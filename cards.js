@@ -1,5 +1,9 @@
 DECKS =
-    {   "Ancient Artillery":  {name: "Ancient Artillery", class: "Ancient Artillery"}
+    {   "PC Lee":       {name: "PC Lee", class: "PC Lee"}
+    ,	"PC Dave":        {name: "PC Dave", class: "PC Dave"}
+    ,	"PC Amy":     {name: "PC Amy", class: "PC Amy"}
+    ,	"PC Chris":       {name: "PC Chris", class: "PC Chris"}
+    ,	"Ancient Artillery":  {name: "Ancient Artillery", class: "Ancient Artillery"}
     ,   "Bandit Archer":      {name: "Bandit Archer", class: "Archer"}
     ,   "Bandit Guard":       {name: "Bandit Guard", class: "Guard"}
     ,   "Black Imp":          {name: "Black Imp", class: "Imp"}
@@ -38,7 +42,55 @@ DECKS =
 
 DECK_DEFINITONS =
 [
-        { class: "Ancient Artillery"
+        {class: "PC Lee"
+        , cards:
+            [ [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            ]
+        },
+    {class: "PC Dave"
+        , cards:
+            [ [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            ]
+        },
+    {class: "PC Amy"
+        , cards:
+            [ [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            ]
+        },
+    {class: "PC Chris"
+        , cards:
+            [ [true, "00","*GET OUT OF MY MIND, CHARLES!"]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            ]
+        },
+    {class: "Ancient Artillery"
         , cards:
             [ [false, "46", "* %attack% -1", "** %range% +2"]
             , [true,  "71", "* %attack% +0", "** %range% +0", "** All adjacent enemies suffer 2 damage"]

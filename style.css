@@ -119,7 +119,15 @@ ul.tabcontainer .inactive
 
 .hiddendeck
 {
-    display: none;
+    position:                   relative;
+    text-align:                 center;
+
+    -webkit-box-flex:           1.0;
+
+    width:                      453px;
+    width:                      calc(437px + 1rem); /* 437px == card image width */
+    max-width:                  147.6vh;
+    margin:                     8px;
 }
 
 ul.currentdeckslist {

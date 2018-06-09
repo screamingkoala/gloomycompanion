@@ -73,6 +73,7 @@ function create_ability_card_back(name, level) {
 }
 
 function create_ability_card_front(initiative, name, shuffle, lines, attack, move, range, level, health) {
+	
     var card = document.createElement("div");
     card.className = "card ability front down";
 
@@ -112,7 +113,7 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
     lines = remove_empty_strings(lines);
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
-
+		
         var new_depth = 0;
         while (line.indexOf("*") >= 0) {
             new_depth += 1;
@@ -192,6 +193,7 @@ function load_ability_deck(deck_class, deck_name, level) {
         var shuffle = definition[0];
         var initiative = definition[1];
         var lines = definition.slice(2);
+		
 
         var empty_front = document.createElement("div");
         empty_front.className = "card ability front down";
@@ -239,7 +241,7 @@ function load_ability_deck(deck_class, deck_name, level) {
                 }
 
             }
-
+			
             card.paint_front_card(this.get_real_name(), cards_lines.concat(extra_lines), this.attack, this.move, this.range, this.level, this.health);
 
             card.ui.set_depth(-3);
@@ -330,6 +332,7 @@ function load_ability_deck(deck_class, deck_name, level) {
     }
 
     write_to_storage(deck.name, JSON.stringify(deck));
+	
     return deck;
 
 }
@@ -337,13 +340,16 @@ function load_ability_deck(deck_class, deck_name, level) {
 function place_deck(deck, container) {
     for (var i = 0; i < deck.draw_pile.length; i++) {
         var card = deck.draw_pile[i];
+		
         card.ui.attach(container);
     }
     for (var i = 0; i < deck.discard.length; i++) {
         var card = deck.discard[i];
         card.ui.attach(container);
     }
+	
     deck.deck_space = container;
+	
 }
 
 function force_repaint_deck(deck) {
@@ -353,12 +359,13 @@ function force_repaint_deck(deck) {
     place_deck(deck, space);
 }
 
-// This should be dynamic dependant on lines per card
+// This should be dynamic dependent on lines per card
 function refresh_ui() {
     var actual_card_height = 296;
     var base_font_size = 26.6;
 
     var tableau = document.getElementById("tableau");
+	
     var cards = tableau.getElementsByClassName("card");
     for (var i = 1; i < cards.length; i++) {
         if (cards[i].className.indexOf("ability") !== -1) {
@@ -788,16 +795,42 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
         var deckid = deck.get_real_name().replace(/\s+/g, '');
         var deck_space = document.createElement("div");
         deck_space.id = deckid;
-        deck_space.addEventListener('contextmenu', function(e) {            
-            this.className = "hiddendeck";
+        deck_space.addEventListener('contextmenu', function(e) {
+			
+				
+				
+			
+			if (document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat")
+				{document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
+				document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
+				
+
+			}
+				
+				
+			else
+				{document.getElementById(this.id).style.background =  "";
+				document.getElementById(this.id).style.backgroundRepeat = "";
+				}
+			
+	
+			 
+			var init_list = document.querySelectorAll("#" + this.id + " .initiative")
+		
+			if (init_list.length !=0){
+			document.querySelectorAll("#BanditGuard .initiative")[0].innerHTML="N/A";
+			}
+			
+			
+			
+			
+			
             e.preventDefault();
-        }, false);
+        }, false)
         deck_space.className = "card-container";
         deck_space.title = "Click to draw enemy ability";
-
-        container.appendChild(deck_space);
-
-        place_deck(deck, deck_space);
+		container.appendChild(deck_space);
+		place_deck(deck, deck_space);
         reshuffle(deck, !preserve_existing_deck_state);
         if (preserve_existing_deck_state) {
 
@@ -834,7 +867,8 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
         var currentdeckslist = document.getElementById("currentdeckslist");        
         var list_item = document.createElement("li");
         list_item.className = "currentdeck";
-        currentdeckslist.appendChild(list_item);
+		// Add the following line to put the line back in 
+        //currentdeckslist.appendChild(list_item);
         var label = document.createElement("a");
         label.id = "switch-" + deckid;
         label.href = "#switch-" + deckid
@@ -1128,6 +1162,40 @@ function init() {
     var applydeckbtn = document.getElementById("applydecks");
     var applyscenariobtn = document.getElementById("applyscenario");
     var applyloadbtn = document.getElementById("applyload");
+	var new_roundbtn = document.getElementById("new_round");
+	var sort_cardsbtn = document.getElementById("sort_cards");
+	var end_roundbtn = document.getElementById("end_round");
+	
+	document.onkeypress = function() {numbered_elements(event)};
+	
+	function numbered_elements(event) {
+    
+	
+	//Take 48 away from the character code to get the number
+	switch (event.charCode-48) {
+	
+		
+    case 1:
+        change_element_border('element_air','false');
+        break;
+    case 2:
+        change_element_border('element_earth','false');
+        break;
+    case 3:
+        change_element_border('element_fire','false');
+        break;
+    case 4:
+        change_element_border('element_ice','false');
+        break;
+    case 5:
+        change_element_border('element_light','false');
+        break;
+    case 6:
+        change_element_border('element_dark','false');	
+	}
+	
+}
+	
     var showmodifierdeck = document.getElementById("showmodifierdeck");
 
     var decklist = new DeckList();
@@ -1155,14 +1223,19 @@ function init() {
     };
 
     applyscenariobtn.onclick = function () {
-        localStorage.clear();
+        //Store choice in local storage
+		
+		localStorage.clear();
         var selected_deck_names = scenariolist.get_scenario_decks();
         write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
+		
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
         });
         apply_deck_selection(selected_decks, false);
+		
+		//Modifer Deck stuff
         var modifier_deck_section = document.getElementById("modifier-container");
         if(!showmodifierdeck.checked){
             modifier_deck_section.style.display = "none";
@@ -1188,5 +1261,174 @@ function init() {
         }
     }
 
+	new_roundbtn.onclick = function () {
+	
+	//Get the round number from the button text. If the substring returns 'Game' it's the first round, so set round to 0
+	round = document.getElementById("new_round").value;
+	round = round.substring(6,10);
+	if (round == 'Game'){round=0};
+	round=parseInt(round, 10)+1;
+	
+	if (confirm('Are you sure you want to put in new initiatives for Round ' + round + '?')) {
+
+	
+	//New Round! Update the button!
+		
+	document.getElementById("new_round").value = 'Round ' + round;
+	
+	//First, build a 2 dimensional array containing the initiatives and the card names
+	var init_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+	var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
+	var cards_array = [];
+	for (i=0; i < init_list.length;i++){
+		cards_array.push([]);			
+			cards_array[i][0]=init_list[i].innerHTML
+			cards_array[i][1]=name_list[i].innerHTML
+		}
+	
+	//Now loop through the list and produce the 'short name' by stripping the last two characters and the spaces, then use that to build up a list of active cards
+	for (i=0; i < cards_array.length;i++){
+			short_name=cards_array[i][1];
+			short_name = short_name.replace(/\s/g, '');
+			short_name = short_name.substring(0, short_name.length-2);
+			x=document.getElementById(short_name);			
+			x=x.getElementsByClassName('name')[0].innerHTML;		
+			
+			//If a cards starts with 'PC', then ask for the initiative, and put it in.
+			
+			if (x.substring(0, 2)=='PC')
+			{
+				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));							
+				document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = new_init;
+			}	
+	
+	
+		}
+		
+		
+		
+		
+		//Lastly, may as well refresh the order at this point.
+	sort_cards();
+ 
+} else {
+ 
+}	
+}
+	function sort_cards() {
+		
+		//First, build a 2 dimensional array containing the initiatives and the card names
+		var init_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+		var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
+		var cards_array = [];
+		for (i=0; i < init_list.length;i++){
+			cards_array.push([]);			
+			cards_array[i][0]=init_list[i].innerHTML
+			cards_array[i][1]=name_list[i].innerHTML
+		}
+		
+		//Then put them in order		
+		cards_array.sort();
+
+		//Then, change the order using CSS
+		for (i=0; i < cards_array.length;i++){
+			short_name=cards_array[i][1]
+			short_name = short_name.replace(/\s/g, '');
+			short_name = short_name.substring(0, short_name.length-2);
+			document.getElementById(short_name).style.order = i+1;
+		}
+
+		
+
+		
+	}
+	
+	end_roundbtn.onclick = function () {
+		if (confirm('Are you sure you want to end the round? Don\'t forget to untick dead monsters!')) {
+		// Lower the elements, passing 'false' to ensure they don't loop inert to strong
+		change_element_border('element_fire','true');
+		change_element_border('element_air','true');
+		change_element_border('element_ice','true');
+		change_element_border('element_earth','true');
+		change_element_border('element_light','true');
+		change_element_border('element_dark','true');
+		cards_array.sort();
+		}
+	}
+	
+	
+
+
+
+	sort_cardsbtn.onclick = function () {
+		
+		sort_cards();
+	}
+
+	
+	//There is probably a more clever way of doing this, but this will do.
+	
+
+	
+	element_air.onclick = function () {
+		change_element_border('element_air','false')
+	}
+	
+	element_earth.onclick = function () {
+		change_element_border('element_earth','false')
+	}
+	
+	element_fire.onclick = function () {
+		change_element_border('element_fire','false')
+	}
+	
+	element_ice.onclick = function () {
+		change_element_border('element_ice','false')
+	}
+	
+	element_light.onclick = function () {
+		change_element_border('element_light','false')
+	}
+	
+	element_dark.onclick = function () {
+		change_element_border('element_dark','false')
+	}
+	
+	change_element_border = function (element,is_it_locked){
+		
+		el_style = window.getComputedStyle(document.getElementById(element));
+		el_style=el_style.border;
+		
+		
+		//if it's strong, make it waning
+		
+		if (el_style == '20px solid rgb(255, 0, 0)') 
+			{
+			document.getElementById(element).style.border = "20px dashed red";
+			}
+			
+		//if it's waning, make it inert
+		
+		else if (el_style == '20px dashed rgb(255, 0, 0)')
+
+			{
+			document.getElementById(element).style.border = "20px  solid  white";
+			}
+			
+		//if it's inert, make it strong, but only if not locked i.e. not from a button press
+		
+		else if (el_style =="20px solid rgb(255, 255, 255)" && is_it_locked == 'false')
+			{
+			
+			document.getElementById(element).style.border = "20px solid red";
+			}
+	
+		//document.getElementById(element).style.border = "thick solid #0000FF"; && is_it_locked
+
+	}
+	
     window.onresize = refresh_ui.bind(null, visible_ability_decks);
 }
+
+
+
