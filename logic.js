@@ -803,11 +803,8 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 			if (document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat")
 				{document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
 				document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
-				
-
-			}
-				
-				
+				}
+								
 			else
 				{document.getElementById(this.id).style.background =  "";
 				document.getElementById(this.id).style.backgroundRepeat = "";
@@ -815,11 +812,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 			
 	
 			 
-			var init_list = document.querySelectorAll("#" + this.id + " .initiative")
-		
-			if (init_list.length !=0){
-			document.querySelectorAll("#BanditGuard .initiative")[0].innerHTML="N/A";
-			}
+			
 			
 			
 			
@@ -1172,8 +1165,16 @@ function init() {
     
 	
 	//Take 48 away from the character code to get the number
-	switch (event.charCode-48) {
 	
+	switch (event.charCode-48) {
+		
+	case 0:
+		end_roundbtn.click();
+		
+		break;
+	case 1:
+        change_element_border('element_air','false');
+        break;
 		
     case 1:
         change_element_border('element_air','false');
@@ -1320,10 +1321,14 @@ function init() {
 		//First, build a 2 dimensional array containing the initiatives and the card names
 		var init_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
 		var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
+		var background_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
 		var cards_array = [];
 		for (i=0; i < init_list.length;i++){
 			cards_array.push([]);			
-			cards_array[i][0]=init_list[i].innerHTML
+			cards_array[i][0]=init_list[i].innerHTML;
+			alert(name_list[i]);
+			
+			//document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat"
 			cards_array[i][1]=name_list[i].innerHTML
 		}
 		
