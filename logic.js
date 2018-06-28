@@ -446,7 +446,12 @@ function send_to_discard(card, pull_animation) {
 }
 
 function draw_ability_card(deck) {
-
+	
+	
+		document.getElementById(deck.name.replace(/\s/g, '')).style.background =  "";
+		document.getElementById(deck.name.replace(/\s/g, '')).style.backgroundRepeat = "";
+		
+	
     if (deck.must_reshuffle()) {
         reshuffle(deck, true);
     }
@@ -458,7 +463,19 @@ function draw_ability_card(deck) {
             }
         });
     }
-    write_to_storage(deck.name, JSON.stringify(deck));
+	
+	// Does it have an initiative showing? No? Flip it again!
+		
+	var deckid = deck.get_real_name().replace(/\s+/g, '');
+	var init_list = document.getElementById(deckid).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+		
+				if (init_list.length == 0){
+						draw_ability_card(deck);
+				}
+		
+	
+	write_to_storage(deck.name, JSON.stringify(deck));
+	
 }
 
 function prevent_pull_animation(deck) {
@@ -795,27 +812,19 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
         var deckid = deck.get_real_name().replace(/\s+/g, '');
         var deck_space = document.createElement("div");
         deck_space.id = deckid;
+		
+		
         deck_space.addEventListener('contextmenu', function(e) {
-			
-				
-				
-			
-			if (document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat")
-				{document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
-				document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
+		// When we right click, add a skull, but only if the card isn't blank (which we can check by seeing if the card displays an initiative
+							
+				var init_list = document.getElementById(this.id).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+					
+				if (init_list.length){
+					document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
+					document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
+					document.getElementById(this.id).style.backgroundSize="120px 120px"
+					init_list[0].innerHTML="NA"
 				}
-								
-			else
-				{document.getElementById(this.id).style.background =  "";
-				document.getElementById(this.id).style.backgroundRepeat = "";
-				}
-			
-	
-			 
-			
-			
-			
-			
 			
 			
             e.preventDefault();
@@ -829,7 +838,10 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 
         }
         deck_space.onclick = draw_ability_card.bind(null, deck);
-
+		
+		
+		
+		
         deck.discard_deck = function () {
             var index = visible_ability_decks.indexOf(this);
 
@@ -990,7 +1002,7 @@ function LevelSelector(text, inline) {
     var max_level = 7;
     var level = {};
     level.html = inline ? document.createElement("span") : document.createElement("ul");
-    level.html.className = "selectionlist";
+    level.html.className = "levellist";
 
     var listitem = inline ? document.createElement("label") : document.createElement("li");
     listitem.innerText = text;
@@ -1161,6 +1173,7 @@ function init() {
 	
 	document.onkeypress = function() {numbered_elements(event)};
 	
+	
 	function numbered_elements(event) {
     
 	
@@ -1169,7 +1182,7 @@ function init() {
 	switch (event.charCode-48) {
 		
 	case 0:
-		end_roundbtn.click();
+		 sort_cards();
 		
 		break;
 	case 1:
@@ -1193,6 +1206,8 @@ function init() {
         break;
     case 6:
         change_element_border('element_dark','false');	
+	 case 9:
+       
 	}
 	
 }
@@ -1226,6 +1241,10 @@ function init() {
     applyscenariobtn.onclick = function () {
         //Store choice in local storage
 		
+		
+		
+		
+		
 		localStorage.clear();
         var selected_deck_names = scenariolist.get_scenario_decks();
         write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
@@ -1244,6 +1263,15 @@ function init() {
         else{
             modifier_deck_section.style.display = "block";
         }
+		
+		//Change Scenario stats
+		x =  parseInt(document.getElementsByName("scenario_number")[0].value);
+		
+		
+		document.getElementById("monster_level").innerHTML=x;
+		document.getElementById("gold_level").innerHTML=Math.floor(x/2)+2;
+		document.getElementById("trap_damage").innerHTML= x+2;
+		document.getElementById("bonus_xp").innerHTML=2*x+4;
     };
 
     applyloadbtn.onclick = function () {
@@ -1310,7 +1338,7 @@ function init() {
 		
 		
 		//Lastly, may as well refresh the order at this point.
-	sort_cards();
+	
  
 } else {
  
@@ -1323,10 +1351,12 @@ function init() {
 		var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
 		var background_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
 		var cards_array = [];
+		
 		for (i=0; i < init_list.length;i++){
+			
 			cards_array.push([]);			
 			cards_array[i][0]=init_list[i].innerHTML;
-			alert(name_list[i]);
+			
 			
 			//document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat"
 			cards_array[i][1]=name_list[i].innerHTML
@@ -1349,15 +1379,15 @@ function init() {
 	}
 	
 	end_roundbtn.onclick = function () {
-		if (confirm('Are you sure you want to end the round? Don\'t forget to untick dead monsters!')) {
-		// Lower the elements, passing 'false' to ensure they don't loop inert to strong
+		if (confirm('Are you sure you want to end the round? Don\'t forget to mark dead monsters!')) {
+		// Lower the elements, passing 'true' to ensure they don't loop inert to strong
 		change_element_border('element_fire','true');
 		change_element_border('element_air','true');
 		change_element_border('element_ice','true');
 		change_element_border('element_earth','true');
 		change_element_border('element_light','true');
 		change_element_border('element_dark','true');
-		cards_array.sort();
+		
 		}
 	}
 	
