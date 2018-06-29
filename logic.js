@@ -446,7 +446,12 @@ function send_to_discard(card, pull_animation) {
 }
 
 function draw_ability_card(deck) {
-
+	
+	
+		document.getElementById(deck.name.replace(/\s/g, '')).style.background =  "";
+		document.getElementById(deck.name.replace(/\s/g, '')).style.backgroundRepeat = "";
+		
+	
     if (deck.must_reshuffle()) {
         reshuffle(deck, true);
     }
@@ -458,7 +463,20 @@ function draw_ability_card(deck) {
             }
         });
     }
-
+	
+	// Does it have an initiative showing? No? Flip it again!
+		
+	var deckid = deck.get_real_name().replace(/\s+/g, '');
+	var init_list = document.getElementById(deckid).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+		
+				if (init_list.length == 0){
+						draw_ability_card(deck);
+				}
+		
+	// Now sort 
+	
+	
+	
 	write_to_storage(deck.name, JSON.stringify(deck));
 	
 }
@@ -800,26 +818,26 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 		
 		
         deck_space.addEventListener('contextmenu', function(e) {
-		// When we right click, add a skull, or remove one if needed	
-			if (document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat")
-				{document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
-				document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
-				}
-								
-			else
-				{document.getElementById(this.id).style.background =  "";
-				document.getElementById(this.id).style.backgroundRepeat = "";
-				}
+		// When we right click, add a skull, but only if the card isn't blank (which we can check by seeing if the card displays an initiative
+							
+				var init_list = document.getElementById(this.id).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+				//if (init_list[0] != undefined) {
+						
+				
+					if (init_list[0].innerHTML.substring(0,1) !="X" ){
+						document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
+						document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
+						document.getElementById(this.id).style.backgroundSize="120px 120px"
+						init_list[0].innerHTML= "X"+ init_list[0].innerHTML.substring(0, 2);
+					}
+					else{
+					document.getElementById(this.id).style.background =  "";
+					document.getElementById(this.id).style.backgroundRepeat = "";
+					document.getElementById(this.id).style.backgroundSize=""
+					init_list[0].innerHTML= init_list[0].innerHTML.substring(1, 3);					
+					}
+				//}
 			
-			//next, set the initiative to NA, and sort. If init_list.length is 0, it means the user right clicked on a blank card
-			var init_list = document.getElementById(this.id).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
-		
-			
-			if (init_list.length){
-				init_list[0].innerHTML="NA"
-				}
-			
-			//document.getElementById("sort_cards").click();
             e.preventDefault();
         }, false)
         deck_space.className = "card-container";
@@ -831,7 +849,10 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 
         }
         deck_space.onclick = draw_ability_card.bind(null, deck);
-
+		
+		
+		
+		
         deck.discard_deck = function () {
             var index = visible_ability_decks.indexOf(this);
 
@@ -992,7 +1013,7 @@ function LevelSelector(text, inline) {
     var max_level = 7;
     var level = {};
     level.html = inline ? document.createElement("span") : document.createElement("ul");
-    level.html.className = "selectionlist";
+    level.html.className = "levellist";
 
     var listitem = inline ? document.createElement("label") : document.createElement("li");
     listitem.innerText = text;
@@ -1163,6 +1184,7 @@ function init() {
 	
 	document.onkeypress = function() {numbered_elements(event)};
 	
+	
 	function numbered_elements(event) {
     
 	
@@ -1195,8 +1217,8 @@ function init() {
         break;
     case 6:
         change_element_border('element_dark','false');	
-	 case 9:
-       
+	
+		
 	}
 	
 }
@@ -1230,6 +1252,10 @@ function init() {
     applyscenariobtn.onclick = function () {
         //Store choice in local storage
 		
+		
+		
+		
+		
 		localStorage.clear();
         var selected_deck_names = scenariolist.get_scenario_decks();
         write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
@@ -1248,6 +1274,15 @@ function init() {
         else{
             modifier_deck_section.style.display = "block";
         }
+		
+		//Change Scenario stats
+		x =  parseInt(document.getElementsByName("scenario_number")[0].value);
+		
+		
+		document.getElementById("monster_level").innerHTML=x;
+		document.getElementById("gold_level").innerHTML=Math.floor(x/2)+2;
+		document.getElementById("trap_damage").innerHTML= x+2;
+		document.getElementById("bonus_xp").innerHTML=2*x+4;
     };
 
     applyloadbtn.onclick = function () {
@@ -1274,14 +1309,40 @@ function init() {
 	if (round == 'Game'){round=0};
 	round=parseInt(round, 10)+1;
 	
+
 	if (confirm('Are you sure you want to put in new initiatives for Round ' + round + '?')) {
 
+	
+	
 	
 	//New Round! Update the button!
 		
 	document.getElementById("new_round").value = 'Round ' + round;
 	
-	//First, build a 2 dimensional array containing the initiatives and the card names
+	//First, flip all the unskulled cards
+	
+	var name_list = document.getElementsByClassName('card-container');
+		
+		for (a=2;a < name_list.length;a++){
+		
+			card_init = name_list[a].querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[0];
+			console.log (card_init);
+			if (card_init == undefined )
+			{
+					name_list[a].click();
+			}
+			else if (card_init.innerHTML.substring(0,1) != "X")
+			{
+					name_list[a].click();
+			}
+		}
+	
+	
+
+	
+	
+	
+	//Next, build a 2 dimensional array containing the initiatives and the card names
 	var init_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
 	var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
 	var cards_array = [];
@@ -1303,7 +1364,8 @@ function init() {
 			
 			if (x.substring(0, 2)=='PC')
 			{
-				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));							
+				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));	
+				if (new_init.length == 1) {new_init = "0" + new_init;}
 				document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = new_init;
 			}	
 	
@@ -1314,12 +1376,11 @@ function init() {
 		
 		
 		//Lastly, may as well refresh the order at this point.
-	
+		sort_cards();
  
-} else {
- 
-}	
+} 
 }
+
 	function sort_cards() {
 		
 		//First, build a 2 dimensional array containing the initiatives and the card names
@@ -1327,6 +1388,7 @@ function init() {
 		var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
 		var background_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
 		var cards_array = [];
+		
 		for (i=0; i < init_list.length;i++){
 			
 			cards_array.push([]);			
@@ -1354,15 +1416,15 @@ function init() {
 	}
 	
 	end_roundbtn.onclick = function () {
-		if (confirm('Are you sure you want to end the round? Don\'t forget to untick dead monsters!')) {
-		// Lower the elements, passing 'false' to ensure they don't loop inert to strong
+		if (confirm('Are you sure you want to end the round? Don\'t forget to mark dead monsters!')) {
+		// Lower the elements, passing 'true' to ensure they don't loop inert to strong
 		change_element_border('element_fire','true');
 		change_element_border('element_air','true');
 		change_element_border('element_ice','true');
 		change_element_border('element_earth','true');
 		change_element_border('element_light','true');
 		change_element_border('element_dark','true');
-		cards_array.sort();
+		
 		}
 	}
 	
