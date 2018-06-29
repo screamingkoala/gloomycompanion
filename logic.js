@@ -821,8 +821,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 		// When we right click, add a skull, but only if the card isn't blank (which we can check by seeing if the card displays an initiative
 							
 				var init_list = document.getElementById(this.id).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
-				//if (init_list[0] != undefined) {
-						
+				if (init_list[0] == undefined) {init_list[0].innerHTML ="X"}	
 				
 					if (init_list[0].innerHTML.substring(0,1) !="X" ){
 						document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
@@ -836,7 +835,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 					document.getElementById(this.id).style.backgroundSize=""
 					init_list[0].innerHTML= init_list[0].innerHTML.substring(1, 3);					
 					}
-				//}
+				
 			
             e.preventDefault();
         }, false)
