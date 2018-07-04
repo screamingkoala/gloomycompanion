@@ -1185,7 +1185,7 @@ function init() {
 	
 	 document.addEventListener('contextmenu', function(e) {
 	 alert('yep');
-	 }}, false)
+	 }
 	
 	
 	function numbered_elements(event) {
