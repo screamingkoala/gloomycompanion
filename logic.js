@@ -1184,8 +1184,10 @@ function init() {
 	document.onkeypress = function() {numbered_elements(event)};
 	
 	 document.addEventListener('contextmenu', function(e) {
-	 alert('yep');
-	 }
+		alert('yep');
+			
+            e.preventDefault();
+        }, false)
 	
 	
 	function numbered_elements(event) {
