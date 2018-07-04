@@ -1183,12 +1183,7 @@ function init() {
 	
 	document.onkeypress = function() {numbered_elements(event)};
 	
-	 document.addEventListener('contextmenu', function(e) {
-		alert('yep');
-			
-            e.preventDefault();
-        }, false)
-	
+	 
 	
 	function numbered_elements(event) {
     
@@ -1505,6 +1500,13 @@ function init() {
 	}
 	
     window.onresize = refresh_ui.bind(null, visible_ability_decks);
+	
+	document.addEventListener('contextmenu', function(e) {
+		sort();
+			
+            e.preventDefault();
+        }, false)
+	
 }
 
 
