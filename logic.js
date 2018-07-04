@@ -1501,11 +1501,7 @@ function init() {
 	
     window.onresize = refresh_ui.bind(null, visible_ability_decks);
 	
-	document.addEventListener('contextmenu', function(e) {
-		sort();
-			
-            e.preventDefault();
-        }, false)
+	
 	
 }
 
