@@ -836,7 +836,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 					init_list[0].innerHTML= init_list[0].innerHTML.substring(1, 3);					
 					}
 				
-			sort();
+			
             e.preventDefault();
         }, false)
         deck_space.className = "card-container";
