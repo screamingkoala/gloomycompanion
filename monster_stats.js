@@ -599,7 +599,7 @@ MONSTER_STATS = {
         }
       ]
     },
-    "PC Ron": {
+   "PC Lee": {
       "level": [
         {
           "level": 0,
