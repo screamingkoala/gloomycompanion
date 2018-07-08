@@ -3,7 +3,7 @@ DECKS =
     ,	"PC Dave":        {name: "PC Dave", class: "PC Dave"}
     ,	"PC Amy":     {name: "PC Amy", class: "PC Amy"}
     ,	"PC Chris":       {name: "PC Chris", class: "PC Chris"}
-    ,	"Ancient Artillery":  {name: "Ancient Artillery", class: "Ancient Artillery"}
+    ,	"PC Ron":  {name: "PC Ron", class: "PC Ron"}
     ,   "Bandit Archer":      {name: "Bandit Archer", class: "Archer"}
     ,   "Bandit Guard":       {name: "Bandit Guard", class: "Guard"}
     ,   "Black Imp":          {name: "Black Imp", class: "Imp"}
@@ -90,7 +90,7 @@ DECK_DEFINITONS =
             , [true, "00",""]
             ]
         },
-    {class: "Ancient Artillery"
+    {class: "PC Ron"
         , cards:
             [ [false, "46", "* %attack% -1", "** %range% +2"]
             , [true,  "71", "* %attack% +0", "** %range% +0", "** All adjacent enemies suffer 2 damage"]
