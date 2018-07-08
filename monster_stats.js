@@ -599,7 +599,7 @@ MONSTER_STATS = {
         }
       ]
     },
-    "Ancient Artillery": {
+    "PC Ron": {
       "level": [
         {
           "level": 0,
