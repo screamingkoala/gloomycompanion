@@ -81,7 +81,7 @@ DECK_DEFINITONS =
         },
     {class: "PC Chris"
         , cards:
-            [ [true, "00","*GET OUT OF MY MIND, CHARLES!"]
+            [ [true, "00","* PRAISE THE SUN!"]
             , [true, "00",""]
             , [true, "00",""]
             , [true, "00",""]
@@ -93,7 +93,7 @@ DECK_DEFINITONS =
         },
     {class: "PC Ron"
         , cards:
-             [ [true, "00","*GET OUT OF MY MIND, CHARLES!"]
+             [ [true, "00",""]
             , [true, "00",""]
             , [true, "00",""]
             , [true, "00",""]
