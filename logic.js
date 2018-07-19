@@ -818,26 +818,34 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 		
 		
         deck_space.addEventListener('contextmenu', function(e) {
+		
+		
 		// When we right click, add a skull, but only if the card isn't blank (which we can check by seeing if the card displays an initiative
-							
-				var init_list = document.getElementById(this.id).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
-				if (init_list[0] == undefined) {init_list[0].innerHTML ="X"}	
-				
-					if (init_list[0].innerHTML.substring(0,1) !="X" ){
-						document.getElementById(this.id).style.background =  "url(\"images/icon.png\")";
-						document.getElementById(this.id).style.backgroundRepeat = "no-repeat";
-						document.getElementById(this.id).style.backgroundSize="120px 120px"
-						init_list[0].innerHTML= "X"+ init_list[0].innerHTML.substring(0, 2);
-					}
-					else{
-					document.getElementById(this.id).style.background =  "";
-					document.getElementById(this.id).style.backgroundRepeat = "";
-					document.getElementById(this.id).style.backgroundSize=""
-					init_list[0].innerHTML= init_list[0].innerHTML.substring(1, 3);					
-					}
-				
 			
-            e.preventDefault();
+			if (document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat"){
+				document.getElementById(this.id).style.background =  "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat";
+			
+			}
+			else{
+				document.getElementById(this.id).style.background =  "";
+			
+			}
+			
+					
+			var init_list = document.getElementById(this.id).querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+			if (init_list[0] != undefined){	
+		
+				if (init_list[0].innerHTML.substring(0,1) !="X" ){
+					
+					init_list[0].innerHTML= "X"+ init_list[0].innerHTML.substring(0, 2);
+				}
+				else{
+					
+					init_list[0].innerHTML= init_list[0].innerHTML.substring(1, 3);					
+				}
+			}
+			
+        e.preventDefault();
         }, false)
         deck_space.className = "card-container";
         deck_space.title = "Click to draw enemy ability";
@@ -1188,39 +1196,43 @@ function init() {
 	function numbered_elements(event) {
     
 	
+	//Don't do anything if panel is outerHTML
+	
+	if (document.getElementById("settingspane").className == "pane inactive"){
+	
 	//Take 48 away from the character code to get the number
 	
-	switch (event.charCode-48) {
+		switch (event.charCode-48) {
+			
+		case 0:
+			 sort_cards();
+			
+			break;
+		case 1:
+			change_element_border('element_air','false');
+			break;
+			
+		case 1:
+			change_element_border('element_air','false');
+			break;
+		case 2:
+			change_element_border('element_earth','false');
+			break;
+		case 3:
+			change_element_border('element_fire','false');
+			break;
+		case 4:
+			change_element_border('element_ice','false');
+			break;
+		case 5:
+			change_element_border('element_light','false');
+			break;
+		case 6:
+			change_element_border('element_dark','false');	
 		
-	case 0:
-		 sort_cards();
-		
-		break;
-	case 1:
-        change_element_border('element_air','false');
-        break;
-		
-    case 1:
-        change_element_border('element_air','false');
-        break;
-    case 2:
-        change_element_border('element_earth','false');
-        break;
-    case 3:
-        change_element_border('element_fire','false');
-        break;
-    case 4:
-        change_element_border('element_ice','false');
-        break;
-    case 5:
-        change_element_border('element_light','false');
-        break;
-    case 6:
-        change_element_border('element_dark','false');	
-	
-		
+			
+		}
 	}
-	
 }
 	
     var showmodifierdeck = document.getElementById("showmodifierdeck");
@@ -1275,9 +1287,11 @@ function init() {
             modifier_deck_section.style.display = "block";
         }
 		
+		//Reset Game Counter
+		document.getElementById("new_round").value = "Start Game"
+		
 		//Change Scenario stats
 		x =  parseInt(document.getElementsByName("scenario_number")[0].value);
-		
 		
 		document.getElementById("monster_level").innerHTML=x;
 		document.getElementById("gold_level").innerHTML=Math.floor(x/2)+2;
@@ -1322,19 +1336,25 @@ function init() {
 	//First, flip all the unskulled cards
 	
 	var name_list = document.getElementsByClassName('card-container');
-		
+	
 		for (a=2;a < name_list.length;a++){
-		
+			
+			
 			card_init = name_list[a].querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[0];
+			
 			console.log (card_init);
-			if (card_init == undefined )
+			
+			
+			//.style.background !=  "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat"
+			
+			if (name_list[a].style.background !=  "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat"  )
 			{
 					name_list[a].click();
 			}
-			else if (card_init.innerHTML.substring(0,1) != "X")
-			{
-					name_list[a].click();
-			}
+			//else if (card_init.innerHTML.substring(0,1) != "X")
+			//{
+			//		name_list[a].click();
+			//}
 		}
 	
 	
