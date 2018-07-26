@@ -474,6 +474,7 @@ function draw_ability_card(deck) {
 				}
 		
 	// Now sort 
+		
 	
 	
 	
@@ -1243,11 +1244,15 @@ function init() {
     deckspage.insertAdjacentElement("afterbegin", decklist.ul);
     scenariospage.insertAdjacentElement("afterbegin", scenariolist.ul);
 
+	
+	
     applydeckbtn.onclick = function () {
         localStorage.clear();
         var selected_deck_names = decklist.get_selected_decks();
         write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
-        var selected_decks = selected_deck_names.map(function (deck_names) {
+        
+		
+		var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
         });
         apply_deck_selection(selected_decks, true);
@@ -1262,30 +1267,26 @@ function init() {
     };
 
     applyscenariobtn.onclick = function () {
-        //Store choice in local storage
+        //Store player names
+		player_names=document.getElementsByName("player_name")
+		player_levels=document.getElementsByName("player_level")
+		var player_array=[];
 		
 		
+		for (i=0;i < player_levels.length; i++){
+			player_array.push(player_names[i].value, player_levels[i].value)
+				
+		}
+			
+		
+		write_to_storage("player_array", JSON.stringify(player_array));
+		
+	
 		
 		
+
+			
 		
-		localStorage.clear();
-        var selected_deck_names = scenariolist.get_scenario_decks();
-        write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
-		
-        decklist.set_selection(selected_deck_names);
-        var selected_decks = selected_deck_names.map(function (deck_names) {
-            return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
-        });
-        apply_deck_selection(selected_decks, false);
-		
-		//Modifer Deck stuff
-        var modifier_deck_section = document.getElementById("modifier-container");
-        if(!showmodifierdeck.checked){
-            modifier_deck_section.style.display = "none";
-        }
-        else{
-            modifier_deck_section.style.display = "block";
-        }
 		
 		//Reset Game Counter
 		document.getElementById("new_round").value = "Start Game"
@@ -1300,19 +1301,25 @@ function init() {
     };
 
     applyloadbtn.onclick = function () {
-        var selected_deck_names = JSON.parse(get_from_storage("selected_deck_names"));
-        decklist.set_selection(selected_deck_names);
-        var selected_decks = selected_deck_names.map(function (deck_names) {
-            return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
-        });
-        apply_deck_selection(selected_decks, true);
-        var modifier_deck_section = document.getElementById("modifier-container");
-        if(!showmodifierdeck.checked){
-            modifier_deck_section.style.display = "none";
-        }
-        else{
-            modifier_deck_section.style.display = "block";
-        }
+		
+		//Load in the previous stored data
+		var player_array = JSON.parse(get_from_storage("player_array"));
+		
+		//If the length isn't 0 (i.e. no data to load), fill in the data
+		if (player_array.length != 0){
+			document.getElementById("player_name_one").value=player_array[0];
+			document.getElementById("player_level_one").value=player_array[1];
+			document.getElementById("player_name_two").value=player_array[2];
+			document.getElementById("player_level_two").value=player_array[3];
+			document.getElementById("player_name_three").value=player_array[4];
+			document.getElementById("player_level_three").value=player_array[5];
+			document.getElementById("player_name_four").value=player_array[6];
+			document.getElementById("player_level_four").value=player_array[7];
+			document.getElementById("player_name_five").value=player_array[8];
+			document.getElementById("player_level_five").value=player_array[9];
+		}
+		
+		
     }
 
 	new_roundbtn.onclick = function () {
@@ -1386,6 +1393,7 @@ function init() {
 			{
 				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));	
 				if (new_init.length == 1) {new_init = "0" + new_init;}
+				if (new_init.length == 0) {new_init = "99" + new_init;}
 				document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = new_init;
 			}	
 	
