@@ -5,7 +5,7 @@ var modifier_deck = null;
 var deck_definitions = load_definition(DECK_DEFINITONS);
 
 var DECK_TYPES =
-    {checked
+    {
         MODIFIER: "modifier",
         ABILITY: "ability",
         BOSS: "boss"
