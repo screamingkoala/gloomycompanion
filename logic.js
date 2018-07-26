@@ -1270,18 +1270,19 @@ function init() {
         //Store player names
 		player_names=document.getElementsByName("player_name")
 		player_levels=document.getElementsByName("player_level")
+		player_active=document.getElementsByName("player_active")
 		var player_array=[];
 		
 		
 		for (i=0;i < player_levels.length; i++){
 			player_array.push(player_names[i].value, player_levels[i].value)
-				
+			alert(player_active[i]);		
 		}
 			
 		
 		write_to_storage("player_array", JSON.stringify(player_array));
 		
-	
+		
 		
 		
 
