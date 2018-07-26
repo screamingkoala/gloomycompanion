@@ -1276,10 +1276,13 @@ function init() {
 		
 		for (i=0;i < player_levels.length; i++){
 			player_array.push(player_names[i].value, player_levels[i].value)
-			if (player_active[i].checked){alert(player_active[i].checked)}
+			if (player_active[i].checked){
+				playercount++;
+				total_player_levels=total_player_levels+player_levels[i].value;
+			}
 				
 		}
-			
+		alert(total_player_levels/playercount/2)
 		
 		write_to_storage("player_array", JSON.stringify(player_array));
 		
