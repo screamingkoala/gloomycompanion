@@ -1272,7 +1272,8 @@ function init() {
 		player_levels=document.getElementsByName("player_level")
 		player_active=document.getElementsByName("player_active")
 		var player_array=[];
-		
+		var playercount=0;
+	    	var total_player_levels=0;
 		
 		for (i=0;i < player_levels.length; i++){
 			player_array.push(player_names[i].value, player_levels[i].value)
