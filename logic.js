@@ -1283,6 +1283,8 @@ function init() {
 			}
 				
 		}
+	    	alert(playercount*2);
+	    	alert(total_player_levels/(playercount*2));
 		alert(Math.ceil(total_player_levels/(playercount*2)))
 		
 		write_to_storage("player_array", JSON.stringify(player_array));
