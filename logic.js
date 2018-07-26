@@ -5,7 +5,7 @@ var modifier_deck = null;
 var deck_definitions = load_definition(DECK_DEFINITONS);
 
 var DECK_TYPES =
-    {
+    {checked
         MODIFIER: "modifier",
         ABILITY: "ability",
         BOSS: "boss"
@@ -1276,7 +1276,7 @@ function init() {
 		
 		for (i=0;i < player_levels.length; i++){
 			player_array.push(player_names[i].value, player_levels[i].value)
-			if (player_active[i].value){alert(player_active[i].value)}
+			if (player_active[i].checked){alert(player_active[i].checked)}
 				
 		}
 			
