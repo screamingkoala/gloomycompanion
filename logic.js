@@ -1276,7 +1276,7 @@ function init() {
 		
 		for (i=0;i < player_levels.length; i++){
 			player_array.push(player_names[i].value, player_levels[i].value)
-			if (player_active[i]){alert(player_active[i]}
+			if (player_active[i]){alert(player_active[i])}
 				
 		}
 			
