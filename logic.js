@@ -1299,14 +1299,8 @@ function init() {
 		//Reset Game Counter
 		document.getElementById("new_round").value = "Start Game"
 		
-		//Change Scenario stats
-		x =  parseInt(document.getElementsByName("scenario_number")[0].value);
-		
-		document.getElementById("monster_level").innerHTML=x;
-		document.getElementById("gold_level").innerHTML=Math.floor(x/2)+2;
-		document.getElementById("trap_damage").innerHTML= x+2;
-		document.getElementById("bonus_xp").innerHTML=2*x+4;
-    };
+		update_stats()
+	}
 
     applyloadbtn.onclick = function () {
 		
@@ -1416,6 +1410,20 @@ function init() {
  
 } 
 }
+
+function update_stats(){
+		
+	//Change Scenario stats
+		x =  parseInt(document.getElementsByName("scenario_number")[0].value) + parseInt(document.getElementById("level_modifier").value)
+		if (x>7){x=7}
+		if (x<0){x=0}
+		
+		
+		document.getElementById("monster_level").innerHTML=x;
+		document.getElementById("gold_level").innerHTML=Math.floor(x/2)+2;
+		document.getElementById("trap_damage").innerHTML= x+2;
+		document.getElementById("bonus_xp").innerHTML=2*x+4;
+}	
 
 	function sort_cards() {
 		
@@ -1534,6 +1542,10 @@ function init() {
 		//document.getElementById(element).style.border = "thick solid #0000FF"; && is_it_locked
 
 	}
+	
+
+	
+	
 	
     window.onresize = refresh_ui.bind(null, visible_ability_decks);
 	
