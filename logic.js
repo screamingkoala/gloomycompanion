@@ -1302,7 +1302,7 @@ function init() {
 		update_stats()
 	}
 
-    applyloadbtn.onclick = function () {
+    applysavetn.onclick = function () {
 		
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("player_array"));
