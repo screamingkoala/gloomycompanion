@@ -1267,7 +1267,7 @@ function init() {
         }
     };
 
-    applyscenariobtn.onclick = function () {
+    applysavebtn.onclick = function () {
         //Store player names
 		player_names=document.getElementsByName("player_name")
 		player_levels=document.getElementsByName("player_level")
@@ -1303,7 +1303,7 @@ function init() {
 		update_stats()
 	}
 
-    applysavebtn.onclick = function () {
+    applyloadbtn.onclick = function () {
 		
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("player_array"));
@@ -1324,6 +1324,26 @@ function init() {
 		
 		
     }
+    
+    applyscenariobtn.onclick = function () {
+       
+        var selected_deck_names = scenariolist.get_scenario_decks();
+        
+        decklist.set_selection(selected_deck_names);
+        var selected_decks = selected_deck_names.map(function (deck_names) {
+            return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
+        });
+        apply_deck_selection(selected_decks, false);
+        var modifier_deck_section = document.getElementById("modifier-container");
+        if(!showmodifierdeck.checked){
+            modifier_deck_section.style.display = "none";
+        }
+        else{
+            modifier_deck_section.style.display = "block";
+        }
+    };
+
+    
 
 	new_roundbtn.onclick = function () {
 	
