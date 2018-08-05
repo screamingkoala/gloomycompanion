@@ -2814,7 +2814,8 @@ MONSTER_STATS = {
             "attack": 2,
             "range": 4,
             "attributes": [
-              "%flying%",              
+              "%flying%",
+              "%curse%",
               "%shield% 1"
             ]
           }
@@ -3338,7 +3339,7 @@ MONSTER_STATS = {
             "attack": 4,
             "range": 0,
             "attributes": [
-              "%retaliate% 1"
+              "%retaliate% 2"
             ]
           }
         },
@@ -5025,7 +5026,7 @@ MONSTER_STATS = {
             "attack": 4,
             "range": 0,
             "attributes": [
-             
+              "%wound%"
             ]
           },
           "elite": {
@@ -5034,7 +5035,7 @@ MONSTER_STATS = {
             "attack": 6,
             "range": 0,
             "attributes": [
-             
+              "%wound%"
             ]
           }
         },
@@ -6254,7 +6255,7 @@ MONSTER_STATS = {
             "attack": 2,
             "range": 4,
             "attributes": [
-              "%shield% 2"
+              "%shield% 3"
             ]
           },
           "elite": {
