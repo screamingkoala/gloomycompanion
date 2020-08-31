@@ -1,9 +1,12 @@
 DECKS =
-    {   "PC Lee":             {name: "PC Lee", class: "PC Lee"}
-    ,	"PC Dave":            {name: "PC Dave", class: "PC Dave"}
-    ,	"PC Amy":   	      {name: "PC Amy", class: "PC Amy"}
-    ,	"PC Chris":           {name: "PC Chris", class: "PC Chris"}
-    ,	"PC Ron":             {name: "PC Ron", class: "PC Ron"}
+    {   "PC Lee":             {name: "PC Lee", class: "PC"}
+    ,	"PC Dave":            {name: "PC Dave", class: "PC"}
+    ,	"PC Amy":   	      {name: "PC Amy", class: "PC"}
+    ,	"PC Chris":           {name: "PC Chris", class: "PC"}
+    ,	"PC Ron":             {name: "PC Ron", class: "PC"}
+    ,	"PC Jonathon":        {name: "PC Jonathon", class: "PC"}
+    ,	"PC Kim":             {name: "PC Kim", class: "PC"}
+    ,	"PC Greg":            {name: "PC Greg", class: "PC"}
     ,   "Ancient Artillery":  {name: "Ancient Artillery", class: "Ancient Artillery"}
     ,   "Bandit Archer":      {name: "Bandit Archer", class: "Archer"}
     ,   "Bandit Guard":       {name: "Bandit Guard", class: "Guard"}
@@ -43,7 +46,7 @@ DECKS =
 
 DECK_DEFINITONS =
 [
-        {class: "PC Lee"
+        {class: "PC"
         , cards:
             [ [true, "00",""]
             , [true, "00",""]
@@ -55,54 +58,7 @@ DECK_DEFINITONS =
             , [true, "00",""]
             ]
         },
-    {class: "PC Dave"
-        , cards:
-            [ [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            ]
-        },
-    {class: "PC Amy"
-        , cards:
-            [ [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            ]
-        },
-    {class: "PC Chris"
-        , cards:
-            [ [true, "00","* PRAISE THE SUN!"]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            ]
-        },
-    {class: "PC Ron"
-        , cards:
-             [ [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            , [true, "00",""]
-            ]
-        },	
+  
      {class: "Ancient Artillery"
         , cards:
             [ [false, "46", "* %attack% -1", "** %range% +2"]
