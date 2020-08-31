@@ -23,11 +23,13 @@ function init_ui()
     var tabs =
     {
         scenarios:      document.getElementById("scenariotab"),
+	players:        document.getElementById("playerstab"),
         decks:          document.getElementById("deckstab")
     };
     var pages =
     {
         scenarios:      document.getElementById("scenariospage"),
+	players:      document.getElementById("playerspage"),
         decks:          document.getElementById("deckspage")
     };
 
