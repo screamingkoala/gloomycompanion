@@ -1592,8 +1592,8 @@ function update_stats(){
 				
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		console.log(el_style);
-		console.log(el_style == '20px solid rgb(152, 176, 181)');
+		console.log("'20px solid " +color+"'");
+		console.log(el_style == "'20px solid " +color+"'");
 		
 		//if it's strong, make it waning
 		
