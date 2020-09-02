@@ -1185,10 +1185,13 @@ function ScenarioList(scenarios) {
 		
             if (DECKS[deck.name]) {
                 deck.class = DECKS[deck.name].class;
+		console.log(deck.name);
             } else if (deck.name.indexOf("Boss") != -1) {
-                deck.class = DECKS["Boss"].class;
+                 console.log(deck.name.indexOf("Boss"));
+		 deck.class = DECKS["Boss"].class;
             }
             deck.level = scenariolist.get_level(deck.name, scenariolist.get_special_rules());
+	    console.log(deck.level);
             return deck;
         }));
     }
@@ -1366,14 +1369,12 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	console.log("foo");
-        console.log(selected_deck_names);
+	
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
         });
-	console.log("more foo");
-	console.log(selected_decks);
+	
         apply_deck_selection(selected_decks, false);
         var modifier_deck_section = document.getElementById("modifier-container");
         
