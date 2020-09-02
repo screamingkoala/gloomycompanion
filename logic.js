@@ -1182,7 +1182,7 @@ function ScenarioList(scenarios) {
 
     scenariolist.get_scenario_decks = function () {
         return (this.decks[this.get_selection()].map(function (deck) {
-		console.log("This is the bit that adds decks. Put the player bit here.")
+		
             if (DECKS[deck.name]) {
                 deck.class = DECKS[deck.name].class;
             } else if (deck.name.indexOf("Boss") != -1) {
@@ -1366,11 +1366,12 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-        
+        console.log(selected_deck_names);
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
         });
+	console.log(selected_decks);
         apply_deck_selection(selected_decks, false);
         var modifier_deck_section = document.getElementById("modifier-container");
         
@@ -1598,7 +1599,7 @@ function update_stats(){
 		
 		if (el_style == "20px solid " + color) 
 			{
-			console.log("fade")
+		
 			document.getElementById(element).style.border = "20px dashed " +color; 
 			
 			}
@@ -1607,7 +1608,7 @@ function update_stats(){
 		
 		else if (el_style == "20px dashed " +color) 
 			{
-			console.log("vanish")
+			
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
 			
 			}
