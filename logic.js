@@ -1182,6 +1182,7 @@ function ScenarioList(scenarios) {
 
     scenariolist.get_scenario_decks = function () {
         return (this.decks[this.get_selection()].map(function (deck) {
+		console.log("This is the bit that adds decks. Put the player bit here.")
             if (DECKS[deck.name]) {
                 deck.class = DECKS[deck.name].class;
             } else if (deck.name.indexOf("Boss") != -1) {
@@ -1592,9 +1593,6 @@ function update_stats(){
 				
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		console.log("20px solid " +color);
-		console.log(el_style == "20px solid " + color);
-		console.log(el_style);
 		
 		//if it's strong, make it waning
 		
