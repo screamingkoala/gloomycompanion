@@ -1597,7 +1597,7 @@ function update_stats(){
 		
 		//if it's strong, make it waning
 		
-		if (el_style == "20px solid " +color+) 
+		if (el_style == "20px solid " +color) 
 			{
 			document.getElementById(element).style.border = "20px dashed rgb(152, 176, 181)";
 			
