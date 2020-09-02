@@ -1517,7 +1517,7 @@ function update_stats(){
 	}
 	
 	end_roundbtn.onclick = function () {
-		if (confirm('Are you sure you want to end the round? Don\'t forget to mark dead monsters!')) {
+		if (confirm('Are you sure you want to end the round? Don\'t forget to right click any monsters no longer in play first.')) {
 		// Lower the elements, passing 'true' to ensure they don't loop inert to strong
 		change_element_border('element_fire','true');
 		change_element_border('element_air','true');
@@ -1614,7 +1614,7 @@ function update_stats(){
 		else if (el_style =="20px solid rgb(255, 255, 255)" && is_it_locked == 'false')
 			{
 			
-			document.getElementById(element).style.border = "20px solid red";
+			document.getElementById(element).style.border = "20px solid rgb(152,176,181)";
 			}
 	
 		//document.getElementById(element).style.border = "thick solid #0000FF"; && is_it_locked
