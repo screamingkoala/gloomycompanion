@@ -1374,7 +1374,8 @@ function init() {
         var selected_deck_names = scenariolist.get_scenario_decks();
 	    console.log (selected_deck_names);
 		console.log (selected_deck_names[0]);	    
-        decklist.set_selection(selected_deck_names);
+		selected_deck_names[3] = {name: "PC Lee", deck_name: "PC Lee", class: "PC Lee", level: "1"};
+	    decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
         });
