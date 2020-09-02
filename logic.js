@@ -1093,7 +1093,7 @@ function DeckList() {
         var dom_dict = create_input("checkbox", "deck", real_name, real_name);
         listitem.appendChild(dom_dict.root);
 
-        var level_selector = new LevelSelector(" with level ", true);
+        var level_selector = new LevelSelector(" with level ", true); 
         listitem.appendChild(level_selector.html);
 
         decklist.ul.appendChild(listitem);
@@ -1182,7 +1182,7 @@ function ScenarioList(scenarios) {
     }
 
  scenariolist.get_scenario_decks = function() { 
-
+	
   
    return (this.decks[this.get_selection()].map(function(deck) {
      console.log("deck: " + deck);
@@ -1373,7 +1373,7 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	    
+	    console.log (JSON.parse(selected_deck_names));
 	    
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
