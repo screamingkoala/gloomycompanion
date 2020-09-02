@@ -1604,9 +1604,11 @@ function update_stats(){
     				color = "rgb(32, 40, 48)";
     				break;
 		}
-		console.log(color);		
+			
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
+		console.log(el_style == "20px solid " + color);	
+		
 		console.log(el_style);	
 		//if it's strong, make it waning
 		
