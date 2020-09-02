@@ -1570,22 +1570,22 @@ function update_stats(){
 	change_element_border = function (element,is_it_locked){
 		
 		switch(element){
-			case element_air:
+			case "element_air":
     				color = "rgb(152,176,181)";
     				break;
-			case element_earth:
+			case "element_earth":
     				color = "rgb(125,168,42)";
     				break;
-			case element_fire:
+			case "element_fire":
     				color = "rgb(226,66,31)";
     				break;
-			case element_ice:
+			case "element_ice":
     				color = "rgb(86,200,239)";
     				break;
-			case element_light:
+			case "element_light":
     				color = "rgb(236,166,16)";
     				break;
-			case element_dark:
+			case "element_dark":
     				color = "rgb(32,40,48)";
     				break;
 		}
@@ -1607,12 +1607,12 @@ function update_stats(){
 		else if (el_style == '20px dashed rgb(152,176,181)')
 
 			{
-			document.getElementById(element).style.border = "20px solid white";
+			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
 			}
 			
 		//if it's inert, make it strong, but only if not locked i.e. not from a button press
 		
-		else if (el_style =="20px solid white" && is_it_locked == 'false')
+		else if (el_style =="20px solid rgb(255, 255, 255)" && is_it_locked == 'false')
 			{
 			
 			document.getElementById(element).style.border = "20px solid rgb(152,176,181)";
