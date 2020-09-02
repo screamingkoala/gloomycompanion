@@ -1377,7 +1377,7 @@ function init() {
 		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Jonathon", class: "PC", level: "1"};
-	    	selected_deck_names[selected_deck_names.length] = {name: "PC Kimberly", class: "PC", level: "1"};
+	    	selected_deck_names[selected_deck_names.length] = {name: "PC Kim", class: "PC", level: "1"};
 	    	console.log (selected_deck_names);
 	    
 	    decklist.set_selection(selected_deck_names);
