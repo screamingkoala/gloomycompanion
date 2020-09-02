@@ -1374,7 +1374,7 @@ function init() {
         var selected_deck_names = scenariolist.get_scenario_decks();
 	    console.log (selected_deck_names);
 	    
-		selected_deck_names[3] = {name: "Living Spirit", class: "Living Spirit", level: "1"};
+		selected_deck_names[3] = {name: "PC Lee", class: "PC", level: "1"};
 	    	console.log (selected_deck_names);
 	    decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
