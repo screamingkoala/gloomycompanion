@@ -1593,8 +1593,6 @@ function update_stats(){
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
 		console.log(el_style);
-		console.log(color);
-		console.log(element);
 		console.log(el_style == '20px solid rgb(152, 176, 181)');
 		
 		//if it's strong, make it waning
@@ -1617,7 +1615,7 @@ function update_stats(){
 		else if (el_style =="20px solid rgb(255, 255, 255)" && is_it_locked == 'false')
 			{
 			
-			document.getElementById(element).style.border = "20px solid rgb(152,176,181)";
+			document.getElementById(element).style.border = "20px solid rgb(152, 176, 181)";
 			}
 	
 		//document.getElementById(element).style.border = "thick solid #0000FF"; && is_it_locked
