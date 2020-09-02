@@ -1597,7 +1597,7 @@ function update_stats(){
 		
 		//if it's strong, make it waning
 		
-		if (el_style == '20px solid rgb(152, 176, 181)') 
+		if (el_style == "20px solid rgb(152, 176, 181)") 
 			{
 			document.getElementById(element).style.border = "20px dashed rgb(152, 176, 181);";
 			console.log("This should wane now");
@@ -1605,7 +1605,7 @@ function update_stats(){
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == '20px dashed rgb(152,176,181)')
+		else if (el_style == "20px dashed rgb(152,176,181)")
 
 			{
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
