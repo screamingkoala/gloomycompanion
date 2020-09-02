@@ -1591,7 +1591,7 @@ function update_stats(){
 		}
 				
 		el_style = window.getComputedStyle(document.getElementById(element));
-		//el_style=el_style.border;
+		el_style=el_style.border;
 		console.log(el_style);
 		console.log(color);
 		console.log(element);
