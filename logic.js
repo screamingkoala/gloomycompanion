@@ -1371,7 +1371,7 @@ function init() {
         var selected_deck_names = scenariolist.get_scenario_decks();
 	console.log("selected_deck_names:" + selected_deck_names);
 	for(var property in selected_deck_names) {
-		   console.log(property + "=" + obj[property]);
+		   console.log(property + "=" + selected_deck_names[property]);
 		}	    
 	    
         decklist.set_selection(selected_deck_names);
