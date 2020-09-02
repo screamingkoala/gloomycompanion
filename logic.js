@@ -1596,17 +1596,17 @@ function update_stats(){
 		
 		//if it's strong, make it waning
 		
-		if (el_style == '20px solid rgb(255, 0, 0)') 
+		if (el_style == '20px solid rgb(152,176,181)') 
 			{
-			document.getElementById(element).style.border = "20px dashed red";
+			document.getElementById(element).style.border = "20px dashed rgb(152,176,181)";
 			}
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == '20px dashed rgb(255, 0, 0)')
+		else if (el_style == '20px dashed rgb(152,176,181)')
 
 			{
-			document.getElementById(element).style.border = "20px  solid  white";
+			document.getElementById(element).style.border = "20px solid rgb(255,255,255)";
 			}
 			
 		//if it's inert, make it strong, but only if not locked i.e. not from a button press
