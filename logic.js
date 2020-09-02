@@ -1185,7 +1185,6 @@ function ScenarioList(scenarios) {
 	
   
    return (this.decks[this.get_selection()].map(function(deck) {
-     console.log("deck: " + deck);
 
      if (DECKS[deck.name]) {
        deck.class = DECKS[deck.name].class;
@@ -1373,7 +1372,7 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	    console.log (JSON.parse(selected_deck_names));
+	    console.log (selected_deck_names);
 	    
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
