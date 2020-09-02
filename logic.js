@@ -1114,10 +1114,7 @@ function DeckList() {
             deck.level = decklist.level_selectors[name].get_selection();
             return deck;
         }.bind(this)));
-	console.log("selected decks" + JSON.stringify(selected_decks));
-	console.log("DECKS" + DECKS[0]);
-	console.log("DECKS[name]" + DECKS[name]);
-	console.log("[name]" + name);
+
         return selected_decks;
     }
 
@@ -1184,27 +1181,23 @@ function ScenarioList(scenarios) {
         }
     }
 
-    scenariolist.get_scenario_decks = function () {
-        return (this.decks[this.get_selection()].map(function (deck) {
-			console.log("DECKS[deck.name]" + JSON.stringify(DECKS[deck.name]));
-		console.log("DECKS[deck.name]" +  DECKS[deck.name]);
-	    console.log("deck.name" + deck.name);
-	    console.log("deck.name.indexOf(Boss)" + deck.name.indexOf("Boss"));
-	    console.log("deck.level" + deck.level);
+ scenariolist.get_scenario_decks = function() { 
+   console.log("Once");
+   return (this.decks[this.get_selection()].map(function(deck) {
+     console.log("deck: " + deck);
 
-						  
-            if (DECKS[deck.name]) {
-                deck.class = DECKS[deck.name].class;
-	
-            } else if (deck.name.indexOf("Boss") != -1) {
-             
-		 deck.class = DECKS["Boss"].class;
-            }
-            deck.level = scenariolist.get_level(deck.name, scenariolist.get_special_rules());
+     if (DECKS[deck.name]) {
+       deck.class = DECKS[deck.name].class;
 
-            return deck;
-        }));
-    }
+     } else if (deck.name.indexOf("Boss") != -1) {
+
+       deck.class = DECKS["Boss"].class;
+     }
+     deck.level = scenariolist.get_level(deck.name, scenariolist.get_special_rules());
+
+     return deck;
+   }));
+ }
 
     scenariolist.get_special_rules = function () {
         return this.special_rules[this.get_selection()];
