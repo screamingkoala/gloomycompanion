@@ -1183,11 +1183,6 @@ function ScenarioList(scenarios) {
 
  scenariolist.get_scenario_decks = function() { 
 
-
-	 
-
-	    console.log(decks[get_selection()]);
-   console.log(deck);	 
   
    return (this.decks[this.get_selection()].map(function(deck) {
      console.log("deck: " + deck);
