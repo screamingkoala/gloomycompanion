@@ -1605,11 +1605,10 @@ function update_stats(){
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == "20px dashed rgb(152, 176, 181)")
-
+		else if (el_style == "20px dashed rgb(152, 176, 181)") 
 			{
-			console.log(el_style);
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
+			
 			}
 			
 		//if it's inert, make it strong, but only if not locked i.e. not from a button press
