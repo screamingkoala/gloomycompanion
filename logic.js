@@ -1592,15 +1592,13 @@ function update_stats(){
 				
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		alert(el_style);
-		alert(color);
 		
 		//if it's strong, make it waning
 		
-		if (el_style == '20px solid rgb(152,176,181);') 
-			{
+		//if (el_style == '20px solid rgb(152,176,181);') 
+		//	{
 			document.getElementById(element).style.border = "20px dashed rgb(152,176,181)";
-			}
+		//	}
 			
 		//if it's waning, make it inert
 		
