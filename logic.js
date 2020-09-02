@@ -1182,7 +1182,12 @@ function ScenarioList(scenarios) {
 
     scenariolist.get_scenario_decks = function () {
         return (this.decks[this.get_selection()].map(function (deck) {
-			
+	    console.log("DECKS[deck.name]" + DECKS[deck.name]);
+	    console.log("deck.name" + deck.name);
+	    console.log("deck.name.indexOf(Boss)" + deck.name.indexOf("Boss"));
+	    console.log("deck.level" + deck.level);
+
+						  
             if (DECKS[deck.name]) {
                 deck.class = DECKS[deck.name].class;
 	
@@ -1191,7 +1196,7 @@ function ScenarioList(scenarios) {
 		 deck.class = DECKS["Boss"].class;
             }
             deck.level = scenariolist.get_level(deck.name, scenariolist.get_special_rules());
-	    console.log("DECK" + deck);
+
             return deck;
         }));
     }
@@ -1369,16 +1374,7 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	console.log("selected_deck_names:" + selected_deck_names);
-	for(var property in selected_deck_names) {
-		   console.log(property + "=" + selected_deck_names[property][0]);
-		console.log(typeof selected_deck_names[0]);
-		console.log(typeof selected_deck_names[1]);								 
-		console.log(typeof selected_deck_names);								    
-		console.log(property + "=" + selected_deck_names[property][1]);
-		console.log(property + "=" + selected_deck_names[property][2]);
-		console.log(property + "=" + selected_deck_names[property][3]);
-		}	    
+	    
 	    
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
