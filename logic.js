@@ -1583,7 +1583,7 @@ function update_stats(){
 	}
 	
 	change_element_border = function (element,is_it_locked){
-		
+		console.log("what");
 		switch(element){
 			case "element_air":
     				color = "rgb(152, 176, 181)";
