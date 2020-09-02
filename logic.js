@@ -1605,7 +1605,7 @@ function update_stats(){
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == "20px dashed rgb(152,176,181)")
+		else if (el_style == "20px dashed rgb(152, 176, 181)")
 
 			{
 			console.log(el_style);
