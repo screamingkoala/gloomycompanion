@@ -1592,7 +1592,8 @@ function update_stats(){
 				
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		
+		alert(el_style);
+		alert(color);
 		
 		//if it's strong, make it waning
 		
