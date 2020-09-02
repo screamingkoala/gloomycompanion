@@ -1371,7 +1371,10 @@ function init() {
         var selected_deck_names = scenariolist.get_scenario_decks();
 	console.log("selected_deck_names:" + selected_deck_names);
 	for(var property in selected_deck_names) {
-		   console.log(property + "=" + selected_deck_names[property][0]);
+		   console.log(property + "=" + selected_deck_names[property][0][0][);
+		console.log(typeof selected_deck_names[0]);
+		console.log(typeof selected_deck_names[1]);								 
+		console.log(typeof selected_deck_names);								    
 		console.log(property + "=" + selected_deck_names[property][1]);
 		console.log(property + "=" + selected_deck_names[property][2]);
 		console.log(property + "=" + selected_deck_names[property][3]);
