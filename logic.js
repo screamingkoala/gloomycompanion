@@ -1599,7 +1599,7 @@ function update_stats(){
 		
 		if (el_style == "20px solid " + color) 
 			{
-			document.getElementById(element).style.border = "20px dashed " +color); 
+			document.getElementById(element).style.border = "20px dashed " +color; 
 			
 			}
 			
