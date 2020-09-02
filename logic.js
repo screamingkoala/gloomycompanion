@@ -1373,7 +1373,11 @@ function init() {
 	for(var property in selected_deck_names) {
 		   console.log(property + "=" + selected_deck_names[property]);
 		}	    
-	    
+	 for(var property in selected_deck_names) {
+		  for(var property2 in property) {
+		   console.log(property + "=" + property[property2]);
+		}	 
+		}	    
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
