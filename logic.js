@@ -1597,15 +1597,15 @@ function update_stats(){
 		
 		//if it's strong, make it waning
 		
-		if (el_style == concat("20px solid ", color)) 
+		if (el_style == "20px solid " + color) 
 			{
-			document.getElementById(element).style.border = concat("20px dashed ", color);
+			document.getElementById(element).style.border = "20px dashed " +color); 
 			
 			}
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == concat("20px dashed ", color)) 
+		else if (el_style == "20px dashed " +color) 
 			{
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
 			
