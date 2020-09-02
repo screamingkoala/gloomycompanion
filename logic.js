@@ -1608,6 +1608,7 @@ function update_stats(){
 		else if (el_style == "20px dashed rgb(152,176,181)")
 
 			{
+			console.log(el_style);
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
 			}
 			
