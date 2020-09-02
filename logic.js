@@ -1560,7 +1560,6 @@ function update_stats(){
 	
 	element_air.onclick = function () {
 		change_element_border('element_air','false')
-		console.log('foo');
 	}
 	
 	element_earth.onclick = function () {
@@ -1584,7 +1583,7 @@ function update_stats(){
 	}
 	
 	change_element_border = function (element,is_it_locked){
-		console.log("what");
+		
 		switch(element){
 			case "element_air":
     				color = "rgb(152, 176, 181)";
@@ -1605,10 +1604,10 @@ function update_stats(){
     				color = "rgb(32, 40, 48)";
     				break;
 		}
-				
+		console.log(color);		
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		
+		console.log(el_style);	
 		//if it's strong, make it waning
 		
 		if (el_style == "20px solid " + color) 
