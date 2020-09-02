@@ -1186,7 +1186,7 @@ function ScenarioList(scenarios) {
 
     scenariolist.get_scenario_decks = function () {
         return (this.decks[this.get_selection()].map(function (deck) {
-
+			console.log("DECKS[deck.name]" + JSON.stringify(DECKS[deck.name]));
 		console.log("DECKS[deck.name]" +  DECKS[deck.name]);
 	    console.log("deck.name" + deck.name);
 	    console.log("deck.name.indexOf(Boss)" + deck.name.indexOf("Boss"));
