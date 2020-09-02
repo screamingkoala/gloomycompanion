@@ -1191,7 +1191,7 @@ function ScenarioList(scenarios) {
 		 deck.class = DECKS["Boss"].class;
             }
             deck.level = scenariolist.get_level(deck.name, scenariolist.get_special_rules());
-	    console.log("DECK" + deck");
+	    console.log("DECK" + deck);
             return deck;
         }));
     }
