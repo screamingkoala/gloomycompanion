@@ -1114,6 +1114,10 @@ function DeckList() {
             deck.level = decklist.level_selectors[name].get_selection();
             return deck;
         }.bind(this)));
+	console.log("selected decks" + selected_decks);
+	console.log("DECKS" + DECKS[0]);
+	console.log("DECKS[name]" + DECKS[name]);
+	console.log("[name]" + name);
         return selected_decks;
     }
 
