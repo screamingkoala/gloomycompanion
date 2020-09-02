@@ -1599,7 +1599,7 @@ function update_stats(){
 		
 		if (el_style == "20px solid rgb(152, 176, 181)") 
 			{
-			document.getElementById(element).style.border = "20px dashed rgb(152, 176, 181)";
+			document.getElementById(element).style.border = "30px solid rgb(152, 176, 181)";
 			console.log("This should wane now");
 			}
 			
