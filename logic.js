@@ -1596,14 +1596,14 @@ function update_stats(){
 		
 		//if it's strong, make it waning
 		
-		if (el_style == '20px solid rgb(152,176,181)') 
+		if (el_style == '20px solid rgb(152,176,181);') 
 			{
 			document.getElementById(element).style.border = "20px dashed rgb(152,176,181)";
 			}
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == '20px dashed rgb(152,176,181)')
+		else if (el_style == '20px dashed rgb(152,176,181);')
 
 			{
 			document.getElementById(element).style.border = "20px solid rgb(255,255,255)";
@@ -1611,7 +1611,7 @@ function update_stats(){
 			
 		//if it's inert, make it strong, but only if not locked i.e. not from a button press
 		
-		else if (el_style =="20px solid rgb(255, 255, 255)" && is_it_locked == 'false')
+		else if (el_style =="20px solid rgb(255, 255, 255);" && is_it_locked == 'false')
 			{
 			
 			document.getElementById(element).style.border = "20px solid rgb(152,176,181)";
