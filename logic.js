@@ -1371,13 +1371,12 @@ function init() {
         var selected_deck_names = scenariolist.get_scenario_decks();
 	console.log("selected_deck_names:" + selected_deck_names);
 	for(var property in selected_deck_names) {
-		   console.log(property + "=" + selected_deck_names[property]);
+		   console.log(property + "=" + selected_deck_names[property][0]);
+		console.log(property + "=" + selected_deck_names[property][1]);
+		console.log(property + "=" + selected_deck_names[property][2]);
+		console.log(property + "=" + selected_deck_names[property][3]);
 		}	    
-	 for(var property in selected_deck_names) {
-		  for(var property2 in property) {
-		   console.log(property + "=" + property[property2]);
-		}	 
-		}	    
+	    
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
