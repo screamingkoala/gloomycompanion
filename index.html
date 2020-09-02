@@ -1,103 +1,120 @@
 <!DOCTYPE html>
 <html manifest="app.manifest">
-    <head>
-        <title>GloomyPal</title>
-        <link rel="apple-touch-icon" sizes="192x192" href="images/icon.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="images/icon.png" />
-        <link rel="manifest" href="app.webmanifest" />
-        <link rel="stylesheet" href="cards.css" />
-        <link rel="stylesheet" href="style.css" />
-        <meta charset="UTF-8">
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content=" fsblack" />
-        <meta name="apple-mobile-web-app-title" content="Gloomy Companion" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script type="text/javascript" src="util.js"></script>
-        <script type="text/javascript" src="cards.js"></script>
-        <script type="text/javascript" src="scenarios.js"></script>
-        <script type="text/javascript" src="macros.js"></script>
-        <script type="text/javascript" src="modifiers.js"></script>
-        <script type="text/javascript" src="monster_stats.js"></script>
-        <script type="text/javascript" src="logic.js"></script>
-        <script type="text/javascript" src="ui.js"></script>
-    </head>
-    <body onload="init(); init_ui();">
-        <div class="panecontainer">
-            <div id="settingspane" class="pane expanded">
-                <ul class="tabcontainer">
-                    <li id="scenariotab">Scenario</li>
-                    <li id="deckstab">Monsters</li>
-                </ul>
-                <div id="scenariospage" class="tabbody">
-					Level Modifier<input type="number"  id ="level_modifier" min="-4" max="4" value="0">
-					<TABLE></TD>
-					<TH></TH><TH>Name</TH><TH>Level</TH>
-					<TR><TD><input name="player_active" type="checkbox"></TD><TD><input type="text" name="player_name" id ="player_name_one"></TD><TD><input type="number" name="player_level" id ="player_level_one" min="1" max="9" value="1"></TD></TR>
-					<TR><TD><input name="player_active" type="checkbox"></TD><TD><input type="text" name="player_name" id ="player_name_two"></TD><TD><input type="number" name="player_level" id ="player_level_two" min="1" max="9" value="1"></TD></TR>
-					<TR><TD><input name="player_active" type="checkbox"></TD><TD><input type="text" name="player_name" id ="player_name_three"></TD><TD><input type="number" name="player_level" id ="player_level_three" min="1" max="9" value="1"></TD></TR>
-					<TR><TD><input name="player_active" type="checkbox"></TD><TD><input type="text" name="player_name" id ="player_name_four"></TD><TD><input type="number" name="player_level" id ="player_level_four" min="1" max="9" value="1"></TD></TR>
-					<TR><TD><input name="player_active" type="checkbox"></TD><TD><input type="text" name="player_name" id ="player_name_five"></TD><TD><input type="number" name="player_level" id ="player_level_five" min="1" max="9" value="1"></TD></TR>
-					</TABLE>
-					
-					<BR>
-                    <input id="showmodifierdeck" type="checkbox"  /><label for="showmodifierdeck">Show Monster Modifier Deck</label>
-                    <br>
-                    <input id="applyscenario" type="button" value="Load Scenario" />
-		    <br>
-                    <input id="applysave" type="button" value="Save Party" />
-                    <br>
-                    <input id="applyload" type="button" value="Load Party" />
-					<br>
-					<br>
-					
-					
-					
-					<TABLE>
-					<TR><TH>Monster Level:</TH><TH id="monster_level">0</TH></TR>
-					<TR><TH>Gold Conversion:</TH><TH id="gold_level">0</TH></TR>
-					<TR><TH>Trap Damage:</TH><TH id="trap_damage">0</TH></TR>
-					<TR><TH>Bonus XP</TH><TH id="bonus_xp">0</TH></TR>
-					</TABLE>
-                    <br>
-				
-					
-                </div>
-                <div id="deckspage" class="tabbody">
-		    <input id="applydecks" type="button" value="Apply" />
-                    <input id="showmodifierdeck-deckspage" type="checkbox"  /><label for="showmodifierdeck-deckspage">Show Monster Modifier Deck</label>
-                    
-                </div>
+   <head>
+      <title>GloomyPal</title>
+      <link rel="apple-touch-icon" sizes="192x192" href="images/icon.png" />
+      <link rel="icon" type="image/png" sizes="192x192" href="images/icon.png" />
+      <link rel="manifest" href="app.webmanifest" />
+      <link rel="stylesheet" href="cards.css" />
+      <link rel="stylesheet" href="style.css" />
+      <meta charset="UTF-8">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content=" fsblack" />
+      <meta name="apple-mobile-web-app-title" content="Gloomy Companion" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script type="text/javascript" src="util.js"></script>
+      <script type="text/javascript" src="cards.js"></script>
+      <script type="text/javascript" src="scenarios.js"></script>
+      <script type="text/javascript" src="macros.js"></script>
+      <script type="text/javascript" src="modifiers.js"></script>
+      <script type="text/javascript" src="monster_stats.js"></script>
+      <script type="text/javascript" src="logic.js"></script>
+      <script type="text/javascript" src="ui.js"></script>
+   </head>
+   <body onload="init(); init_ui();">
+      <div class="panecontainer">
+         <div id="settingspane" class="pane expanded">
+            <ul class="tabcontainer">
+               <li id="scenariotab">Scenario</li>
+               <li id="playerstab">Players</li>
+               <li id="deckstab">Monsters</li>
+            </ul>
+
+            <div id="scenariospage" class="tabbody">
+               <input id="applyscenario" type="button" value="Load Scenario" />
             </div>
-            <div id="cancelarea">
+
+            <div id="playerspage" class="tabbody">
+               <TABLE>
+                  <TR>
+                     <TH></TH>
+                     <TH>Name</TH>
+                     <TH>Level</TH>
+                  </TR>
+                  <TR>
+                     <TD><input name="player_active" type="checkbox"></TD>
+                     <TD><input type="text" name="player_name" id ="player_name_one"></TD>
+                     <TD><input type="number" name="player_level" id ="player_level_one" min="1" max="9" value="1"></TD>
+                  </TR>
+                  <TR>
+                     <TD><input name="player_active" type="checkbox"></TD>
+                     <TD><input type="text" name="player_name" id ="player_name_two"></TD>
+                     <TD><input type="number" name="player_level" id ="player_level_two" min="1" max="9" value="1"></TD>
+                  </TR>
+                  <TR>
+                     <TD><input name="player_active" type="checkbox"></TD>
+                     <TD><input type="text" name="player_name" id ="player_name_three"></TD>
+                     <TD><input type="number" name="player_level" id ="player_level_three" min="1" max="9" value="1"></TD>
+                  </TR>
+                  <TR>
+                     <TD><input name="player_active" type="checkbox"></TD>
+                     <TD><input type="text" name="player_name" id ="player_name_four"></TD>
+                     <TD><input type="number" name="player_level" id ="player_level_four" min="1" max="9" value="1"></TD>
+                  </TR>
+                  <TR>
+                     <TD><input name="player_active" type="checkbox"></TD>
+                     <TD><input type="text" name="player_name" id ="player_name_five"></TD>
+                     <TD><input type="number" name="player_level" id ="player_level_five" min="1" max="9" value="1"></TD>
+                  </TR>
+               </TABLE>
+               <input id="applysave" type="button" value="Save Party" />
+
+               <input id="applyload" type="button" value="Load Party" />
+               <br>
+               <br>
+
+          
+                     
+               <br>
             </div>
-        </div>
-        
-            <input alt="Configure" id="settingsbtn" type="image" src="images/settings.svg" />
-			<div>
-			<input id="new_round" type="button" value="Start Game" />
-			<input id="sort_cards" type="button" value="Sort" />
-			<input id="end_round" type="button" value="End Round" />	</LI>					
-			</div>	
-			
-			<a class="element"   style="border:3px solid black" title=""><b>1</b><img src="images/air.svg" height="100" width="100" id="element_air" style="border:20px solid white"></a>
-			<a class="element"   style="border:3px solid black" title=""><b>2</b><img src="images/earth.svg" height="100" width="100" id="element_earth" style="border:20px solid white"></a>
-			<a class="element"   style="border:3px solid black" title=""><b>3</b><img src="images/fire.svg" height="100" width="100" id="element_fire" style="border:20px solid white"></a>
-			<a class="element"   style="border:3px solid black" title=""><b>4</b><img src="images/ice.svg" height="100" width="100" id="element_ice"style="border:20px solid white"></a>
-			<a class="element"   style="border:3px solid black" title=""><b>5</b><img src="images/light.svg" height="100" id="element_light" width="100" style="border:20px solid white"></a>
-			<a class="element"  style="border:3px solid black"  title=""><b>6</b><img src="images/dark.svg" height="100" id="element_dark" width="100" style="border:20px solid white"></a>
-			
-			
-			</UL>
-			
-            <div id="currentdecks">
-                <ul id="currentdeckslist" class="currentdeckslist">
-				
-                </ul>
+
+            <div id="deckspage" class="tabbody">
+               <input id="applydecks" type="button" value="Apply" />
+               <input id="showmodifierdeck-deckspage" type="checkbox"  /><label for="showmodifierdeck-deckspage">Show Monster Modifier Deck</label>
             </div>
-        </div>
-        <div id="tableau" style="font-size: 26.6px;"> <!-- base font size for all cards. Placed here to make it adjustable from javascript -->
-		
-        </div>
-    </body>
+
+         </div>
+         <div id="cancelarea">
+         </div>
+      </div>
+      <input alt="Configure" id="settingsbtn" type="image" src="images/settings.svg" />
+      <div>
+         <input id="new_round" type="button" value="Start Game" />
+         <input id="sort_cards" type="button" value="Sort" />
+         <input id="end_round" type="button" value="End Round" />
+	<table>
+<TR>
+<TH id= scenariro_Level></TH>
+<TH id= gold_conversion></TH>
+<TH id= trap_damage></TH>
+<TH id =bonus_xp></TH>           
+</TR>
+</table>              
+              	
+      </div>
+      <a class="element"   style="border:3px solid black" title=""><b>1</b><img src="images/air.svg" height="100" width="100" id="element_air" style="border:20px solid white"></a>
+      <a class="element"   style="border:3px solid black" title=""><b>2</b><img src="images/earth.svg" height="100" width="100" id="element_earth" style="border:20px solid white"></a>
+      <a class="element"   style="border:3px solid black" title=""><b>3</b><img src="images/fire.svg" height="100" width="100" id="element_fire" style="border:20px solid white"></a>
+      <a class="element"   style="border:3px solid black" title=""><b>4</b><img src="images/ice.svg" height="100" width="100" id="element_ice" style="border:20px solid white"></a>
+      <a class="element"   style="border:3px solid black" title=""><b>5</b><img src="images/light.svg" height="100" id="element_light" width="100" style="border:20px solid white"></a>
+      <a class="element"  style="border:3px solid black"  title=""><b>6</b><img src="images/dark.svg" height="100" id="element_dark" width="100" style="border:20px solid white"></a>
+      <div id="currentdecks">
+         <ul id="currentdeckslist" class="currentdeckslist">
+         </ul>
+      </div>
+      <div id="tableau" style="font-size: 26.6px;">
+         <!-- base font size for all cards. Placed here to make it adjustable from javascript -->
+      </div>
+   </body>
 </html>

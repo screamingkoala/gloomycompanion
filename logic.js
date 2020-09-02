@@ -66,9 +66,11 @@ function create_ability_card_back(name, level) {
 
     var name_span = document.createElement("span");
     name_span.className = "name";
-    name_span.innerText = name + "-" + level;
-    card.appendChild(name_span);
 
+
+    name_span.innerText = name;
+
+    card.appendChild(name_span);
     return card;
 }
 
@@ -82,20 +84,27 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
     name_span.innerText = name + "-" + level;
     card.appendChild(name_span);
 
-	
-	var healthNormal_span = document.createElement("span");
-    healthNormal_span.className = "healthNormal";
-    healthNormal_span.innerText = "HP " + health[0];
-    card.appendChild(healthNormal_span);
-	
+
+        var healthNormal_span = document.createElement("span");
+        healthNormal_span.className = "healthNormal";
+        healthNormal_span.innerText = "HP " + health[0];
+        card.appendChild(healthNormal_span);
+
+
 	if ( health[1] > 0 ) {
 		var healthElite_span = document.createElement("span");
 		healthElite_span.className = "healthElite";
 		healthElite_span.innerText = "HP " + health[1];
 		card.appendChild(healthElite_span);
 	}
-	
-	
+
+   
+	if(name.substring(0,2)=="PC"){		
+		healthNormal_span.innerText = "";
+		healthElite_span.innerText = "";
+	}
+
+
     var initiative_span = document.createElement("span");
     initiative_span.className = "initiative";
     initiative_span.innerText = initiative;
@@ -160,10 +169,18 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
             current_parent = list_item;
         }
 
-        text = expand_string(line.trim(), attack, move, range);
-        current_parent.insertAdjacentHTML("beforeend", text);
+        
+	
+	    text = expand_string(line.trim(), attack, move, range);
+            current_parent.insertAdjacentHTML("beforeend", text);
+	
+		
+	
+        
     }
 
+	
+	 
     return card;
 }
 
@@ -1027,6 +1044,8 @@ function LevelSelector(text, inline) {
     listitem.innerText = text;
     level.html.appendChild(listitem);
 
+
+
     var level_spinner = create_input("number", "scenario_number", "1", "");
     level_spinner.input.min = 0;
     level_spinner.input.max = max_level;
@@ -1054,7 +1073,7 @@ function DeckList() {
 
 
     var listitem = document.createElement("li");
-    var global_level_selector = new LevelSelector("Select global level ", true);
+    var global_level_selector = new LevelSelector("Select scenario level ", true);
     listitem.appendChild(global_level_selector.html);
     decklist.global_level_selector = global_level_selector;
 
@@ -1124,7 +1143,7 @@ function ScenarioList(scenarios) {
     scenariolist.special_rules = {};
     scenariolist.level_selector = null;
 
-    scenariolist.level_selector = new LevelSelector("Select level", false);
+    scenariolist.level_selector = new LevelSelector("Select scenario level", false);
 
     scenariolist.ul.appendChild(scenariolist.level_selector.html);
 
@@ -1326,7 +1345,25 @@ function init() {
     }
     
     applyscenariobtn.onclick = function () {
-       
+	
+	base_level = scenariolist.level_selector.get_selection();
+
+	if (base_level == 7){
+		gold=6;
+	}
+	else{
+		gold = Math.floor(base_level/2)+2;
+	}
+	
+	trap_damage = 2 + Number(base_level);
+	
+	bonus_xp = 4 + (base_level *2);
+
+	document.querySelector("#scenariro_Level").innerHTML = "Scenario Level: " + base_level ;
+	document.querySelector("#gold_conversion").innerHTML = "Gold Conversion: " + gold;
+	document.querySelector("#trap_damage").innerHTML = "Trap Damage:" + trap_damage;
+	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
+
         var selected_deck_names = scenariolist.get_scenario_decks();
         
         decklist.set_selection(selected_deck_names);
@@ -1335,12 +1372,11 @@ function init() {
         });
         apply_deck_selection(selected_decks, false);
         var modifier_deck_section = document.getElementById("modifier-container");
-        if(!showmodifierdeck.checked){
-            modifier_deck_section.style.display = "none";
-        }
-        else{
-            modifier_deck_section.style.display = "block";
-        }
+        
+        modifier_deck_section.style.display = "none";
+
+	
+
     };
 
     
