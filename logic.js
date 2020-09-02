@@ -1594,6 +1594,7 @@ function update_stats(){
 		el_style=el_style.border;
 		console.log(el_style);
 		console.log(color);
+		console.log(element);
 		
 		//if it's strong, make it waning
 		
