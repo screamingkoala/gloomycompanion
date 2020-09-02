@@ -1599,6 +1599,7 @@ function update_stats(){
 		
 		if (el_style == "20px solid " + color) 
 			{
+			console.log("fade")
 			document.getElementById(element).style.border = "20px dashed " +color; 
 			
 			}
@@ -1607,6 +1608,7 @@ function update_stats(){
 		
 		else if (el_style == "20px dashed " +color) 
 			{
+			console.log("vanish")
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
 			
 			}
