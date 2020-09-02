@@ -1599,13 +1599,13 @@ function update_stats(){
 		
 		if (el_style == concat("20px solid ", color)) 
 			{
-			document.getElementById(element).style.border = "20px dashed rgb(152, 176, 181)";
+			document.getElementById(element).style.border = concat("20px dashed ", color);
 			
 			}
 			
 		//if it's waning, make it inert
 		
-		else if (el_style == "20px dashed rgb(152, 176, 181)") 
+		else if (el_style == concat("20px dashed ", color)) 
 			{
 			document.getElementById(element).style.border = "20px solid rgb(255, 255, 255)";
 			
