@@ -1569,6 +1569,27 @@ function update_stats(){
 	
 	change_element_border = function (element,is_it_locked){
 		
+		switch(element){
+			case element_air:
+    				color = "rgb(152,176,181)";
+    				break;
+			case element_earth:
+    				color = "rgb(125,168,42)";
+    				break;
+			case element_fire:
+    				color = "rgb(226,66,31)";
+    				break;
+			case element_ice:
+    				color = "rgb(86,200,239)";
+    				break;
+			case element_light:
+    				color = "rgb(236,166,16)";
+    				break;
+			case element_dark:
+    				color = "rgb(32,40,48)";
+    				break;
+		}
+				
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
 		
