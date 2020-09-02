@@ -1366,11 +1366,13 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
+	console.log("foo");
         console.log(selected_deck_names);
         decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
             return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
         });
+	console.log("more foo");
 	console.log(selected_decks);
         apply_deck_selection(selected_decks, false);
         var modifier_deck_section = document.getElementById("modifier-container");
