@@ -1592,12 +1592,12 @@ function update_stats(){
 				
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		console.log("'20px solid " +color+"'");
-		console.log(el_style == "'20px solid " +color+"'");
+		console.log("20px solid " +color);
+		console.log(el_style == "20px solid " +color);
 		
 		//if it's strong, make it waning
 		
-		if (el_style == "'20px solid " +color+"'") 
+		if (el_style == "20px solid " +color+) 
 			{
 			document.getElementById(element).style.border = "20px dashed rgb(152, 176, 181)";
 			
@@ -1616,7 +1616,7 @@ function update_stats(){
 		else if (el_style =="20px solid rgb(255, 255, 255)" && is_it_locked == 'false')
 			{
 			
-			document.getElementById(element).style.border = "'20px solid " +color+"'";
+			document.getElementById(element).style.border = "20px solid " +color;
 			}
 	
 		//document.getElementById(element).style.border = "thick solid #0000FF"; && is_it_locked
