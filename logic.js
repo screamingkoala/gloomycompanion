@@ -1372,13 +1372,13 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	    console.log (selected_deck_names);
+	    
 	    	
 		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Jonathon", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Kim", class: "PC", level: "1"};
-	    	console.log (selected_deck_names);
+	    
 	    
 	    decklist.set_selection(selected_deck_names);
         var selected_decks = selected_deck_names.map(function (deck_names) {
@@ -1560,6 +1560,7 @@ function update_stats(){
 	
 	element_air.onclick = function () {
 		change_element_border('element_air','false')
+		console.log('foo');
 	}
 	
 	element_earth.onclick = function () {
