@@ -1185,13 +1185,13 @@ function ScenarioList(scenarios) {
 			
             if (DECKS[deck.name]) {
                 deck.class = DECKS[deck.name].class;
-		console.log(deck.name);
+	
             } else if (deck.name.indexOf("Boss") != -1) {
-                 console.log(deck.name.indexOf("Boss"));
+             
 		 deck.class = DECKS["Boss"].class;
             }
             deck.level = scenariolist.get_level(deck.name, scenariolist.get_special_rules());
-	    console.log(deck.level);
+	
             return deck;
         }));
     }
