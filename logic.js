@@ -496,7 +496,7 @@ function draw_ability_card(deck) {
 	
 	
 	write_to_storage(deck.name, JSON.stringify(deck));
-	console.log(deck.class+" " + visible_deck.class);
+	console.log(deck.class);
 }
 
 function prevent_pull_animation(deck) {
