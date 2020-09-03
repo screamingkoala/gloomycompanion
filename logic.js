@@ -496,7 +496,7 @@ function draw_ability_card(deck) {
 	
 	
 	write_to_storage(deck.name, JSON.stringify(deck));
-	console.log(deck.class);
+	
 }
 
 function prevent_pull_animation(deck) {
@@ -873,8 +873,11 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
         if (preserve_existing_deck_state) {
 
         }
+	
+	//If it's a PC, don't flip on click
+	
         deck_space.onclick = draw_ability_card.bind(null, deck);
-		
+	console.log(deck.name); 
 		
 		
 		
