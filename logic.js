@@ -875,9 +875,10 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
         }
 	
 	//If it's a PC, don't flip on click
-	
+	if (deck.name.substring(0,2) != "PC"){
         deck_space.onclick = draw_ability_card.bind(null, deck);
-	console.log(deck.name); 
+	}
+	console.log(deck.name.substring(0,2)); 
 		
 		
 		
