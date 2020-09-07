@@ -1416,6 +1416,13 @@ function init() {
 
 	//Run the 'end round' sequence
 	end_round();
+	// Lower the elements, passing 'true' to ensure they don't loop inert to strong
+	change_element_border('element_fire','true');
+	change_element_border('element_air','true');
+	change_element_border('element_ice','true');
+	change_element_border('element_earth','true');
+	change_element_border('element_light','true');
+	change_element_border('element_dark','true');
 	
 	//New Round! Update the button!
 		
@@ -1538,18 +1545,7 @@ function update_stats(){
 		
 	}
 	
-	end_roundbtn.onclick = function () {
-		if (confirm('Are you sure you want to end the round? Don\'t forget to right click any monsters no longer in play first.')) {
-		// Lower the elements, passing 'true' to ensure they don't loop inert to strong
-		change_element_border('element_fire','true');
-		change_element_border('element_air','true');
-		change_element_border('element_ice','true');
-		change_element_border('element_earth','true');
-		change_element_border('element_light','true');
-		change_element_border('element_dark','true');
-		
-		}
-	}
+	
 	
 	
 
