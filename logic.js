@@ -1546,7 +1546,7 @@ function update_stats(){
 	}
 	
 	
-	}
+	
 	
 	
 
