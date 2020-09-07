@@ -1416,7 +1416,7 @@ function init() {
 	}
 	
 
-	if (confirm('Are you sure you want to put in new initiatives for Round ' + round + '? Make to sure right click any monsters to deactivat them first')) {
+	if (confirm(message)) {
 
 	//Run the 'end round' sequence
 	end_round();
