@@ -1410,12 +1410,8 @@ function init() {
 	round = round.substring(6,10);
 	if (round == 'Game'){round=0};
 	round=parseInt(round, 10)+1;
-	message = 'Are you sure you want to put in new initiatives for Round ' + round + '?';
-	if (round !=1){
-		message += ' Make to sure right click any missing monsters to deactivate them first';
-	}
+	message = 'Are you sure you want to put in new initiatives for Round ' + round + '? \ Make to sure right click any missing monsters to deactivate them first';
 	
-
 	if (confirm(message)) {
 
 	//Run the 'end round' sequence
