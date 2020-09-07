@@ -1415,13 +1415,6 @@ function init() {
 	if (confirm(message)) {
 
 	//Run the 'end round' sequence
-	// Lower the elements, passing 'true' to ensure they don't loop inert to strong
-	change_element_border('element_fire','true');
-	change_element_border('element_air','true');
-	change_element_border('element_ice','true');
-	change_element_border('element_earth','true');
-	change_element_border('element_light','true');
-	change_element_border('element_dark','true');
 	end_round();
 	
 	//New Round! Update the button!
@@ -1546,7 +1539,7 @@ function update_stats(){
 	}
 	
 	
-	
+	}
 	
 	
 
@@ -1652,7 +1645,4 @@ function update_stats(){
 	
 	
 	
-
-
-
-
+}
