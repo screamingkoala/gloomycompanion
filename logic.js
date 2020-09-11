@@ -1379,7 +1379,11 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	    
+	console.log(document.getElementById('player_check_one'));
+	console.log(document.getElementById('player_check_two'));
+	console.log(document.getElementById('player_check_three'));
+	console.log(document.getElementById('player_check_four'));
+	console.log(document.getElementById('player_check_five'));
 	    	
 		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
