@@ -742,7 +742,7 @@ function load_definition(card_database) {
 }
 
 function get_monster_stats(name, level) {
-   if(name.substring(0,2)!="PC"){
+ 
     var attack = [MONSTER_STATS["monsters"][name]["level"][level]["normal"]["attack"],
         MONSTER_STATS["monsters"][name]["level"][level]["elite"]["attack"]
     ];
@@ -759,14 +759,7 @@ function get_monster_stats(name, level) {
     var health =        [   MONSTER_STATS["monsters"][name]["level"][level]["normal"]["health"],
                             MONSTER_STATS["monsters"][name]["level"][level]["elite"]["health"]
                         ];	
-   }
-   else{
-   	attack=0;
-	move=0;
-	range=0;
-	attributes="";
-	health=0;
-   }   
+   
     return {"attack": attack, "move": move, "range": range, "attributes": attributes, "health": health};
    
 	   
