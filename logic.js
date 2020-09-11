@@ -1389,7 +1389,7 @@ function init() {
 	if (document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
 		//selected_deck_names[selected_deck_names.length] = "{name: \"PC " + document.getElementById("player_name_one").value, class: \"PC\", level: "+ document.getElementById("player_level_one").value+"};
 		console.log("{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
-		string = "{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
+		string = "{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";		
 		console.log(string);
 	}
 	
