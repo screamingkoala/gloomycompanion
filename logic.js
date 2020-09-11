@@ -1393,6 +1393,7 @@ function init() {
 		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
 		console.log(JSON_string);
 		console.log(JSON.parse(JSON_string));
+		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
 		
 	}
 	
