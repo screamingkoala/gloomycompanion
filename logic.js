@@ -1390,7 +1390,7 @@ function init() {
 		//selected_deck_names[selected_deck_names.length] = "{name: \"PC " + document.getElementById("player_name_one").value, class: \"PC\", level: "+ document.getElementById("player_level_one").value+"};
 		console.log("{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
 		JSON_string ="{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";
-		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
+		//selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
 		console.log(JSON_string);
 		console.log(JSON.stringify(JSON_string));
 		selected_deck_names[selected_deck_names.length] = JSON.stringify(JSON_string);
