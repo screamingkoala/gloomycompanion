@@ -1394,13 +1394,16 @@ function init() {
 		//JSON_string ="{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";
 		JSON_string ='{name: "PC ' + document.getElementById("player_name_one").value + '", class: "PC", level: "' + document.getElementById("player_level_one").value+'"}';
 		//selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
+		JSON_String ='{ "name":"John", "age":30, "city":"New York"}';
 		console.log(JSON_string);
 		console.log(JSON.parse(JSON_string));
-		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
+		selected_deck_names[selected_deck_names.length] = JSON.stringify(JSON_string);
 				
 	}
 	
 		//selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
+	    	{name: "PC Lee", class: "PC", level: "1"}
+	        {name: "PC Lee", class: "PC", level: "1"}
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Jonathon", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Kim", class: "PC", level: "1"};
