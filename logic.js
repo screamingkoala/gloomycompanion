@@ -1386,8 +1386,8 @@ function init() {
 	console.log(document.querySelector('#player_check_five:checked') !== null);
 	console.log(document.getElementById("player_name_one").value);
 	    	
-	if (document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != ""){
-		console.log('Yep');
+	if (document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
+		selected_deck_names[selected_deck_names.length] = {name: "PC " + document.getElementById("player_name_one").value, class: "PC", level: "+ document.getElementById("player_level_one").value+"};
 	}
 	
 		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
