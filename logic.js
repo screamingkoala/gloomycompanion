@@ -1398,7 +1398,7 @@ function init() {
 	
 	    
 	 
-	if (document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
+	if (false && document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
 		console.log("5");
 		JSON_string ='{"name":"PC Lee", "class":"PC", "level":"1"}';
 		console.log(JSON_string);
@@ -1417,7 +1417,7 @@ function init() {
 				
 	}
 	
-		//selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
+		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
 	   
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Jonathon", class: "PC", level: "1"};
