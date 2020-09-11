@@ -1402,8 +1402,7 @@ function init() {
 	}
 	
 		//selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
-	    	{name: "PC Lee", class: "PC", level: "1"}
-	        {name: "PC Lee", class: "PC", level: "1"}
+	   
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Jonathon", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Kim", class: "PC", level: "1"};
