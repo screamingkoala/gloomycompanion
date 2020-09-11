@@ -1390,9 +1390,9 @@ function init() {
 	 
 	if (document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
 		//selected_deck_names[selected_deck_names.length] = "{name: \"PC " + document.getElementById("player_name_one").value, class: \"PC\", level: "+ document.getElementById("player_level_one").value+"};
-		console.log("{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
+		console.log("{ name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
 		//JSON_string ="{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";
-		JSON_string ='{name: "PC ' + document.getElementById("player_name_one").value + '", class: "PC", level: "' + document.getElementById("player_level_one").value+'"}';
+		JSON_string ='{ name: "PC ' + document.getElementById("player_name_one").value + '", class: "PC", level: "' + document.getElementById("player_level_one").value+'"}';
 		//selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
 		JSON_String ='{ "name":"John", "age":30, "city":"New York"}';
 		console.log(JSON_string);
