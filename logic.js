@@ -1402,7 +1402,7 @@ function init() {
 		console.log(JSON_string);
 		//console.log(JSON.parse(JSON_string).replace(/\\"/g, '"'));
 		console.log(JSON.parse(JSON_string));
-		console.log(JSON.parse('{name: "PC Greg", class: "PC", level: "1"}'));
+		console.log(JSON.parse('{"name": "PC Greg", "class": "PC", "level": "1"}'));
 		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
 				
 	}
