@@ -1391,7 +1391,7 @@ function init() {
 		console.log("{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
 		string = "{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";		
 		console.log(string);
-		console.log("{name: \"PC Lee\", class: \"PC\", level: \"1\"});
+		console.log("{name: \"PC Lee\", class: \"PC\", level: \"1\"}");
 	}
 	
 //		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
