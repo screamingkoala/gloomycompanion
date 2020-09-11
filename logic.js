@@ -1384,7 +1384,12 @@ function init() {
 	console.log(document.querySelector('#player_check_three:checked') !== null);	
 	console.log(document.querySelector('#player_check_four:checked') !== null);
 	console.log(document.querySelector('#player_check_five:checked') !== null);
+	console.log(document.getElementById("player_name_one").value);
 	    	
+	if (document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != ""){
+		console.log('Yep');
+	}
+	
 		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Greg", class: "PC", level: "1"};
 	    	selected_deck_names[selected_deck_names.length] = {name: "PC Jonathon", class: "PC", level: "1"};
