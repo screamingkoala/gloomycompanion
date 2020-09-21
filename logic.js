@@ -1696,8 +1696,9 @@ function update_stats(){
 	}
 	
 	change_party= function(class_icon){
-		icon_style = window.getComputedStyle(document.getElementById(class_icon).opacity);
+		icon_style = window.getComputedStyle(document.getElementById(class_icon));
 		console.log(icon_style);
+		console.log(icon_style.opacity);
 		
 	}
 	
