@@ -1696,18 +1696,18 @@ function update_stats(){
 	}
 	
 	change_party= function(class_icon){
-		icon_style = window.getComputedStyle(document.getElementById(class_icon));
-		icon_style = icon_style.opacity;
-		if (icon_style == 1){
-			document.getElementById(element).style.opacity = .5;
-		}
-		else{
-			document.getElementById(element).style.opacity = 1;
-		}
+  
+	icon_style = window.getComputedStyle(document.getElementById(class_icon));
+	icon_style = icon_style.opacity;
+	if (icon_style == 1){
+		document.getElementById(class_icon).style.opacity = ".5";
+	}
+	else {
+		document.getElementById(class_icon).style.opacity = "1";
+	}
 		
 		
 	}
-	
 	
     window.onresize = refresh_ui.bind(null, visible_ability_decks);
 	
