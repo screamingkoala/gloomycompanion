@@ -1699,10 +1699,10 @@ function update_stats(){
 		icon_style = window.getComputedStyle(document.getElementById(class_icon));
 		icon_style = icon_style.opacity;
 		if (icon_style == 1){
-			document.getElementById(element).style.opacity = .5
+			document.getElementById(element).style.opacity = .5;
 		}
-		else
-			document.getElementById(element).style.opacity = 1
+		else{
+			document.getElementById(element).style.opacity = 1;
 		}
 		
 		
