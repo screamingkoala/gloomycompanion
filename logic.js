@@ -1319,26 +1319,8 @@ function init() {
 				count=count+1;
 			}
 		}
-		player_names=document.getElementsByName("class_name")
-		player_levels=document.getElementsByName("player_level")
-		total_characters=document.getElementsByName("class_name");
-		var player_array=[];
-		var playercount=0;
-	    	var total_player_levels=0;
 		
-		for (i=0;i < player_levels.length; i++){
-			player_array.push(player_names[i].value, player_levels[i].value)
-			if (player_active[i].checked){
-				playercount++;
-				total_player_levels=total_player_levels+parseInt(player_levels[i].value);
-			}
-				
-		}
-	    	if (playercount){
-			document.getElementsByName("scenario_number")[0].value =Math.ceil(total_player_levels/(playercount*2))
-		}
-		
-		write_to_storage("player_array", JSON.stringify(player_array));
+		write_to_storage("team_array", JSON.stringify(team_array));
 		
 		
 		
