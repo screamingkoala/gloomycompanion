@@ -1,3 +1,5 @@
+//If you see good code in here, it was probably the original guy. Anything that makes you shake your head was probably me 
+
 //TODO Adding an extra Guard deck will reshuffle the first one, End of round with multiple Archers, resize text, worth to show common and elite_only attributes?, shield and retaliate only when shown (apparently, attribtues are active at the beginning of the turn, and active after initiative)
 var do_shuffles = true;
 var visible_ability_decks = [];
@@ -1673,8 +1675,31 @@ function update_stats(){
 
 	}
 	
-
+	brute_icon.onclick = function () {
+		change_party("brute_icon")
+	}
 	
+	tinkerer_icon.onclick = function () {
+		change_party("tinkerer_icon")
+	}
+	spellweaver_icon.onclick = function () {
+		change_party("spellweaver_icon")
+	}
+	scoundrel_icon.onclick = function () {
+		change_party("scoundrel_icon")
+	}
+	cragheart_icon.onclick = function () {
+		change_party("cragheart_icon")
+	}
+	mindthief_icon.onclick = function () {
+		change_party("mindthief_icon")
+	}
+	
+	change_party= function(class){
+		icon_style = window.getComputedStyle(document.getElementById(class).opacity);
+		console.log(icon_style);
+		
+	}
 	
 	
     window.onresize = refresh_ui.bind(null, visible_ability_decks);
