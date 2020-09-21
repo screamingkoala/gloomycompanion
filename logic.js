@@ -1303,11 +1303,20 @@ function init() {
     };
 
     applysavebtn.onclick = function () {
-        //Store player names
+        //Store team names and levels
+	    
+	    var team_array=[];
+	    var class_array=[];
+	    count=0;
+
 	    total_characters=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
-				console.log(document.getElementsByName("class_name")[i].id);
+				
+				class_array[0] = document.getElementsByName("class_name")[i].id;
+				class_array[1] = document.querySelector("#" + class_array[0]+ "_level");
+				team_array(count) = class_array;
+				count=count+1;
 			}
 		}
 		player_names=document.getElementsByName("class_name")
@@ -1696,12 +1705,9 @@ function update_stats(){
 	
 	change_party= function(base_class){
 		
-  	console.log(base_class);
+  	
 	class_icon=base_class + "_icon";
 	class_level= base_class + "_td_level"
-	console.log(base_class);
-	console.log(class_icon);
-	console.log(class_level);
 				
 	icon_style = window.getComputedStyle(document.getElementById(class_icon));
 	icon_style = icon_style.opacity;
