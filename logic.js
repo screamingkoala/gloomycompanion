@@ -1320,7 +1320,7 @@ function init() {
 				console.log(class_array[0]);
 				console.log(class_array[1]);
 				console.log(count);
-				
+				console.log(team_array);
 			}
 		}
 		
