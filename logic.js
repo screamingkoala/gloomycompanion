@@ -1341,7 +1341,7 @@ function init() {
 		//Reset Game Counter
 		document.getElementById("new_round").value = "Start Game"
 		
-		update_stats()
+		//update_stats()
 	}
 
     applyloadbtn.onclick = function () {
