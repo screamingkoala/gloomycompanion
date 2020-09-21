@@ -1315,7 +1315,7 @@ function init() {
 				
 				class_array[0] = document.getElementsByName("class_name")[i].id;
 				class_array[1] = document.querySelector("#" + class_array[0]+ "_level").value;
-				team_array(count) = class_array;
+				team_array[count] = class_array;
 				count=count+1;
 			}
 		}
