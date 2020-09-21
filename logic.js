@@ -1306,8 +1306,10 @@ function init() {
         //Store player names
 	    total_characters=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
-			if (document.getElementsByName("class_name")[i].style.visibility) =="visible"){
-				console.log(document.getElementsByName("class_name")[i].
+			if (document.getElementsByName("class_name")[i].style.visibility) == "visible"){
+				console.log(document.getElementsByName("class_name")[i].id);
+			}
+		}
 		player_names=document.getElementsByName("class_name")
 		player_levels=document.getElementsByName("player_level")
 		total_characters=document.getElementsByName("class_name");
