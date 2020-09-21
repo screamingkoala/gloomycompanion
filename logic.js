@@ -1676,34 +1676,42 @@ function update_stats(){
 	}
 	
 	brute_icon.onclick = function () {
-		change_party("brute_icon")
+		change_party("brute")
 	}
 	
 	tinkerer_icon.onclick = function () {
-		change_party("tinkerer_icon")
+		change_party("tinkerer")
 	}
 	spellweaver_icon.onclick = function () {
-		change_party("spellweaver_icon")
+		change_party("spellweaver")
 	}
 	scoundrel_icon.onclick = function () {
-		change_party("scoundrel_icon")
+		change_party("scoundrel")
 	}
 	cragheart_icon.onclick = function () {
-		change_party("cragheart_icon")
+		change_party("cragheart")
 	}
 	mindthief_icon.onclick = function () {
-		change_party("mindthief_icon")
+		change_party("mindthief")
 	}
 	
-	change_party= function(class_icon){
-  
+	change_party= function(base_class){
+		
+  	class_td=base_class+"_td";
+	class_icon=base_class+"_icon";
+	console.log(class_td);
+	console.log(class_icon);
+				
 	icon_style = window.getComputedStyle(document.getElementById(class_icon));
 	icon_style = icon_style.opacity;
+		
 	if (icon_style == 1){
+		document.getElementById(class_td).style.visibility= "hidden";
 		document.getElementById(class_icon).style.opacity = ".5";
 	}
 	else {
 		document.getElementById(class_icon).style.opacity = "1";
+		document.getElementById(class_td).style.visibility= "visible";
 	}
 		
 		
