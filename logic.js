@@ -1390,30 +1390,23 @@ function init() {
 	document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
         var selected_deck_names = scenariolist.get_scenario_decks();
-	console.log(document.querySelector('#player_check_one:checked') !== null);
-	console.log(document.querySelector('#player_check_two:checked') !== null);
-	console.log(document.querySelector('#player_check_three:checked') !== null);	
-	console.log(document.querySelector('#player_check_four:checked') !== null);
-	console.log(document.querySelector('#player_check_five:checked') !== null);
-	console.log(document.getElementById("player_name_one").value);
+
 	
 	    
 	 
 	if (false && document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
-		console.log("5");
+	
 		JSON_string ='{"name":"PC Lee", "class":"PC", "level":"1"}';
-		console.log(JSON_string);
-		console.log(JSON.parse(JSON_string));
 		
 		//selected_deck_names[selected_deck_names.length] = "{name: \"PC " + document.getElementById("player_name_one").value, class: \"PC\", level: "+ document.getElementById("player_level_one").value+"};
-		console.log("{ name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}");		
+	
 		//JSON_string ="{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";
 		JSON_string ='{"name":"PC ' + document.getElementById("player_name_one").value + '","class":"PC", "level":"' + document.getElementById("player_level_one").value+'"}';
 		//selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
-		console.log(JSON_string);
-		//console.log(JSON.parse(JSON_string).replace(/\\"/g, '"'));
-		console.log(JSON.parse(JSON_string));
-		//console.log(JSON.parse('{"name": "PC Greg", "class": "PC", "level": "1"}'));
+	
+	
+	
+	
 		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
 				
 	}
@@ -1475,7 +1468,7 @@ function init() {
 			
 			card_init = name_list[a].querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[0];
 			
-			console.log (card_init);
+			
 			
 			
 			//.style.background !=  "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat"
@@ -1648,9 +1641,9 @@ function update_stats(){
 			
 		el_style = window.getComputedStyle(document.getElementById(element));
 		el_style=el_style.border;
-		console.log(el_style == "20px solid " + color);	
 		
-		console.log(el_style);	
+		
+		
 		//if it's strong, make it waning
 		
 		if (el_style == "20px solid " + color) 
@@ -1703,11 +1696,12 @@ function update_stats(){
 	
 	change_party= function(base_class){
 		
-  	
+  	console.log(base_class);
 	class_icon=base_class + "_icon";
 	class_level= base_class + "_td_level"
-	console.log(class_td);
+	console.log(base_class);
 	console.log(class_icon);
+	console.log(class_level);
 				
 	icon_style = window.getComputedStyle(document.getElementById(class_icon));
 	icon_style = icon_style.opacity;
