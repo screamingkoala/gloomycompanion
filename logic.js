@@ -1304,9 +1304,13 @@ function init() {
 
     applysavebtn.onclick = function () {
         //Store player names
-		player_names=document.getElementsByName("player_name")
+	    total_characters=document.getElementsByName("class_name");
+	    	for(i=0; i<total_characters.length; i++){
+			console.log(i);
+			console.log(document.getElementsByName("class_name")[i].style.visibility);}
+		player_names=document.getElementsByName("class_name")
 		player_levels=document.getElementsByName("player_level")
-		player_active=document.getElementsByName("player_active")
+		total_characters=document.getElementsByName("class_name");
 		var player_array=[];
 		var playercount=0;
 	    	var total_player_levels=0;
