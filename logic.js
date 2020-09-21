@@ -1306,8 +1306,8 @@ function init() {
         //Store player names
 	    total_characters=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
-			console.log(i);
-			console.log(document.getElementsByName("class_name")[i].style.visibility);}
+			if (document.getElementsByName("class_name")[i].style.visibility) =="visible"){
+				console.log(document.getElementsByName("class_name")[i].
 		player_names=document.getElementsByName("class_name")
 		player_levels=document.getElementsByName("player_level")
 		total_characters=document.getElementsByName("class_name");
@@ -1701,7 +1701,7 @@ function update_stats(){
 	
 	change_party= function(base_class){
 		
-  	class_td=base_class + "_td";
+  	
 	class_icon=base_class + "_icon";
 	class_level= base_class + "_td_level"
 	console.log(class_td);
@@ -1711,12 +1711,12 @@ function update_stats(){
 	icon_style = icon_style.opacity;
 		
 	if (icon_style == 1){
-		document.getElementById(class_td).style.visibility= "hidden";
+		document.getElementById(base_class).style.visibility= "hidden";
 		document.getElementById(class_level).style.visibility= "hidden";
 		document.getElementById(class_icon).style.opacity = ".5";
 	}
 	else {
-		document.getElementById(class_td).style.visibility= "visible";
+		document.getElementById(base_class).style.visibility= "visible";
 		document.getElementById(class_level).style.visibility= "visible";
 		document.getElementById(class_icon).style.opacity = "1";
 		
