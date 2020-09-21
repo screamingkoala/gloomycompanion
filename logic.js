@@ -1222,6 +1222,7 @@ function init() {
     var applyscenariobtn = document.getElementById("applyscenario");
     var applyloadbtn = document.getElementById("applyload");
 	var applysavebtn = document.getElementById("applysave");
+	var applyloadbtn = document.getElementById("applyload");
 	var new_roundbtn = document.getElementById("new_round");
 	var sort_cardsbtn = document.getElementById("sort_cards");
 	var end_roundbtn = document.getElementById("end_round");
@@ -1328,37 +1329,14 @@ function init() {
 		
 		write_to_storage("team_array", JSON.stringify(team_array));
 		
-		
-		
-		
-
-			
-		
-		
-		//Reset Game Counter
-		document.getElementById("new_round").value = "Start Game"
-		
-		//update_stats()
 	}
 
+	
     applyloadbtn.onclick = function () {
 		
 		//Load in the previous stored data
-		var player_array = JSON.parse(get_from_storage("player_array"));
-		
-		//If the length isn't 0 (i.e. no data to load), fill in the data
-		if (player_array.length != 0){
-			document.getElementById("player_name_one").value=player_array[0];
-			document.getElementById("player_level_one").value=player_array[1];
-			document.getElementById("player_name_two").value=player_array[2];
-			document.getElementById("player_level_two").value=player_array[3];
-			document.getElementById("player_name_three").value=player_array[4];
-			document.getElementById("player_level_three").value=player_array[5];
-			document.getElementById("player_name_four").value=player_array[6];
-			document.getElementById("player_level_four").value=player_array[7];
-			document.getElementById("player_name_five").value=player_array[8];
-			document.getElementById("player_level_five").value=player_array[9];
-		}
+		var player_array = JSON.parse(get_from_storage("team_array"));
+		console.log(player_array);
 		
 		
     }
