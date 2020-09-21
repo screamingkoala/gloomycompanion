@@ -1697,8 +1697,9 @@ function update_stats(){
 	
 	change_party= function(base_class){
 		
-  	class_td=base_class+"_td";
-	class_icon=base_class+"_icon";
+  	class_td=base_class + "_td";
+	class_icon=base_class + "_icon";
+	class_level= base_class + "_td_level"
 	console.log(class_td);
 	console.log(class_icon);
 				
@@ -1707,11 +1708,14 @@ function update_stats(){
 		
 	if (icon_style == 1){
 		document.getElementById(class_td).style.visibility= "hidden";
+		document.getElementById(class_level).style.visibility= "hidden";
 		document.getElementById(class_icon).style.opacity = ".5";
 	}
 	else {
-		document.getElementById(class_icon).style.opacity = "1";
 		document.getElementById(class_td).style.visibility= "visible";
+		document.getElementById(class_level).style.visibility= "visible";
+		document.getElementById(class_icon).style.opacity = "1";
+		
 	}
 		
 		
