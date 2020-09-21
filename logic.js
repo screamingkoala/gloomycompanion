@@ -1697,8 +1697,14 @@ function update_stats(){
 	
 	change_party= function(class_icon){
 		icon_style = window.getComputedStyle(document.getElementById(class_icon));
-		console.log(icon_style);
-		console.log(icon_style.opacity);
+		icon_style = icon_style.opacity;
+		if (icon_style == 1){
+			document.getElementById(element).style.opacity = .5
+		}
+		else
+			document.getElementById(element).style.opacity = 1
+		}
+		
 		
 	}
 	
