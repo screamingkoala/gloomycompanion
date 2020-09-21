@@ -1331,8 +1331,8 @@ function init() {
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("team_array"));
 	    	for (i=0; i<player_array.length; i++){
-			console.log(player_array[i]); 
-			change_party(player_array[i]);
+			console.log(player_array[i][0]); 
+			change_party(player_array[i][0]);
 			
 			
 		}
