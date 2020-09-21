@@ -1318,12 +1318,6 @@ function init() {
 				class_array[1] = document.querySelector("#" + class_array[0]+ "_level").value;
 				team_array.push([class_array[0],class_array[1]]);
 
-				//team_array[count] = class_array;
-				//count=count+1;
-				console.log(class_array[0]);
-				console.log(class_array[1]);
-				console.log(count);
-				console.log(team_array);
 			}
 		}
 		
@@ -1336,7 +1330,7 @@ function init() {
 		
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("team_array"));
-	    	for (i=0; i>player_array.length; i++){
+	    	for (i=0; i<player_array.length; i++){
 			change_party(player_array[i]);
 			console.log(player_array[i]);
 			
