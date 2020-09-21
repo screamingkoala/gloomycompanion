@@ -1317,6 +1317,10 @@ function init() {
 				class_array[1] = document.querySelector("#" + class_array[0]+ "_level").value;
 				team_array[count] = class_array;
 				count=count+1;
+				console.log(class_array[0]);
+				console.log(class_array[1]);
+				console.log(count);
+				
 			}
 		}
 		
