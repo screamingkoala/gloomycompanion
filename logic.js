@@ -1695,8 +1695,8 @@ function update_stats(){
 		change_party("mindthief_icon")
 	}
 	
-	change_party= function(class){
-		icon_style = window.getComputedStyle(document.getElementById(class).opacity);
+	change_party= function(class_icon){
+		icon_style = window.getComputedStyle(document.getElementById(class_icon).opacity);
 		console.log(icon_style);
 		
 	}
