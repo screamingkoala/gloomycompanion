@@ -22,14 +22,15 @@ function init_ui()
 {
     var tabs =
     {
-        scenarios:      document.getElementById("scenariotab"),
         players:        document.getElementById("playerstab"),
+	scenarios:      document.getElementById("scenariotab"),        
         decks:          document.getElementById("deckstab")
     };
     var pages =
     {
-        scenarios:      document.getElementById("scenariospage"),
         players:        document.getElementById("playerspage"),
+	scenarios:      document.getElementById("scenariospage"),
+        
         decks:          document.getElementById("deckspage")
     };
 
