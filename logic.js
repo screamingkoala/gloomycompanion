@@ -1327,9 +1327,17 @@ function init() {
 
 	
     applyloadbtn.onclick = function () {
-		
+	//First, hide all existing characters
+	total_characters=document.getElementsByName("class_name");
+	    	for(i=0; i<total_characters.length; i++){
+			document.getElementsByName("class_name")[i].style.visibility == "hidden"				
+		}
+	    
+	    
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("team_array"));
+	    
+	    	//loop through and put in the characters levels
 	    	for (i=0; i<player_array.length; i++){
 			change_party(player_array[i][0]);
 			document.querySelector("#" + player_array[i][0] + "_level").value =  player_array[i][1];
