@@ -1377,9 +1377,10 @@ function init() {
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 				class_name=document.getElementsByName("class_name")[i].id; 
 				class_level=document.querySelector("#" + class_name+ "_level").value;
-				json_string = 'selected_deck_names[selected_deck_names.length] = {name: "PC Brute", class: "PC", level: "1"};'
+				class_string = 'selected_deck_names[selected_deck_names.length] = {name: "PC Brute", class: "PC", level: "1"};'
+				console.log(class_string);
+				json_string = JSON.parse(class_string);
 				console.log(json_string);
-
 			}
 		}
 	    
