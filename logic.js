@@ -1384,6 +1384,9 @@ function init() {
 				console.log(json_string);
 				class_string = '{"name": "PC '+ class_name+ '", "class": "'+ class_name + '", "level": "'+ class_level + '"}'
 				console.log(class_string);
+				json_string = JSON.parse(class_string);
+				console.log(json_string);
+				selected_deck_names[selected_deck_names.length] = json_string;
 			}
 		}
 	    
