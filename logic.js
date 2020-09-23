@@ -1377,11 +1377,7 @@ function init() {
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 				class_name=document.getElementsByName("class_name")[i].id; 
 				class_level=document.querySelector("#" + class_name+ "_level").value;
-				class_name=class_name.charAt(0).toUpperCase() + class_name.slice(1);
-				class_string = '{"name": "PC Brute", "class": "Brute", "level": "1"}'
-				console.log(class_string);
-				json_string = JSON.parse(class_string);
-				console.log(json_string);
+				class_name=class_name.charAt(0).toUpperCase() + class_name.slice(1);				
 				class_string = '{"name": "PC '+ class_name+ '", "class": "'+ class_name + '", "level": "'+ class_level + '"}'
 				console.log(class_string);
 				json_string = JSON.parse(class_string);
