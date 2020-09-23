@@ -1328,11 +1328,7 @@ function init() {
 	
     applyloadbtn.onclick = function () {
 	//First, hide all existing characters
-	total_characters=document.getElementsByName("class_name");
-	    	for(i=0; i<total_characters.length; i++){
-			document.getElementsByName("class_name")[i].style.visibility == "hidden";			
-			console.log(document.getElementsByName("class_name")[i]);
-		}
+
 	    
 	    
 		//Load in the previous stored data
@@ -1378,23 +1374,7 @@ function init() {
 
 	
 	    
-	 
-	if (false && document.querySelector('#player_check_one:checked') !== null && document.getElementById("player_name_one").value != "" && document.getElementById("player_level_one").value != ""){
-	
-		JSON_string ='{"name":"PC Lee", "class":"PC", "level":"1"}';
-		
-		//selected_deck_names[selected_deck_names.length] = "{name: \"PC " + document.getElementById("player_name_one").value, class: \"PC\", level: "+ document.getElementById("player_level_one").value+"};
-	
-		//JSON_string ="{name: \"PC " + document.getElementById("player_name_one").value + "\", class: \"PC\", level: \""+ document.getElementById("player_level_one").value+"\"}";
-		JSON_string ='{"name":"PC ' + document.getElementById("player_name_one").value + '","class":"PC", "level":"' + document.getElementById("player_level_one").value+'"}';
-		//selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
-	
-	
-	
-	
-		selected_deck_names[selected_deck_names.length] = JSON.parse(JSON_string);
-				
-	}
+
 	
 		selected_deck_names[selected_deck_names.length] = {name: "PC Lee", class: "PC", level: "1"};
 	   
