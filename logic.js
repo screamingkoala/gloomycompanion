@@ -1373,7 +1373,7 @@ function init() {
         var selected_deck_names = scenariolist.get_scenario_decks();
 
 		class_array=document.getElementsByName("class_name");
-	    	for(i=0; i<total_characters.length; i++){
+	    	for(i=0; i<class_array.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 				console.log(document.getElementsByName("class_name")[i].id);
 				console.log(document.querySelector("#" + class_array[0]+ "_level").value);
