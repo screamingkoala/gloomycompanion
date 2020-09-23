@@ -1330,7 +1330,8 @@ function init() {
 	//First, hide all existing characters
 	total_characters=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
-			document.getElementsByName("class_name")[i].style.visibility == "hidden"	;			
+			document.getElementsByName("class_name")[i].style.visibility == "hidden";			
+			console.log(document.getElementsByName("class_name")[i]);
 		}
 	    
 	    
