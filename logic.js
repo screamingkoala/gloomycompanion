@@ -1220,9 +1220,9 @@ function init() {
     var scenariospage = document.getElementById("scenariospage");
     var applydeckbtn = document.getElementById("applydecks");
     var applyscenariobtn = document.getElementById("applyscenario");
-    var applyloadbtn = document.getElementById("applyload");
+
 	var applysavebtn = document.getElementById("applysave");
-	var applyloadbtn = document.getElementById("applyload");
+
 	var new_roundbtn = document.getElementById("new_round");
 	var sort_cardsbtn = document.getElementById("sort_cards");
 	var end_roundbtn = document.getElementById("end_round");
@@ -1326,7 +1326,7 @@ function init() {
 	}
 
 	
-    applyloadbtn.onclick = function () {
+    load_party = function () {
 	//First, hide all existing characters
 
 	    
