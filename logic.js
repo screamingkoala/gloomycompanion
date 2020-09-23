@@ -1376,10 +1376,9 @@ function init() {
 	    	for(i=0; i<class_array.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 				class_name=document.getElementsByName("class_name")[i].id; 
-				console.log(class_name);
-				console.log(document.querySelector("#" + class_name+ "_level").value);
-				
-				
+				class_level=document.querySelector("#" + class_name+ "_level").value;
+				json_string = 'selected_deck_names[selected_deck_names.length] = {name: "PC Brute", class: "PC", level: "1"};'
+				console.log(json.string);
 
 			}
 		}
