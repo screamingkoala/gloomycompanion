@@ -1372,7 +1372,7 @@ function init() {
 
         var selected_deck_names = scenariolist.get_scenario_decks();
 
-		total_characters=document.getElementsByName("class_name");
+		class_array=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 				console.log(document.getElementsByName("class_name")[i].id);
