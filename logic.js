@@ -1379,9 +1379,7 @@ function init() {
 				console.log(class_name);
 				console.log(document.querySelector("#" + class_name+ "_level").value);
 				
-				class_array[0] = document.getElementsByName("class_name")[i].id;
-				class_array[1] = document.querySelector("#" + class_array[0]+ "_level").value;
-				team_array.push([class_array[0],class_array[1]]);
+				
 
 			}
 		}
