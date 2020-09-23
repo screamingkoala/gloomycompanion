@@ -1376,7 +1376,7 @@ function init() {
 	    	for(i=0; i<class_array.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 				class_name=document.getElementsByName("class_name")[i].id; 
-				class_name=class_name.charAt(0).toUpperCase() + string.slice(1);
+				class_name=class_name.charAt(0).toUpperCase() + class_name.slice(1);
 				class_level=document.querySelector("#" + class_name+ "_level").value;
 				class_string = '{"name": "PC Brute", "class": "Brute", "level": "1"}'
 				console.log(class_string);
