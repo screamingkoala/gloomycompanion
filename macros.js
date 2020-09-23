@@ -42,6 +42,7 @@ MACROS =
     , "%flying%":                                   "<span class='nobr'><img class='icon' src='images/fly.svg'></span>"
     , "%strengthen%":                               "<span class='nobr'>STRENGTHEN <img class='icon' src='images/strengthen.svg'></span>"
     , "%stun%":                                     "<span class='nobr'>STUN <img class='icon' src='images/stun.svg'></span>"
+    , "%symbol_brute%":                             "<img class='icon' src='images/Brute.svg'></span>"
     , "%target%":                                   "<span class='nobr'>Target <img class='icon' src='images/target.svg'></span>"
     , "%use_element%":                              "<img class='element overlay' src='images/use_element.svg'>"
     , "%wound%":                                    "<span class='nobr'>WOUND <img class='icon' src='images/wound.svg'></span>"
