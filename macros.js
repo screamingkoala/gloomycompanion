@@ -42,7 +42,7 @@ MACROS =
     , "%flying%":                                   "<span class='nobr'><img class='icon' src='images/fly.svg'></span>"
     , "%strengthen%":                               "<span class='nobr'>STRENGTHEN <img class='icon' src='images/strengthen.svg'></span>"
     , "%stun%":                                     "<span class='nobr'>STUN <img class='icon' src='images/stun.svg'></span>"
-    , "%symbol_brute%":                             "<img class='icon' src='images/Brute.svg'></span>"
+    , "%symbol_brute%":                             "<img class='icon' src='images/Brute.svg' width='100' height='100'></span>"
     , "%symbol_spellweaver%":                       "<img class='icon' src='images/Spellweaver.svg'></span>"
     , "%symbol_tinkerer%":                          "<img class='icon' src='images/Tinkerer.svg'></span>"
     , "%symbol_scoundrel%":                         "<img class='icon' src='images/Scoundrel.svg'></span>"
