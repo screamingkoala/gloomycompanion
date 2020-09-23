@@ -1341,7 +1341,7 @@ function init() {
 		}
 			
 	    
-		console.log(player_array.length);
+		
 	    
 		
 		
@@ -1372,7 +1372,18 @@ function init() {
 
         var selected_deck_names = scenariolist.get_scenario_decks();
 
-	
+		total_characters=document.getElementsByName("class_name");
+	    	for(i=0; i<total_characters.length; i++){
+			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
+				console.log(document.getElementsByName("class_name")[i].id);
+				console.log(document.querySelector("#" + class_array[0]+ "_level").value);
+				
+				class_array[0] = document.getElementsByName("class_name")[i].id;
+				class_array[1] = document.querySelector("#" + class_array[0]+ "_level").value;
+				team_array.push([class_array[0],class_array[1]]);
+
+			}
+		}
 	    
 
 	
