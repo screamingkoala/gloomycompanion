@@ -1375,8 +1375,9 @@ function init() {
 		class_array=document.getElementsByName("class_name");
 	    	for(i=0; i<class_array.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
-				console.log(document.getElementsByName("class_name")[i].id);
-				console.log(document.querySelector("#" + class_array[0]+ "_level").value);
+				class_name=document.getElementsByName("class_name")[i].id; 
+				console.log(class_name);
+				console.log(document.querySelector("#" + class_name+ "_level").value);
 				
 				class_array[0] = document.getElementsByName("class_name")[i].id;
 				class_array[1] = document.querySelector("#" + class_array[0]+ "_level").value;
