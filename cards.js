@@ -1,6 +1,6 @@
 DECKS =
     {   "PC Lee":             {name: "PC Lee", class: "PC"}
-    ,	"PC Dave":            {name: "PC Dave", class: "PC"}
+    ,	"PC Brute":           {name: "PC Dave", class: "Brute"}
     ,	"PC Amy":   	      {name: "PC Amy", class: "PC"}
     ,	"PC Chris":           {name: "PC Chris", class: "PC"}
     ,	"PC Ron":             {name: "PC Ron", class: "PC"}
@@ -49,6 +49,19 @@ DECK_DEFINITONS =
         {class: "PC"
         , cards:
             [ [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            , [true, "00",""]
+            ]
+        },
+	
+	{class: "Brute"
+        , cards:
+            [ [true, "00","Brute"]
             , [true, "00",""]
             , [true, "00",""]
             , [true, "00",""]
