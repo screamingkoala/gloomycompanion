@@ -1,9 +1,11 @@
 DECKS =
-    {   "PC Lee":             {name: "PC Lee", class: "PC"}
+    {   "PC Mindthief":       {name: "PC Mindthief", class: "Mindthief"}
     ,	"PC Brute":           {name: "PC Brute", class: "Brute"}
-    ,	"PC Amy":   	      {name: "PC Amy", class: "PC"}
-    ,	"PC Chris":           {name: "PC Chris", class: "PC"}
-    ,	"PC Ron":             {name: "PC Ron", class: "PC"}
+    ,	"PC Tinkerer":        {name: "PC Tinkerer", class: "Tinkerer"}
+    ,	"PC Scoundrel":       {name: "PC Scoundrel", class: "Scoundrel"}
+    ,	"PC Cragheart":       {name: "PC Cragheart", class: "Cragheart"}
+    ,	"PC Spellweaver":     {name: "PC Spellweaver", class: "Spellweaver"}
+    ,	"PC Lee":             {name: "PC Lee", class: "PC"}
     ,	"PC Jonathon":        {name: "PC Jonathon", class: "PC"}
     ,	"PC Kim":             {name: "PC Kim", class: "PC"}
     ,	"PC Greg":            {name: "PC Greg", class: "PC"}
