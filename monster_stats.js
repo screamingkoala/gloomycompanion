@@ -596,7 +596,7 @@ MONSTER_STATS = {
         }
       ]
     },
-	"PC Dave": {
+	"PC Brute": {
       "level": [
         {
           "level": 0,
