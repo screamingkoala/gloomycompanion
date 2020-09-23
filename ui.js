@@ -29,8 +29,7 @@ function init_ui()
     var pages =
     {
         players:        document.getElementById("playerspage"),
-	scenarios:      document.getElementById("scenariospage"),
-        
+	scenarios:      document.getElementById("scenariospage"),        
         decks:          document.getElementById("deckspage")
     };
 
@@ -63,7 +62,7 @@ function init_ui()
         show_settingspane(settingspane, cancelarea, false);
     }
 
-    activate_tab(tabs, pages, "scenarios");
+    activate_tab(tabs, pages, "players");
 	
 }
 
