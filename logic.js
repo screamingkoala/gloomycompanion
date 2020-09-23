@@ -1381,6 +1381,8 @@ function init() {
 				console.log(class_string);
 				json_string = JSON.parse(class_string);
 				console.log(json_string);
+				class_string = '{"name": "PC '+ Brute+ '", "class": "'+ Brute + '", "level": "'+ class_level + '"}'
+				console.log(class_string);
 			}
 		}
 	    
