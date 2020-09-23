@@ -61,7 +61,7 @@ DECK_DEFINITONS =
             ]
         },
 	
-	{class: "Brute", cards: [[true, "00","%symbol%", "* Brute"]]},
+	{class: "Brute", cards: [[true, "00","%symbol%, "* Brute"]]},
 	{class: "Spellweaver", cards: [[true, "00","%symbol%", "* Spellweaver"]]},
 	{class: "Tinkerer", cards: [[true, "00","%symbol%", "* Tinkerer"]]},
 	{class: "Scoundrel", cards: [[true, "00","%symbol%", "* Scoundrel"]]},
