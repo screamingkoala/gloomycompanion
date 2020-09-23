@@ -1378,7 +1378,7 @@ function init() {
 				class_name=document.getElementsByName("class_name")[i].id; 
 				class_level=document.querySelector("#" + class_name+ "_level").value;
 				json_string = 'selected_deck_names[selected_deck_names.length] = {name: "PC Brute", class: "PC", level: "1"};'
-				console.log(json.string);
+				console.log(json_string);
 
 			}
 		}
