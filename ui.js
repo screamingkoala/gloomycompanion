@@ -39,6 +39,7 @@ function init_ui()
 
     scenariotab.onclick = function(e)
     {
+	save_party();
         activate_tab(tabs, pages, "scenarios");
     }
 
