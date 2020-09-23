@@ -1339,14 +1339,10 @@ function init() {
 			change_party(player_array[i][0]);
 			document.querySelector("#" + player_array[i][0] + "_level").value =  player_array[i][1];
 		}
-			
-	    
-		
-	    
-		
-		
+		    		
     }
-    
+	    
+
     applyscenariobtn.onclick = function () {
 	
 	base_level = scenariolist.level_selector.get_selection();
