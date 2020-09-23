@@ -62,11 +62,11 @@ DECK_DEFINITONS =
         },
 	
 	{class: "Brute", 	cards: [[true, "00","*%symbol_brute%", 		"*Brute"]]},
-	{class: "Spellweaver",	cards: [[true, "00","%symbol_spellweaver%", 	"Spellweaver"]]},
-	{class: "Tinkerer", 	cards: [[true, "00","%symbol_tinkerer%",	"Tinkerer"]]},
-	{class: "Scoundrel", 	cards: [[true, "00","%symbol_scoundrel%", 	"Scoundrel"]]},
-	{class: "Cragheart", 	cards: [[true, "00","%symbol_cragheart%", 	"Cragheart"]]},
-	{class: "Mindthief", 	cards: [[true, "00","%symbol_Mindthief%", 	"Mindthief"]]},
+	{class: "Spellweaver",	cards: [[true, "00","*%symbol_spellweaver%", 	"*Spellweaver"]]},
+	{class: "Tinkerer", 	cards: [[true, "00","*%symbol_tinkerer%",	"*Tinkerer"]]},
+	{class: "Scoundrel", 	cards: [[true, "00","*%symbol_scoundrel%", 	"*Scoundrel"]]},
+	{class: "Cragheart", 	cards: [[true, "00","*%symbol_cragheart%", 	"*Cragheart"]]},
+	{class: "Mindthief", 	cards: [[true, "00","*%symbol_Mindthief%", 	"*Mindthief"]]},
 	
   
      {class: "Ancient Artillery"
