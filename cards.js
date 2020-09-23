@@ -62,7 +62,7 @@ DECK_DEFINITONS =
 	{class: "Brute"
         , cards:
              [true, "00","* * Brute"]
-            ]
+            
         },
   
      {class: "Ancient Artillery"
