@@ -61,9 +61,9 @@ DECK_DEFINITONS =
 	
 	{class: "Brute"
         , cards:
-            [ [true, "00","Brute"]
-            , [true, "00",""]
-            , [true, "00",""]
+            [ [true, "00","* Brute"]
+            , [true, "00","* * Brute"]
+            , [true, "00","* * * Brute"]
             , [true, "00",""]
             , [true, "00",""]
             , [true, "00",""]
