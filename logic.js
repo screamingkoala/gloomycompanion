@@ -1221,7 +1221,7 @@ function init() {
     var applydeckbtn = document.getElementById("applydecks");
     var applyscenariobtn = document.getElementById("applyscenario");
 
-	var applysavebtn = document.getElementById("applysave");
+	
 
 	var new_roundbtn = document.getElementById("new_round");
 	var sort_cardsbtn = document.getElementById("sort_cards");
@@ -1303,7 +1303,7 @@ function init() {
         }
     };
 
-    applysavebtn.onclick = function () {
+    save_party = function () {
         //Store team names and levels
 	    
 	    var team_array=[];
