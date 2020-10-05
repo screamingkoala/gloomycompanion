@@ -1498,8 +1498,10 @@ function init() {
 	for (i=0; i < cards_array.length;i++){
 			short_name=cards_array[i][1];
 			short_name = short_name.replace(/\s/g, '');
+			console.log(short_name);
 			//short_name = short_name.substring(0, short_name.length-2);
-			x=document.getElementById(short_name);			
+			x=document.getElementById(short_name);
+			console.log(x);
 			x=x.getElementsByClassName('name')[0].innerHTML;		
 			
 			//If a cards HTML starts with '<', then it's a PC card. Ask for the initiative, and put it in.
