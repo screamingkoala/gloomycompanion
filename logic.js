@@ -1498,7 +1498,7 @@ function init() {
 	for (i=0; i < cards_array.length;i++){
 			short_name=cards_array[i][1];
 			short_name = short_name.replace(/\s/g, '');
-			short_name = short_name.substring(0, short_name.length-2);
+			//short_name = short_name.substring(0, short_name.length-2);
 			x=document.getElementById(short_name);			
 			x=x.getElementsByClassName('name')[0].innerHTML;		
 			
