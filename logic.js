@@ -547,7 +547,7 @@ function draw_modifier_card(deck) {
 function double_draw(deck) {
     var advantage_card;
     // Case there was 1 card in draw_pile when we clicked "draw 2".
-    //    now we should draw, save that card, reshuffle, and
+    //    now we should draw, save that card, reshuffle, and_
     //    draw the next
     if (deck.draw_pile.length == 1) {
         draw_modifier_card(deck);
@@ -1325,7 +1325,22 @@ function init() {
 		
 	}
 
-	
+    change_suggested_level = function () {
+	    total_characters=document.getElementsByName("class_name");
+	    	for(i=0; i<total_characters.length; i++){
+			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
+			
+				name = document.getElementsByName("class_name")[i].id;
+				total_levels = document.querySelector("#" + name + "_level").value;
+				
+
+			}
+		}
+	console.log(total_levels);
+	console.log(total_characters.length);
+	    
+	    
+    }
     load_party = function () {
 	//First, hide all existing characters
 
