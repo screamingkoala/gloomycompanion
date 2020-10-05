@@ -1340,7 +1340,7 @@ function init() {
 		}
 	console.log(total_levels);
 	console.log(active_characters);
-        console.log(Math.ceil(total_levels/active_characters.length));	    
+        console.log(Math.ceil(total_levels/active_characters));	    
 	    
     }
     load_party = function () {
