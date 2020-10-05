@@ -1326,6 +1326,7 @@ function init() {
 	}
 
     change_suggested_level = function () {
+	    total_levels = 0;
 	    total_characters=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
