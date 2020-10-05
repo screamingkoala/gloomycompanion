@@ -12,7 +12,7 @@ var DECK_TYPES =
         ABILITY: "ability",
         BOSS: "boss"
     };
-
+=
 var EVENT_NAMES = {
     MODIFIER_CARD_DRAWN:            "modifierCardDrawn",
     MODIFIER_DECK_SHUFFLE_REQUIRED: "modfierDeckShuffleRequired"
@@ -1503,7 +1503,7 @@ function init() {
 			x=x.getElementsByClassName('name')[0].innerHTML;		
 			
 			//If a cards HTML starts with '<', then it's a PC card. Ask for the initiative, and put it in.
-			
+			console.log(x.substring(0,1));
 			if (x.substring(0, 1)=='<')
 			{
 				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));	
