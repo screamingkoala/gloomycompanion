@@ -1,5 +1,5 @@
 DECKS =
-    {   "PC Mindthief":       {name: "PC Mindthief", class: "Mindthief"}
+    {   "PC Mindthief":       {name: "<B>PC Mindthief</b>", class: "Mindthief"}
     ,	"PC Brute":           {name: "PC Brute", class: "Brute"}
     ,	"PC Tinkerer":        {name: "PC Tinkerer", class: "Tinkerer"}
     ,	"PC Scoundrel":       {name: "PC Scoundrel", class: "Scoundrel"}
