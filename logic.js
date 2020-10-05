@@ -1346,9 +1346,7 @@ function init() {
 
 			}
 		}
-	console.log(total_levels);
-	console.log(active_characters);
-        console.log(Math.ceil(total_levels/active_characters));
+	
 	document.getElementById("suggested_level").innerHTML =  "Suggested level: " + Math.ceil(total_levels/active_characters);
 
 	    
@@ -1499,7 +1497,7 @@ function init() {
 			short_name=cards_array[i][1];
 			short_name = short_name.replace(/\s/g, '');
 			console.log(short_name);
-			//short_name = short_name.substring(0, short_name.length-2);
+			short_name = short_name.substring(0, short_name.length-2);
 			x=document.getElementById(short_name);
 			console.log(x);
 			x=x.getElementsByClassName('name')[0].innerHTML;		
