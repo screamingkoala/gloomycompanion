@@ -1327,10 +1327,11 @@ function init() {
 
     change_suggested_level = function () {
 	    total_levels = 0;
+	    active_characters =0;
 	    total_characters=document.getElementsByName("class_name");
 	    	for(i=0; i<total_characters.length; i++){
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
-			
+				active_characters = active_characters + 1;
 				name = document.getElementsByName("class_name")[i].id;
 				total_levels = total_levels + parseInt(document.querySelector("#" + name + "_level").value);
 				
@@ -1338,8 +1339,8 @@ function init() {
 			}
 		}
 	console.log(total_levels);
-	console.log(total_characters.length);
-        console.log(Math.ceil(total_levels/total_characters.length));	    
+	console.log(active_characters);
+        console.log(Math.ceil(total_levels/active_characters.length));	    
 	    
     }
     load_party = function () {
