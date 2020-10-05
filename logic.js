@@ -87,7 +87,7 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
 	console.log(name.substring(3,name.length));
     if (name.substring(0,2) == "PC"){
 	name = name.substring(3,name.length);
-	name_span.innerHTML  = '<img src="images/' + name +'.svg" height="20" width="20"> ' + name;
+	name_span.innerHTML  = '<img src="images/' + name +'.svg" height="50" width="50"> ' + name;
     }
     else{
         name_span.innerText = name + "-" + level;
