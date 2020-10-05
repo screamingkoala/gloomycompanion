@@ -1331,14 +1331,14 @@ function init() {
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible"){
 			
 				name = document.getElementsByName("class_name")[i].id;
-				total_levels = document.querySelector("#" + name + "_level").value;
+				total_levels = total_levels + document.querySelector("#" + name + "_level").value;
 				
 
 			}
 		}
 	console.log(total_levels);
 	console.log(total_characters.length);
-	    
+        console.log(ceil(total_levels/total_characters.length));	    
 	    
     }
     load_party = function () {
