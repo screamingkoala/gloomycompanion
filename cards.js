@@ -1,14 +1,10 @@
 DECKS =
-    {   "PC Mindthief":       {name: "<B>PC Mindthief</b>", class: "Mindthief"}
+    {   "PC Mindthief":       {name: "PC Mindthief", class: "Mindthief"}
     ,	"PC Brute":           {name: "PC Brute", class: "Brute"}
     ,	"PC Tinkerer":        {name: "PC Tinkerer", class: "Tinkerer"}
     ,	"PC Scoundrel":       {name: "PC Scoundrel", class: "Scoundrel"}
     ,	"PC Cragheart":       {name: "PC Cragheart", class: "Cragheart"}
     ,	"PC Spellweaver":     {name: "PC Spellweaver", class: "Spellweaver"}
-    ,	"PC Lee":             {name: "PC Lee", class: "PC"}
-    ,	"PC Jonathon":        {name: "PC Jonathon", class: "PC"}
-    ,	"PC Kim":             {name: "PC Kim", class: "PC"}
-    ,	"PC Greg":            {name: "PC Greg", class: "PC"}
     ,   "Ancient Artillery":  {name: "Ancient Artillery", class: "Ancient Artillery"}
     ,   "Bandit Archer":      {name: "Bandit Archer", class: "Archer"}
     ,   "Bandit Guard":       {name: "Bandit Guard", class: "Guard"}
