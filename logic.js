@@ -1341,7 +1341,7 @@ function init() {
 	console.log(total_levels);
 	console.log(active_characters);
         console.log(Math.ceil(total_levels/active_characters));
-	document.querySelector("#suggested_level").innerhtml =  "Suggested level: " + Math.ceil(total_levels/active_characters);
+	document.getElementById("suggested_level").innerHTML =  "Suggested level: " + Math.ceil(total_levels/active_characters);
 
 	    
     }
