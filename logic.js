@@ -12,7 +12,7 @@ var DECK_TYPES =
         ABILITY: "ability",
         BOSS: "boss"
     };
-=
+
 var EVENT_NAMES = {
     MODIFIER_CARD_DRAWN:            "modifierCardDrawn",
     MODIFIER_DECK_SHUFFLE_REQUIRED: "modfierDeckShuffleRequired"
