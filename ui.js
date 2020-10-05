@@ -40,7 +40,9 @@ function init_ui()
     scenariotab.onclick = function(e)
     {
 	save_party();
+	change_suggested_level();
         activate_tab(tabs, pages, "scenarios");
+
     }
 
     deckstab.onclick = function(e)
