@@ -1340,7 +1340,9 @@ function init() {
 		}
 	console.log(total_levels);
 	console.log(active_characters);
-        console.log(Math.ceil(total_levels/active_characters));	    
+        console.log(Math.ceil(total_levels/active_characters));
+	document.querySelector("#suggested_level").innerhtml =  "Suggested level: " + Math.ceil(total_levels/active_characters);
+
 	    
     }
     load_party = function () {
@@ -1392,9 +1394,9 @@ function init() {
 				class_level=document.querySelector("#" + class_name+ "_level").value;
 				class_name=class_name.charAt(0).toUpperCase() + class_name.slice(1);				
 				class_string = '{"name": "PC '+ class_name+ '", "class": "'+ class_name + '", "level": "'+ class_level + '"}'
-				console.log(class_string);
+				
 				json_string = JSON.parse(class_string);
-				console.log(json_string);
+				
 				selected_deck_names[selected_deck_names.length] = json_string;
 			}
 		}
