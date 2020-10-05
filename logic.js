@@ -83,8 +83,14 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
 
     var name_span = document.createElement("span");
     name_span.className = "name";
-    name_span.innerText = name + "-" + level;
-    card.appendChild(name_span);
+  	console.log(name.substring(0,2));
+	console.log(name.substring(3,name.length-5));
+    if (name.substring(0,2) = "PC"){
+	name_span.innerText  = name.substring(3,name.length-5);
+    else{
+        name_span.innerText = name + "-" + level;
+    }
+	card.appendChild(name_span);
 
 
         var healthNormal_span = document.createElement("span");
