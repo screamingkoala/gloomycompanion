@@ -1569,14 +1569,15 @@ function update_stats(){
 		
 		//Then, change the order using CSS
 		for (i=0; i < cards_array.length;i++){
-			console.log("1");
+
 			short_name=cards_array[i][1]
-			console.log("2");
+			console.log("short_name");
 			short_name = short_name.replace(/\s/g, '');
-			console.log("3");
+			console.log("short_name");			
 			short_name = short_name.substring(0, short_name.length-2);
-			console.log("4");
-			document.getElementById(short_name).style.order = i+1;
+			console.log("short_name");
+			document.getElementById("PC" + short_name).style.order = i+1;
+			
 		}
 
 		
