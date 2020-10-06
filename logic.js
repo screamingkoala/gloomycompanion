@@ -501,7 +501,7 @@ function draw_ability_card(deck) {
 				}
 		
 	// Now sort 
-	console.log("sort");		
+	//console.log("sort");		
 	sort_cards();
 	
 	
@@ -1599,7 +1599,7 @@ function update_stats(){
 
 	sort_cardsbtn.onclick = function () {
 		
-		sort_cards();
+		
 	}
 
 	
