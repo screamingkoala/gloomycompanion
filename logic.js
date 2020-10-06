@@ -83,8 +83,7 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
 
     var name_span = document.createElement("span");
     name_span.className = "name";
-  	console.log(name.substring(0,2));
-	console.log(name.substring(3,name.length));
+  	
     if (name.substring(0,2) == "PC"){
 	
 	name_span.innerHTML  = '<img src="images/' + name.substring(3,name.length) +'.svg" height="40" width="40"> ' + name.substring(3,name.length);
@@ -1497,7 +1496,7 @@ function init() {
 	for (i=0; i < cards_array.length;i++){
 			short_name=cards_array[i][1];
 			short_name = short_name.replace(/\s/g, '');
-			console.log(short_name);
+			
 			
 			//If a cards HTML starts with '<', then it's a PC card. Ask for the initiative, and put it in.
 			
