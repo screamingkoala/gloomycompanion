@@ -1576,7 +1576,7 @@ function update_stats(){
 			console.log(short_name);			
 			short_name = short_name.substring(0, short_name.length-2);
 			console.log(short_name);
-			document.getElementById("PC" + short_name).style.order = i+1;
+			document.getElementById(short_name).style.order = i+1;
 			
 		}
 
