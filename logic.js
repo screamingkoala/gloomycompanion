@@ -1504,15 +1504,15 @@ function init() {
 			{
 			//remove everying after ">" a
 			short_name = short_name.substring(short_name.indexOf(">")+1);
-			console.log(short_name);
+			
 			
 				
 			x=document.getElementById("PC" + short_name);
-			console.log(x);
+			
 			x=x.getElementsByClassName('name')[0].innerHTML;		
 			
 			
-			console.log(x.substring(0,1));
+		
 			
 				new_init=window.prompt("New Initiative for " + short_name);	
 				if (new_init.length == 1) {new_init = "0" + new_init;}
