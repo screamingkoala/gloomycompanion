@@ -1161,7 +1161,7 @@ function ScenarioList(scenarios) {
     scenariolist.special_rules = {};
     scenariolist.level_selector = null;
 
-    scenariolist.level_selector = new LevelSelector("Select scenario level", false);
+    scenariolist.level_selector = new LevelSelector("Select difficulty level", false);
 
     scenariolist.ul.appendChild(scenariolist.level_selector.html);
 
@@ -1348,7 +1348,7 @@ function init() {
 		}
 	
 	document.getElementById("suggested_level").innerHTML =  "Suggested level: " + Math.ceil(total_levels/active_characters);
-
+	document.querySelector("#scenariospage > ul > ul > input[type=number]").value = Math.ceil(total_levels/active_characters);
 	    
     }
     load_party = function () {
