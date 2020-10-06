@@ -1566,12 +1566,16 @@ function update_stats(){
 		
 		//Then put them in order		
 		cards_array.sort();
-
+		
 		//Then, change the order using CSS
 		for (i=0; i < cards_array.length;i++){
+			console.log("1");
 			short_name=cards_array[i][1]
+			console.log("2");
 			short_name = short_name.replace(/\s/g, '');
+			console.log("3");
 			short_name = short_name.substring(0, short_name.length-2);
+			console.log("4");
 			document.getElementById(short_name).style.order = i+1;
 		}
 
