@@ -1437,7 +1437,7 @@ function init() {
 	round=parseInt(round, 10)+1;
 	
 
-	if (confirm('Are you sure you want to put in initiatives for Round ' + round + '? Make to sure right click any monsters to deactivate them first')) {
+	if (confirm('Are you sure you want to put in initiatives for Round ' + round + '? Make sure to right click any monsters to deactivate them first.')) {
 
 	//Run the 'end round' sequence
 	end_round();
@@ -1516,7 +1516,7 @@ function init() {
 			
 			console.log(x.substring(0,1));
 			
-				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));	
+				new_init=window.prompt("New Initiative for " + short_name);	
 				if (new_init.length == 1) {new_init = "0" + new_init;}
 				if (new_init.length == 0) {new_init = "99" + new_init;}
 				document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = new_init;
