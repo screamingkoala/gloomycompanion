@@ -1347,7 +1347,7 @@ function init() {
 			}
 		}
 	
-	document.getElementById("suggested_level").innerHTML =  "Suggested level: " + Math.ceil(total_levels/active_characters);
+	
 	document.querySelector("#scenariospage > ul > ul > input[type=number]").value = Math.ceil(total_levels/active_characters);
 	    
     }
