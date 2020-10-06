@@ -1571,11 +1571,11 @@ function update_stats(){
 		for (i=0; i < cards_array.length;i++){
 
 			short_name=cards_array[i][1]
-			console.log("short_name");
+			console.log(short_name);
 			short_name = short_name.replace(/\s/g, '');
-			console.log("short_name");			
+			console.log(short_name);			
 			short_name = short_name.substring(0, short_name.length-2);
-			console.log("short_name");
+			console.log(short_name);
 			document.getElementById("PC" + short_name).style.order = i+1;
 			
 		}
