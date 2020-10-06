@@ -1502,8 +1502,8 @@ function init() {
 			
 			if (short_name.substring(0, 1)=='<')
 			{
-			//remove everying after ">" 
-			short_name = short_name.substring(short_name.indexOf(">")+1);
+			//remove everying after ">" and add "PC" to the start
+			short_name = "PC" + short_name.substring(short_name.indexOf(">")+1);
 			console.log(short_name);
 			
 			//short_name = short_name.substring(0, short_name.length-2);
