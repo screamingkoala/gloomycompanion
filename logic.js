@@ -1089,7 +1089,7 @@ function DeckList() {
     decklist.global_level_selector = null;
 
 
-    //var listitem = document.createElement("li");
+    var listitem = document.createElement("li");
     var global_level_selector = new LevelSelector("Select scenario difficulty ", true);
     listitem.appendChild(global_level_selector.html);
     decklist.global_level_selector = global_level_selector;
