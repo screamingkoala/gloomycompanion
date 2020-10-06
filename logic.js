@@ -87,8 +87,8 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
 	console.log(name.substring(3,name.length));
     if (name.substring(0,2) == "PC"){
 	
-	name_span.innerHTML  = '<img src="images/' + name.substring(3,name.length) +'.svg" height="50" width="50"> ' + name.substring(3,name.length);
-    	//name_span.innerHTML  = name.substring(3,name.length);
+	name_span.innerHTML  = '<img src="images/' + name.substring(3,name.length) +'.svg" height="40" width="40"> ' + name.substring(3,name.length);
+    
     }
     else{
         name_span.innerText = name + "-" + level;
@@ -1498,15 +1498,19 @@ function init() {
 			short_name=cards_array[i][1];
 			short_name = short_name.replace(/\s/g, '');
 			console.log(short_name);
+			
+			//If a cards HTML starts with '<', then it's a PC card. Ask for the initiative, and put it in.
+			
+			if (short_name.substring(0, 1)=='<')
+			{
 			short_name = short_name.substring(0, short_name.length-2);
 			x=document.getElementById(short_name);
 			console.log(x);
 			x=x.getElementsByClassName('name')[0].innerHTML;		
 			
-			//If a cards HTML starts with '<', then it's a PC card. Ask for the initiative, and put it in.
+			
 			console.log(x.substring(0,1));
-			if (x.substring(0, 1)=='<')
-			{
+			
 				new_init=window.prompt("New Initiative for " + cards_array[i][1].substring(3,cards_array[i][1].length-2));	
 				if (new_init.length == 1) {new_init = "0" + new_init;}
 				if (new_init.length == 0) {new_init = "99" + new_init;}
