@@ -495,8 +495,9 @@ function draw_ability_card(deck) {
 	}
 
 	// Now sort 
-	//console.log("sort");		
-	sort_cards();
+	console.log("sort");		
+	//sort_cards();
+	sort_cardsbtn.click;
 
 
 	write_to_storage(deck.name, JSON.stringify(deck));
