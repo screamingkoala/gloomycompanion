@@ -215,7 +215,12 @@
     background-origin:          content-box;
     background-repeat:          no-repeat;
     background-size:            cover;
+    background-image: 		url("/images/Scoundrel.svg");
+    height: 			100%;
+    width: 			100%;
+	
 
+	
     box-shadow:                 5px 5px 5px rgba(0, 0, 0, 0.1);
     border-radius:              15px;
     overflow:                   hidden;
