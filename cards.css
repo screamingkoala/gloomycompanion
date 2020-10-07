@@ -505,6 +505,7 @@ div.collapse
     left:                       3%;
     top:                        45%;
     width:                      15%;
+    font-size: 			27px;
 }
 
 .card .healthElite
@@ -517,6 +518,7 @@ div.collapse
     left:                       3%;
     top:                        70%;
     width:                      15%;
+    font-size: 			27px;
 }
 
 .card.front .name
