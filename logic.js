@@ -927,6 +927,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 			}
 
 			e.preventDefault();
+			sort_cards();
 		}, false)
 		deck_space.className = "card-container";
 		deck_space.title = "Click to draw enemy ability";
