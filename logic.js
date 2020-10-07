@@ -1601,7 +1601,7 @@ function init() {
 
 
 	sort_cardsbtn.onclick = function() {
-
+		sort_cards();
 
 	}
 
