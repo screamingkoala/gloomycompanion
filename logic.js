@@ -95,14 +95,14 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
 
 	var healthNormal_span = document.createElement("span");
 	healthNormal_span.className = "healthNormal";
-	healthNormal_span.innerText = "HP " + health[0];
+	healthNormal_span.innerText = "Normal HP " + health[0];
 	card.appendChild(healthNormal_span);
 
 
 	if (health[1] > 0) {
 		var healthElite_span = document.createElement("span");
 		healthElite_span.className = "healthElite";
-		healthElite_span.innerText = "HP " + health[1];
+		healthElite_span.innerText = "Elite HP " + health[1];
 		card.appendChild(healthElite_span);
 	}
 
