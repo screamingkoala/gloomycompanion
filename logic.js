@@ -1398,8 +1398,9 @@ function init() {
 			}
 		}
 
-
-		document.querySelector("#scenariospage > ul > ul > input[type=number]").value = Math.ceil(total_levels / active_characters);
+	
+		//set the level to the calculated level or 7, whichever is lower.
+		document.querySelector("#scenariospage > ul > ul > input[type=number]").value = Math.min(7, Math.ceil(total_levels / active_characters));
 
 	}
 	load_party = function() {
