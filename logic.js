@@ -1281,7 +1281,7 @@ function init() {
 
 
 	var new_roundbtn = document.getElementById("new_round");
-	var sort_cardsbtn = document.getElementById("sort_cards");
+	
 	var end_roundbtn = document.getElementById("end_round");
 
 	document.onkeypress = function() {
@@ -1603,10 +1603,7 @@ function init() {
 
 
 
-	sort_cardsbtn.onclick = function() {
-		sort_cards();
 
-	}
 
 
 	//There is probably a more clever way of doing this, but this will do.
