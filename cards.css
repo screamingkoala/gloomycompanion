@@ -432,6 +432,7 @@
 {
     height:                     100%;
     vertical-align:             text-bottom;
+    filter:			contrast(200%);
 }
 
 .mirrored
