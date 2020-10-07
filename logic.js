@@ -191,6 +191,50 @@ function create_ability_card_front(initiative, name, shuffle, lines, attack, mov
 	return card;
 }
 
+function sort_cards() {
+		
+		//First, build a 2 dimensional array containing the initiatives and the card names
+		var init_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
+		var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
+		var background_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
+		var cards_array = [];
+
+		for (i = 0; i < init_list.length; i++) {
+
+			cards_array.push([]);
+			cards_array[i][0] = init_list[i].innerHTML;
+
+
+			//document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat"
+			cards_array[i][1] = name_list[i].innerHTML;
+		}
+
+		//Then put them in order		
+		cards_array.sort();
+
+		//Then, change the order using CSS
+		for (i = 0; i < cards_array.length; i++) {
+
+			short_name = cards_array[i][1]
+			short_name = short_name.replace(/\s/g, '');
+
+			if (short_name.substring(0, 1) == '<') {
+				//remove everying after ">" 
+				short_name = "PC" + short_name.substring(short_name.indexOf(">") + 1);
+			} else {
+				short_name = short_name.substring(0, short_name.length - 2);
+			}
+			console.log(short_name);
+			document.getElementById(short_name).style.order = i + 1;
+
+		}
+
+
+
+
+	}
+
+
 function load_ability_deck(deck_class, deck_name, level) {
 	var deck_definition = deck_definitions[deck_class];
 	deck_definition.name = deck_name;
@@ -1555,49 +1599,7 @@ function init() {
 		document.getElementById("bonus_xp").innerHTML = 2 * x + 4;
 	}
 
-	function sort_cards() {
-
-		//First, build a 2 dimensional array containing the initiatives and the card names
-		var init_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative");
-		var name_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
-		var background_list = document.querySelectorAll("div.card.ability.front.pull.up.discard span.name");
-		var cards_array = [];
-
-		for (i = 0; i < init_list.length; i++) {
-
-			cards_array.push([]);
-			cards_array[i][0] = init_list[i].innerHTML;
-
-
-			//document.getElementById(this.id).style.background !=  "url(\"images/icon.png\") no-repeat"
-			cards_array[i][1] = name_list[i].innerHTML;
-		}
-
-		//Then put them in order		
-		cards_array.sort();
-
-		//Then, change the order using CSS
-		for (i = 0; i < cards_array.length; i++) {
-
-			short_name = cards_array[i][1]
-			short_name = short_name.replace(/\s/g, '');
-
-			if (short_name.substring(0, 1) == '<') {
-				//remove everying after ">" 
-				short_name = "PC" + short_name.substring(short_name.indexOf(">") + 1);
-			} else {
-				short_name = short_name.substring(0, short_name.length - 2);
-			}
-			console.log(short_name);
-			document.getElementById(short_name).style.order = i + 1;
-
-		}
-
-
-
-
-	}
-
+	
 
 
 
