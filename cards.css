@@ -428,6 +428,12 @@
     vertical-align:             text-bottom;
 }
 
+.class_icon
+{
+    height:                     100%;
+    vertical-align:             text-bottom;
+}
+
 .mirrored
 {
     -webkit-transform:          scale(-1,1);
