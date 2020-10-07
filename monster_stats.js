@@ -7,7 +7,7 @@ SPECIAL_VALUES =
 
 MONSTER_STATS = {
   "monsters": {
-	"PC Lee": {
+	"PC Spellweaver": {
       "level": [
         {
           "level": 0,
@@ -91,9 +91,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -110,9 +108,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -129,9 +125,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -148,141 +142,12 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        }
-      ]
-    },"PC Greg": {
-      "level": [
-        {
-          "level": 0,
-          "normal": {
-            "health": 4,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
             "attributes": []
-          },
-          "elite": {
-            "health": 7,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 1,
-          "normal": {
-            "health": 6,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 9,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 2,
-          "normal": {
-            "health": 7,
-            "move": 0,
-            "attack": 2,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 11,
-            "move": 0,
-            "attack": 3,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 3,
-          "normal": {
-            "health": 8,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 4,
-          "normal": {
-            "health": 9,
-            "move": 0,
-            "attack": 4,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": [
-              "%target% 2"
             ]
           }
         },
         {
-          "level": 5,
-          "normal": {
-            "health": 11,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 15,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 6,
-          "normal": {
-            "health": 14,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 16,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 7,
+          "level": 8,
           "normal": {
             "health": 16,
             "move": 0,
@@ -295,141 +160,11 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
+            "attributes": []
             ]
-          }
-        }
-      ]
-    },"PC Jonathon": {
-      "level": [
-        {
-          "level": 0,
-          "normal": {
-            "health": 4,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
           },
-          "elite": {
-            "health": 7,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
         {
-          "level": 1,
-          "normal": {
-            "health": 6,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 9,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 2,
-          "normal": {
-            "health": 7,
-            "move": 0,
-            "attack": 2,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 11,
-            "move": 0,
-            "attack": 3,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 3,
-          "normal": {
-            "health": 8,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 4,
-          "normal": {
-            "health": 9,
-            "move": 0,
-            "attack": 4,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 5,
-          "normal": {
-            "health": 11,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 15,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 6,
-          "normal": {
-            "health": 14,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 16,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 7,
+          "level": 9,
           "normal": {
             "health": 16,
             "move": 0,
@@ -442,453 +177,9 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
+            "attributes": []
             ]
           }
-        }
-      ]
-    },"PC Kim": {
-      "level": [
-        {
-          "level": 0,
-          "normal": {
-            "health": 4,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 7,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 1,
-          "normal": {
-            "health": 6,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 9,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 2,
-          "normal": {
-            "health": 7,
-            "move": 0,
-            "attack": 2,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 11,
-            "move": 0,
-            "attack": 3,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 3,
-          "normal": {
-            "health": 8,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 4,
-          "normal": {
-            "health": 9,
-            "move": 0,
-            "attack": 4,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 5,
-          "normal": {
-            "health": 11,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 15,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 6,
-          "normal": {
-            "health": 14,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 16,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 7,
-          "normal": {
-            "health": 16,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": []
-          },
-          "elite": {
-            "health": 20,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        }
-      ]
-    },
-	"PC Brute": {
-      "level": [
-        {
-          "level": 0,
-          "normal": {
-            "health": 4,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 7,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 1,
-          "normal": {
-            "health": 6,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 9,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 2,
-          "normal": {
-            "health": 7,
-            "move": 0,
-            "attack": 2,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 11,
-            "move": 0,
-            "attack": 3,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 3,
-          "normal": {
-            "health": 8,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 4,
-          "normal": {
-            "health": 9,
-            "move": 0,
-            "attack": 4,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 5,
-          "normal": {
-            "health": 11,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 15,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 6,
-          "normal": {
-            "health": 14,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 16,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 7,
-          "normal": {
-            "health": 16,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": []
-          },
-          "elite": {
-            "health": 20,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        }
-      ]
-    },"PC Spellweaver": {
-      "level": [
-        {
-          "level": 0,
-          "normal": {
-            "health": 4,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 7,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 1,
-          "normal": {
-            "health": 6,
-            "move": 0,
-            "attack": 2,
-            "range": 4,
-            "attributes": []
-          },
-          "elite": {
-            "health": 9,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          }
-        },
-        {
-          "level": 2,
-          "normal": {
-            "health": 7,
-            "move": 0,
-            "attack": 2,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 11,
-            "move": 0,
-            "attack": 3,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 3,
-          "normal": {
-            "health": 8,
-            "move": 0,
-            "attack": 3,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          }
-        },
-        {
-          "level": 4,
-          "normal": {
-            "health": 9,
-            "move": 0,
-            "attack": 4,
-            "range": 5,
-            "attributes": []
-          },
-          "elite": {
-            "health": 13,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 5,
-          "normal": {
-            "health": 11,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 15,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 6,
-          "normal": {
-            "health": 14,
-            "move": 0,
-            "attack": 4,
-            "range": 6,
-            "attributes": []
-          },
-          "elite": {
-            "health": 16,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        },
-        {
-          "level": 7,
-          "normal": {
-            "health": 16,
-            "move": 0,
-            "attack": 4,
-            "range": 7,
-            "attributes": []
-          },
-          "elite": {
-            "health": 20,
-            "move": 0,
-            "attack": 5,
-            "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
-          }
-        }
       ]
     },"PC Mindthief": {
       "level": [
@@ -974,9 +265,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -993,9 +282,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1012,9 +299,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1031,11 +316,44 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
+            "attributes": []
             ]
           }
-        }
+        },
+        {
+          "level": 8,
+          "normal": {
+            "health": 16,
+            "move": 0,
+            "attack": 4,
+            "range": 7,
+            "attributes": []
+          },
+          "elite": {
+            "health": 20,
+            "move": 0,
+            "attack": 5,
+            "range": 7,
+            "attributes": []
+            ]
+          },
+        {
+          "level": 9,
+          "normal": {
+            "health": 16,
+            "move": 0,
+            "attack": 4,
+            "range": 7,
+            "attributes": []
+          },
+          "elite": {
+            "health": 20,
+            "move": 0,
+            "attack": 5,
+            "range": 7,
+            "attributes": []
+            ]
+          }
       ]
     },"PC Scoundrel": {
       "level": [
@@ -1121,9 +439,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1140,9 +456,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1159,9 +473,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1178,11 +490,44 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
+            "attributes": []
             ]
           }
-        }
+        },
+        {
+          "level": 8,
+          "normal": {
+            "health": 16,
+            "move": 0,
+            "attack": 4,
+            "range": 7,
+            "attributes": []
+          },
+          "elite": {
+            "health": 20,
+            "move": 0,
+            "attack": 5,
+            "range": 7,
+            "attributes": []
+            ]
+          },
+        {
+          "level": 9,
+          "normal": {
+            "health": 16,
+            "move": 0,
+            "attack": 4,
+            "range": 7,
+            "attributes": []
+          },
+          "elite": {
+            "health": 20,
+            "move": 0,
+            "attack": 5,
+            "range": 7,
+            "attributes": []
+            ]
+          }
       ]
     },"PC Cragheart": {
       "level": [
@@ -1268,9 +613,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 6,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1287,9 +630,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 4,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1306,9 +647,7 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
-            ]
+            "attributes": []
           }
         },
         {
@@ -1325,11 +664,44 @@ MONSTER_STATS = {
             "move": 0,
             "attack": 5,
             "range": 7,
-            "attributes": [
-              "%target% 2"
+            "attributes": []
             ]
           }
-        }
+        },
+        {
+          "level": 8,
+          "normal": {
+            "health": 16,
+            "move": 0,
+            "attack": 4,
+            "range": 7,
+            "attributes": []
+          },
+          "elite": {
+            "health": 20,
+            "move": 0,
+            "attack": 5,
+            "range": 7,
+            "attributes": []
+            ]
+          },
+        {
+          "level": 9,
+          "normal": {
+            "health": 16,
+            "move": 0,
+            "attack": 4,
+            "range": 7,
+            "attributes": []
+          },
+          "elite": {
+            "health": 20,
+            "move": 0,
+            "attack": 5,
+            "range": 7,
+            "attributes": []
+            ]
+          }
       ]
     },"PC Tinkerer": {
       "level": [
