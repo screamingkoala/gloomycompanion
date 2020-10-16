@@ -1559,9 +1559,9 @@ function init() {
 					x = x.getElementsByClassName('name')[0].innerHTML;
 
 
-					console.log(short_name);
-					console.log(document.getElementById("PC" + short_name).style.background);
-					//console.log(document.getElementById(x).style.background == "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat");
+									
+					if (document.getElementById("PC" + short_name).style.background != 'url("images/icon.png") 0% 0% / 120px 120px no-repeat'){
+					
 					new_init = window.prompt("New Initiative for " + short_name);
 					if (new_init.length == 1) {
 						new_init = "0" + new_init;
@@ -1570,6 +1570,11 @@ function init() {
 						new_init = "99" + new_init;
 					}
 					document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = new_init;
+					}
+					else
+					{
+					document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = 100;
+					}
 				}
 
 
