@@ -1559,8 +1559,8 @@ function init() {
 					x = x.getElementsByClassName('name')[0].innerHTML;
 
 
-					console.log(x);
-					console.log(document.getElementById(x).style.background);
+					console.log(short_name);
+					console.log(document.getElementById(short_name).style.background);
 					//console.log(document.getElementById(x).style.background == "url(\"images/icon.png\") 0% 0% / 120px 120px no-repeat");
 					new_init = window.prompt("New Initiative for " + short_name);
 					if (new_init.length == 1) {
