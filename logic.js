@@ -1573,7 +1573,7 @@ function init() {
 					}
 					else
 					{
-					document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = **;
+					document.querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[i].innerHTML = "**";
 					}
 				}
 
