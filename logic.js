@@ -1449,8 +1449,11 @@ function init() {
 		for (i = 0; i < class_array.length; i++) {
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible") {
 				class_name = document.getElementsByName("class_name")[i].id;
+				console.log(class_name);
 				class_level = document.querySelector("#" + class_name + "_level").value;
+				console.log(class_name);
 				class_name = class_name.charAt(0).toUpperCase() + class_name.slice(1);
+				console.log(class_name);
 				class_string = '{"name": "PC ' + class_name + '", "class": "' + class_name + '", "level": "' + class_level + '"}'
 				
 				json_string = JSON.parse(class_string);
