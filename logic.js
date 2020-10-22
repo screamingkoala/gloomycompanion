@@ -795,7 +795,7 @@ function load_definition(card_database) {
 }
 
 function get_monster_stats(name, level) {
-
+	console.log(name);
 	var attack = [MONSTER_STATS["monsters"][name]["level"][level]["normal"]["attack"],
 		MONSTER_STATS["monsters"][name]["level"][level]["elite"]["attack"]
 	];
