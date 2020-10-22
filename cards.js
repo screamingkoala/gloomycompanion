@@ -321,7 +321,7 @@ DECK_DEFINITONS = [{
 		]
 	},
 	{
-		class: "Beast Tyrant",
+		class: "Beasttyrant",
 		cards: [
 			[true, "00", "*%symbol_beast_tyrant%"]
 		]
