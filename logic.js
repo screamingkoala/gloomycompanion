@@ -1741,6 +1741,12 @@ function init() {
 	beasttyrant_icon.onclick = function() {
 		change_party("beasttyrant")
 	}
+	sawbones_icon.onclick = function() {
+		change_party("sawbones")
+	}
+	beserker_icon.onclick = function() {
+		change_party("beserker")
+	}
 
 
 	change_party = function(base_class) {
