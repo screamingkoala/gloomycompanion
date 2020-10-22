@@ -65,7 +65,7 @@ DECKS = {
 	},
 	"PC Beast Tyrant": {
 		name: "PC Beast Tyrant",
-		class: "Beasttyrant"
+		class: "Beast Tyrant"
 	},
 
 	"Ancient Artillery": {
@@ -321,7 +321,7 @@ DECK_DEFINITONS = [{
 		]
 	},
 	{
-		class: "Beasttyrant",
+		class: "Beast Tyrant",
 		cards: [
 			[true, "00", "*%symbol_beast_tyrant%"]
 		]
