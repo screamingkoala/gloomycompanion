@@ -880,7 +880,7 @@ MONSTER_STATS = {
        {"level": 9,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
           "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}}
        ]
-    },	  	"PC Beserker": {
+    },	  	"PC Berserker": {
       "level":
       [
       {"level": 0,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
