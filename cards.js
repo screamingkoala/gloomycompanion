@@ -65,7 +65,7 @@ DECKS = {
 	},
 	"PC Beast Tyrant": {
 		name: "PC Beast Tyrant",
-		class: "Beast Tyrant"
+		class: "Beasttyrant"
 	},
 
 	"Ancient Artillery": {
