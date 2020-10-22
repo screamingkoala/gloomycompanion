@@ -237,6 +237,7 @@ function sort_cards() {
 
 function load_ability_deck(deck_class, deck_name, level) {
 	var deck_definition = deck_definitions[deck_class];
+	console.log(name);
 	deck_definition.name = deck_name;
 	deck_definition.level = level;
 
