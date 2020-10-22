@@ -67,14 +67,6 @@ DECKS = {
 		name: "PC Beast Tyrant",
 		class: "Beast Tyrant"
 	},
-	"PC Elementalist": {
-		name: "PC Elementalist",
-		class: "Elementalist"
-	},
-	"PC Elementalist": {
-		name: "PC Elementalist",
-		class: "Elementalist"
-	},
 
 	"Ancient Artillery": {
 		name: "Ancient Artillery",
