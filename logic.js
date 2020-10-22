@@ -1714,6 +1714,34 @@ function init() {
 	mindthief_icon.onclick = function() {
 		change_party("mindthief")
 	}
+	sunkeeper_icon.onclick = function() {
+		change_party("sunkeeper")
+	}
+	quartermaster_icon.onclick = function() {
+		change_party("quartermaster")
+	}
+	summoner_icon.onclick = function() {
+		change_party("summoner")
+	}
+	nightshroud_icon.onclick = function() {
+		change_party("nightshroud")
+	}
+	plagueherald_icon.onclick = function() {
+		change_party("plagueherald")
+	}
+	soothsinger_icon.onclick = function() {
+		change_party("soothsinger")
+	}
+	doomstalker_icon.onclick = function() {
+		change_party("doomstalker")
+	}
+	elementalist_icon.onclick = function() {
+		change_party("elementalist")
+	}
+	beasttyrant_icon.onclick = function() {
+		change_party("beasttyrant")
+	}
+
 
 	change_party = function(base_class) {
 
