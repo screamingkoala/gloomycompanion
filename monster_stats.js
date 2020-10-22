@@ -730,7 +730,108 @@ MONSTER_STATS = {
        {"level": 9,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
           "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}}
        ]
-    },"PC Brute": {
+    },
+	"PC Brute": {
+      "level":
+      [
+      {"level": 0,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 1,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 2,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+         "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 3,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 4,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 5,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 6,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 7,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 8,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+       {"level": 9,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}}
+       ]
+    },
+	"PC Sunkeeper": {
+      "level":
+      [
+      {"level": 0,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 1,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 2,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+         "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 3,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 4,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 5,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 6,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 7,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 8,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+       {"level": 9,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}}
+       ]
+    },
+	"PC Quartermaster": {
+      "level":
+      [
+      {"level": 0,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 1,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 2,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+         "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 3,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 4,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 5,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 6,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 7,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 8,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+       {"level": 9,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}}
+       ]
+    },
+	"PC Summoner": {
+      "level":
+      [
+      {"level": 0,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 1,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 2,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+         "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 3,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 4,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 5,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 6,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 7,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+      {"level": 8,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}},
+       {"level": 9,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
+          "elite": {"health": 7,"move": 0,"attack": 3,"range": 5,"attributes": []}}
+       ]
+    },
+	"PC Nightshroud": {
       "level":
       [
       {"level": 0,"normal": {"health": 0,"move": 0,"attack": 0,"range": 0,"attributes": []},
