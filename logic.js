@@ -1748,7 +1748,7 @@ function init() {
 		change_party("elementalist")
 	}
 	Beast_Tyrant_icon.onclick = function() {
-		change_party("beasttyrant")
+		change_party("Beast_Tyrant")
 	}
 	sawbones_icon.onclick = function() {
 		change_party("sawbones")
