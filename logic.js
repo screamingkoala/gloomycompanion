@@ -1451,9 +1451,11 @@ function init() {
 				class_level = document.querySelector("#" + class_name + "_level").value;
 				class_name = class_name.charAt(0).toUpperCase() + class_name.slice(1);
 				class_string = '{"name": "PC ' + class_name + '", "class": "' + class_name + '", "level": "' + class_level + '"}'
-
+				
 				json_string = JSON.parse(class_string);
-
+				console.log(class_name);
+				console.log(class_string);
+				console.log(json_string);
 				selected_deck_names[selected_deck_names.length] = json_string;
 			}
 		}
