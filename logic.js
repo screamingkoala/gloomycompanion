@@ -1744,7 +1744,7 @@ function init() {
 	sawbones_icon.onclick = function() {
 		change_party("sawbones")
 	}
-	besrerker_icon.onclick = function() {
+	berserker_icon.onclick = function() {
 		change_party("berserker")
 	}
 
