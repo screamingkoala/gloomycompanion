@@ -257,73 +257,73 @@ DECK_DEFINITONS = [{
 	{
 		class: "Mindthief",
 		cards: [
-			[true, "00", "*%symbol_Mindthief%"]
+			[true, "00", "*%symbol_mindthief%"]
 		]
 	},
 	{
 		class: "Sunkeeper",
 		cards: [
-			[true, "00", "*%symbol_Sunkeeper%"]
+			[true, "00", "*%symbol_sunkeeper%"]
 		]
 	},
 	{
 		class: "Quartermaster",
 		cards: [
-			[true, "00", "*%symbol_Quartermaster%"]
+			[true, "00", "*%symbol_quartermaster%"]
 		]
 	},
 	{
 		class: "Summoner",
 		cards: [
-			[true, "00", "*%symbol_Summoner%"]
+			[true, "00", "*%symbol_summoner%"]
 		]
 	},
 	{
 		class: "Nightshroud",
 		cards: [
-			[true, "00", "*%symbol_Nightshroud%"]
+			[true, "00", "*%symbol_nightshroud%"]
 		]
 	},
 	{
 		class: "Plagueherald",
 		cards: [
-			[true, "00", "*%symbol_Plagueherald%"]
+			[true, "00", "*%symbol_plagueherald%"]
 		]
 	},
 	{
 		class: "Berserker",
 		cards: [
-			[true, "00", "*%symbol_Berserker%"]
+			[true, "00", "*%symbol_berserker%"]
 		]
 	},
 	{
 		class: "Soothsinger",
 		cards: [
-			[true, "00", "*%symbol_Soothsinger%"]
+			[true, "00", "*%symbol_soothsinger%"]
 		]
 	},
 	{
 		class: "Doomstalker",
 		cards: [
-			[true, "00", "*%symbol_Doomstalker%"]
+			[true, "00", "*%symbol_doomstalker%"]
 		]
 	},
 	{
 		class: "Sawbones",
 		cards: [
-			[true, "00", "*%symbol_Sawbones%"]
+			[true, "00", "*%symbol_sawbones%"]
 		]
 	},
 	{
 		class: "Elementalist",
 		cards: [
-			[true, "00", "*%symbol_Elementalist%"]
+			[true, "00", "*%symbol_elementalist%"]
 		]
 	},
 	{
 		class: "Beast Tyrant",
 		cards: [
-			[true, "00", "*%symbol_Beast Tyrant%"]
+			[true, "00", "*%symbol_beast_tyrant%"]
 		]
 	},
 
