@@ -866,7 +866,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 
 	if (!modifier_deck) {
 		init_modifier_deck();
-		add_modifier_deck(container, modifier_deck, preserve_existing_deck_state);
+		
 		if (preserve_existing_deck_state) {
 			var loaded_modifier_deck = JSON.parse(get_from_storage("modifier_deck"));
 			var curses = count_type("curse", loaded_modifier_deck);
@@ -888,7 +888,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 	} else if (!preserve_existing_deck_state) {
 		container.removeChild(document.getElementById("modifier-container"));
 		init_modifier_deck();
-		add_modifier_deck(container, modifier_deck, preserve_existing_deck_state);
+		
 	}
 	write_to_storage("modifier_deck", JSON.stringify(modifier_deck));
 
