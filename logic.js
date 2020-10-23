@@ -1367,11 +1367,8 @@ function init() {
 		apply_deck_selection(selected_decks, true);
 		var showmodifierdeck_deckspage = document.getElementById("showmodifierdeck-deckspage");
 		var modifier_deck_section = document.getElementById("modifier-container");
-		if (!showmodifierdeck_deckspage.checked) {
-			modifier_deck_section.style.display = "none";
-		} else {
-			modifier_deck_section.style.display = "block";
-		}
+		modifier_deck_section.style.display = "block";
+		
 	};
 
 	save_party = function() {
