@@ -1229,13 +1229,13 @@ function ScenarioList(scenarios) {
 	
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
 	scenario_spinner.input.min = 1;
-	scenario_spinner.input.max = scenarios.length;
-	
-	console.log(scenario_spinner.input.innerHTML);
-	console.log(scenario_spinner.innerHTML);
-	
+	scenario_spinner.input.max = scenarios.length;	
 	scenariolist.ul.appendChild(scenario_spinner.input);
 	scenariolist.spinner = scenario_spinner.input;
+	console.log(scenariolist);
+	console.log(scenariolist.ul);
+	console.log(scenariolist.innerHTML);
+	console.log(scenariolist.ul.innerHTML);
 	
 	
 	
