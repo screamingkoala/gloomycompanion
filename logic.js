@@ -1406,9 +1406,10 @@ function init() {
 		}
 
 	
-		//set the level to the calculated level or 7, whichever is lower.
-		document.querySelector("#scenariospage > ul > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
-
+		//set the level to the calculated level or 7, whichever is lower 
+		if (active_characters != 0){
+			document.querySelector("#scenariospage > ul > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
+		}
 	}
 	load_party = function() {
 		//First, hide all existing characters
