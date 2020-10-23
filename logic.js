@@ -1418,7 +1418,7 @@ function init() {
 
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("team_array"));
-		console.log(player_array");
+	
 		//loop through and put in the characters levels
 		if (player_array.length != 0){
 		    for (i = 0; i > player_array.length; i++) {
