@@ -1222,17 +1222,19 @@ function ScenarioList(scenarios) {
 		scenariolist.decks[i] = scenario.decks;
 		scenariolist.special_rules[i] = scenario.special_rules ? scenario.special_rules : "";
 	}
-
-	
-	var listitem = document.createElement("label");
+		
+	var listitem = document.createElement("li");
 	listitem.innerText = "Select scenario";
 	scenariolist.ul.appendChild(listitem);
 	
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
 	scenario_spinner.input.min = 1;
 	scenario_spinner.input.max = scenarios.length;
+	
+	console.log(scenario_spinner.innterHTML);
 	scenariolist.ul.appendChild(scenario_spinner.input);
 	scenariolist.spinner = scenario_spinner.input;
+	
 	
 	
 	scenariolist.get_selection = function() {
