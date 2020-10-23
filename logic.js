@@ -1421,7 +1421,7 @@ function init() {
 		console.log(player_array");
 		//loop through and put in the characters levels
 		if (player_array.length != 0){
-		    for (i = 0; i = player_array.length; i++) {
+		    for (i = 0; i > player_array.length; i++) {
 		    	change_party(player_array[i][0]);
 		    	document.querySelector("#" + player_array[i][0] + "_level").value = player_array[i][1];
 		    }
