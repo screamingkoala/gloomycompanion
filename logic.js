@@ -1116,7 +1116,7 @@ function LevelSelector(text, inline) {
 
 
 
-	var level_spinner = create_input("number", "scenario_number", "1", "Select scenario");
+	var level_spinner = create_input("number", "scenario_number", "1", "");
 	level_spinner.input.min = 0;
 	level_spinner.input.max = max_level;
 	level.html.appendChild(level_spinner.input);
