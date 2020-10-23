@@ -1157,19 +1157,23 @@ function DeckList() {
 
 	decklist.ul.appendChild(listitem);
 
+
+	
 	for (key in DECKS) {
 		var real_name = DECKS[key].name;
-		var listitem = document.createElement("li");
-		var dom_dict = create_input("checkbox", "deck", real_name, real_name);
-		listitem.appendChild(dom_dict.root);
+		
+		if (real_name.substring(0,2) != "PC"){
+			var listitem = document.createElement("li");
+			var dom_dict = create_input("checkbox", "deck", real_name, real_name);
+			listitem.appendChild(dom_dict.root);
 
-		var level_selector = new LevelSelector(" at level ", true);
-		listitem.appendChild(level_selector.html);
+			var level_selector = new LevelSelector(" at level ", true);
+			listitem.appendChild(level_selector.html);
 
-		decklist.ul.appendChild(listitem);
-		decklist.checkboxes[real_name] = dom_dict.input;
-		decklist.level_selectors[real_name] = level_selector;
-
+			decklist.ul.appendChild(listitem);
+			decklist.checkboxes[real_name] = dom_dict.input;
+			decklist.level_selectors[real_name] = level_selector;
+		}
 	};
 
 	decklist.get_selection = function() {
