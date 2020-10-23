@@ -1163,7 +1163,7 @@ function DeckList() {
 		var dom_dict = create_input("checkbox", "deck", real_name, real_name);
 		listitem.appendChild(dom_dict.root);
 
-		var level_selector = new LevelSelector(" with level ", true);
+		var level_selector = new LevelSelector(" at level ", true);
 		listitem.appendChild(level_selector.html);
 
 		decklist.ul.appendChild(listitem);
@@ -1213,7 +1213,7 @@ function ScenarioList(scenarios) {
 	scenariolist.special_rules = {};
 	scenariolist.level_selector = null;
 
-	scenariolist.level_selector = new LevelSelector("Select difficulty level", false);
+	scenariolist.level_selector = new LevelSelector("Select difficulty level", true);
 
 	scenariolist.ul.appendChild(scenariolist.level_selector.html);
 
@@ -1453,17 +1453,15 @@ function init() {
 				class_level = document.querySelector("#" + class_name + "_level").value;
 				//replace the _ with a space 
 				class_name  = class_name.replace(/_/g, " ");
-				console.log(class_name);						
+										
 				
-				console.log(class_name);
+				
 				class_name = class_name.charAt(0).toUpperCase() + class_name.slice(1);
-				console.log(class_name);
+				
 				class_string = '{"name": "PC ' + class_name + '", "class": "' + class_name + '", "level": "' + class_level + '"}'
 				
 				json_string = JSON.parse(class_string);
-				console.log(class_name);
-				console.log(class_string);
-				console.log(json_string);
+				
 				selected_deck_names[selected_deck_names.length] = json_string;
 			}
 		}
