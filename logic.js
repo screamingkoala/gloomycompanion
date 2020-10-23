@@ -1213,7 +1213,7 @@ function ScenarioList(scenarios) {
 	scenariolist.special_rules = {};
 	scenariolist.level_selector = null;
 
-	scenariolist.level_selector = new LevelSelector("Select difficulty level", true);
+	scenariolist.level_selector = new LevelSelector("Select difficulty level ", true);
 
 	scenariolist.ul.appendChild(scenariolist.level_selector.html);
 
