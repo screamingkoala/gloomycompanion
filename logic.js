@@ -1365,9 +1365,7 @@ function init() {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		});
 		apply_deck_selection(selected_decks, true);
-		var showmodifierdeck_deckspage = document.getElementById("showmodifierdeck-deckspage");
-		var modifier_deck_section = document.getElementById("modifier-container");
-		modifier_deck_section.style.display = "block";
+	
 		
 	};
 
@@ -1484,9 +1482,7 @@ function init() {
 		});
 
 		apply_deck_selection(selected_decks, false);
-		var modifier_deck_section = document.getElementById("modifier-container");
 
-		modifier_deck_section.style.display = "none";
 
 
 
