@@ -1224,7 +1224,7 @@ function ScenarioList(scenarios) {
 	}
 
 	var listitem = document.createElement("li");
-	listitem.innerText = "Select scenario number";
+	listitem.innerText = "Select scenario";
 	scenariolist.ul.appendChild(listitem);
 
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
