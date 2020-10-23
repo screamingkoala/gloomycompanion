@@ -1223,9 +1223,12 @@ function ScenarioList(scenarios) {
 		scenariolist.special_rules[i] = scenario.special_rules ? scenario.special_rules : "";
 	}
 
-	var listitem = document.createElement("li");
+	//var listitem = document.createElement("li");
 	//listitem.innerText = "Select scenario";
 	//scenariolist.ul.appendChild(listitem);
+	var listitem = document.createElement("label");
+	listitem.innerText = "Select scenario";
+	scenariolist.ul.appendChild(listitem);
 
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
 	scenario_spinner.input.min = 1;
