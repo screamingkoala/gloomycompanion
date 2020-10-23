@@ -1116,7 +1116,7 @@ function LevelSelector(text, inline) {
 
 
 
-	var level_spinner = create_input("number", "scenario_number", "1", "");
+	var level_spinner = create_input("number", "scenario_number", "1", "Select scenario");
 	level_spinner.input.min = 0;
 	level_spinner.input.max = max_level;
 	level.html.appendChild(level_spinner.input);
@@ -1224,15 +1224,16 @@ function ScenarioList(scenarios) {
 	}
 
 	var listitem = document.createElement("li");
-	listitem.innerText = "Select scenario";
-	scenariolist.ul.appendChild(listitem);
+	//listitem.innerText = "Select scenario";
+	//scenariolist.ul.appendChild(listitem);
 
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
 	scenario_spinner.input.min = 1;
 	scenario_spinner.input.max = scenarios.length;
 	scenariolist.ul.appendChild(scenario_spinner.input);
 	scenariolist.spinner = scenario_spinner.input;
-
+	
+	
 	scenariolist.get_selection = function() {
 		// We're using the scenario index that is zero-based, but the scenario list is 1-based
 		var current_value = scenariolist.spinner.value - 1;
