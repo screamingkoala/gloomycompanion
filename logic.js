@@ -849,7 +849,7 @@ function get_boss_stats(name, level) {
 	}
 }
 
-function apply_deck_selection(decks, preserve_existing_deck_state) {_
+function apply_deck_selection(decks, preserve_existing_deck_state) {
 	var container = document.getElementById("tableau");
 	document.getElementById("currentdeckslist").innerHTML = "";
 	var decks_to_remove = visible_ability_decks.filter(function(visible_deck) {
