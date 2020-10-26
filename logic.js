@@ -1147,7 +1147,7 @@ function DeckList() {
 	listitem.appendChild(global_level_selector.html);
 	
 	var hr = document.createElement('hr');// make a hr
-        listitem.appendChild(hzRule);// append the hr
+        listitem.appendChild(hr);// append the hr
 
 	
 	decklist.global_level_selector = global_level_selector;
