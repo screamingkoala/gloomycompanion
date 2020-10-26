@@ -1169,7 +1169,7 @@ function DeckList() {
 			listitem.appendChild(dom_dict.root);
 
 			var level_selector = new LevelSelector("", true);
-			level_selector.html.style = "float: right;"
+			level_selector.html.style = "float: right;clear: both;"
 			listitem.appendChild(level_selector.html);
 
 
