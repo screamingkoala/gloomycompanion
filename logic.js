@@ -1145,6 +1145,11 @@ function DeckList() {
 	var listitem = document.createElement("li");
 	var global_level_selector = new LevelSelector("Set level for all monsters: ", true);
 	listitem.appendChild(global_level_selector.html);
+	
+	var hr = document.createElement('hr');// make a hr
+        listitem.appendChild(hzRule);// append the hr
+
+	
 	decklist.global_level_selector = global_level_selector;
 
 	var dom_dict = create_input("button", "applylevel", "Apply", "");
