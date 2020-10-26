@@ -41,8 +41,8 @@ function create_input(type, name, value, text)
     var textnode = document.createTextNode(text);
 
     var label = document.createElement("label");
-    label.appendChild(input);
     label.appendChild(textnode);
+    label.appendChild(input);    
 
     return {'root': label, 'input': input};
 }
