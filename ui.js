@@ -56,6 +56,7 @@ function init_ui()
     deckstab.onclick = function(e)
     {
         activate_tab(tabs, pages, "decks");
+	change_suggested_level();
     }
 
    playerstab.onclick = function(e)
