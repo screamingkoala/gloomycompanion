@@ -1361,10 +1361,7 @@ function init() {
 
 		
 		
-		localStorage.clear();
-		var selected_deck_names = decklist.get_selected_decks();
-		write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
-
+		
 
 		var selected_decks = selected_deck_names.map(function(deck_names) {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
