@@ -864,33 +864,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 		}).length == 0);
 	});
 
-	if (!modifier_deck) {
-		init_modifier_deck();
-		
-		if (preserve_existing_deck_state) {
-			var loaded_modifier_deck = JSON.parse(get_from_storage("modifier_deck"));
-			var curses = count_type("curse", loaded_modifier_deck);
-			var blessings = count_type("bless", loaded_modifier_deck);
-			for (var i = 0; i < blessings; i++) {
-				modifier_deck.add_card("bless");
-			}
-			for (var i = 0; i < curses; i++) {
-				modifier_deck.add_card("curse");
-			}
-			modifier_deck.draw_top_discard();
-
-			document.body.dispatchEvent(new CustomEvent(EVENT_NAMES.MODIFIER_DECK_SHUFFLE_REQUIRED, {
-				detail: {
-					shuffle: modifier_deck.shuffle_end_of_round()
-				}
-			}));
-		}
-	} else if (!preserve_existing_deck_state) {
-		//container.removeChild(document.getElementById("modifier-container"));
-		init_modifier_deck();
-		
-	}
-	write_to_storage("modifier_deck", JSON.stringify(modifier_deck));
+	
 
 	decks_to_remove.forEach(function(deck) {
 		deck.discard_deck();
