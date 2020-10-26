@@ -1371,6 +1371,7 @@ function init() {
 		for (i = 0; i < class_array.length; i++) {
 			console.log(i);
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible") {
+				console.log(i);
 				class_name = document.getElementsByName("class_name")[i].id;
 				class_level = document.querySelector("#" + class_name + "_level").value;
 				//replace the _ with a space 
@@ -1387,7 +1388,8 @@ function init() {
 				selected_deck_names[selected_deck_names.length] = json_string;
 			}
 		}
-		
+		var selected_decks = selected_deck_names.map(function(deck_names) {
+			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		
 		apply_deck_selection(selected_decks, true);
 		
