@@ -1364,6 +1364,29 @@ function init() {
 
 	applydeckbtn.onclick = function() {
 		show_game_elements();
+		
+		base_level = scenariolist.level_selector.get_selection();
+		
+		if (base_level == 7) {
+			gold = 6;
+		} else {
+			gold = Math.floor(base_level / 2) + 2;
+		}
+
+		trap_damage = 2 + Number(base_level);
+
+		hazardous_terrain = Math.floor(trap_damage / 2);
+
+		bonus_xp = 4 + (base_level * 2);
+
+		document.querySelector("#scenariro_Level").innerHTML = "Scenario Level: " + base_level;
+		document.querySelector("#gold_conversion").innerHTML = " | Gold Conversion: " + gold;
+		document.querySelector("#trap_damage").innerHTML = " | Trap Damage: " + trap_damage;
+		document.querySelector("#hazardous_terrain").innerHTML = " | Hazardous Terrain Damage: " + hazardous_terrain;
+		document.querySelector("#bonus_xp").innerHTML = " | Bonus XP: " + bonus_xp;
+
+		
+		
 		localStorage.clear();
 		var selected_deck_names = decklist.get_selected_decks();
 		write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
@@ -1373,7 +1396,7 @@ function init() {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		});
 		apply_deck_selection(selected_decks, true);
-	
+		
 		
 	};
 
