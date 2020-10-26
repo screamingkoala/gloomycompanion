@@ -225,7 +225,7 @@ function sort_cards() {
 			} else {
 				short_name = short_name.substring(0, short_name.length - 2);
 			}
-			console.log(short_name);
+			
 			document.getElementById(short_name).style.order = i + 1;
 
 		}
@@ -238,7 +238,7 @@ function sort_cards() {
 
 function load_ability_deck(deck_class, deck_name, level) {
 	var deck_definition = deck_definitions[deck_class];
-	console.log(name);
+	
 	deck_definition.name = deck_name;
 	deck_definition.level = level;
 
@@ -541,7 +541,7 @@ function draw_ability_card(deck) {
 	}
 
 	// Now sort 
-	console.log("sort");		
+			
 	sort_cards();
 	
 
@@ -797,7 +797,7 @@ function load_definition(card_database) {
 }
 
 function get_monster_stats(name, level) {
-	console.log(name);
+	
 	var attack = [MONSTER_STATS["monsters"][name]["level"][level]["normal"]["attack"],
 		MONSTER_STATS["monsters"][name]["level"][level]["elite"]["attack"]
 	];
@@ -1236,10 +1236,7 @@ function ScenarioList(scenarios) {
 	scenario_spinner.input.max = scenarios.length;	
 	scenariolist.ul.appendChild(scenario_spinner.input);
 	scenariolist.spinner = scenario_spinner.input;
-	console.log(scenariolist);
-	console.log(scenariolist.ul);
-	console.log(scenariolist.innerHTML);
-	console.log(scenariolist.ul.innerHTML);
+
 	
 	
 	
