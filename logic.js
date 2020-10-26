@@ -849,7 +849,7 @@ function get_boss_stats(name, level) {
 	}
 }
 
-function apply_deck_selection(decks, preserve_existing_deck_state) {
+function apply_deck_selection(decks, preserve_existing_deck_state) {_
 	var container = document.getElementById("tableau");
 	document.getElementById("currentdeckslist").innerHTML = "";
 	var decks_to_remove = visible_ability_decks.filter(function(visible_deck) {
@@ -1385,6 +1385,7 @@ function init() {
 				
 				selected_deck_names[selected_deck_names.length] = json_string;
 			}
+		}
 		
 		
 		apply_deck_selection(selected_decks, true);
@@ -1513,7 +1514,7 @@ function init() {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		});
 
-		apply_deck_selection(selected_decks, false);
+		pply_deck_selection(selected_decks, false);
 
 
 
