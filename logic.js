@@ -886,7 +886,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 			}));
 		}
 	} else if (!preserve_existing_deck_state) {
-		container.removeChild(document.getElementById("modifier-container"));
+		//container.removeChild(document.getElementById("modifier-container"));
 		init_modifier_deck();
 		
 	}
