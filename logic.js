@@ -1166,7 +1166,7 @@ function DeckList() {
 			var listitem = document.createElement("li");
 			
 			var dom_dict = create_input("checkbox", "deck", real_name, real_name);
-			dom_dict.html.style = "float: left;clear: both;"
+			
 			listitem.appendChild(dom_dict.root);
 
 			var level_selector = new LevelSelector("", true);
