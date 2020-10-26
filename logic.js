@@ -1511,7 +1511,7 @@ function init() {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		});
 
-		pply_deck_selection(selected_decks, false);
+		apply_deck_selection(selected_decks, false);
 
 
 
