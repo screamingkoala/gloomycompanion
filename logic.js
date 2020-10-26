@@ -1146,8 +1146,7 @@ function DeckList() {
 	var global_level_selector = new LevelSelector("Set level for all monsters: ", true);
 	listitem.appendChild(global_level_selector.html);
 	
-	var hr = document.createElement('hr');// make a hr
-        listitem.appendChild(hr);// append the hr
+	
 
 	
 	decklist.global_level_selector = global_level_selector;
@@ -1159,7 +1158,11 @@ function DeckList() {
 		}
 	};
 	listitem.appendChild(dom_dict.root);
-
+	
+	var hr = document.createElement('hr');// make a hr
+        listitem.appendChild(hr);// append the hr
+	
+	
 	decklist.ul.appendChild(listitem);
 
 
