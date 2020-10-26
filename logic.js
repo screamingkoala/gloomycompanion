@@ -1356,6 +1356,7 @@ function init() {
 
 
 	applydeckbtn.onclick = function() {
+		show_game_elements();
 		localStorage.clear();
 		var selected_deck_names = decklist.get_selected_decks();
 		write_to_storage("selected_deck_names", JSON.stringify(selected_deck_names));
@@ -1431,9 +1432,11 @@ function init() {
 
 
 	applyscenariobtn.onclick = function() {
-
+	
+	show_game_elements();
+		
 		base_level = scenariolist.level_selector.get_selection();
-
+		
 		if (base_level == 7) {
 			gold = 6;
 		} else {
@@ -1785,7 +1788,14 @@ function init() {
 
 
 	}
-
+	
+	show_game_elements= function(){
+		document.getElementById("elements").style.display=  "block";
+		document.getElementById("new_round").style.display= "block";
+		
+	}
+	
+	
 	window.onresize = refresh_ui.bind(null, visible_ability_decks);
 
 
