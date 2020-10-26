@@ -1385,7 +1385,7 @@ function init() {
 		var selected_decks = selected_deck_names.map(function(deck_names) {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		});
-		apply_deck_selection(selected_decks, true);
+		apply_deck_selection(selected_decks, false);
 		
 		
 	};
