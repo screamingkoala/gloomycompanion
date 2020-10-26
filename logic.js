@@ -1161,7 +1161,7 @@ function DeckList() {
 	
 	var hr = document.createElement('hr');// make a hr
         listitem.appendChild(hr);// append the hr
-	
+	listitem.style ="display: flex;justify-content: space-between;"
 	
 	decklist.ul.appendChild(listitem);
 
