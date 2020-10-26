@@ -1164,6 +1164,7 @@ function DeckList() {
 		
 		if (real_name.substring(0,2) != "PC"){
 			var listitem = document.createElement("li");
+			listitem.style ="display: flex;justify-content: space-between;"
 			
 			var dom_dict = create_input("checkbox", "deck", real_name, real_name);
 			
