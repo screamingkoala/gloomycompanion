@@ -1430,11 +1430,11 @@ function init() {
 		
 		//Load in the previous stored data
 		var player_array = JSON.parse(get_from_storage("team_array"));
-	   	 console.log(player_array.length);
+	   	 
 		//loop through and put in the characters levels
-		if (player_array.length != 0){
+		if (player_array != null){
 		    for (i = 0; i < player_array.length; i++) {
-		    	console.log(i);
+		    	
 		    	change_party(player_array[i][0]);
 		    	document.querySelector("#" + player_array[i][0] + "_level").value = player_array[i][1];
 		    }
