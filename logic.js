@@ -7,7 +7,7 @@ var modifier_deck = null;
 var deck_definitions = load_definition(DECK_DEFINITONS);
 
 var DECK_TYPES = {
-	MODIFIER: "modifier",
+	
 	ABILITY: "ability",
 	BOSS: "boss"
 };
@@ -1161,11 +1161,9 @@ function DeckList() {
 	
 	var hr = document.createElement('hr');// make a hr
         listitem.appendChild(hr);// append the hr
-	//listitem.style ="display: flex;justify-content: space-between;"
+	
 	
 	decklist.ul.appendChild(listitem);
-
-
 	
 	for (key in DECKS) {
 		var real_name = DECKS[key].name;
