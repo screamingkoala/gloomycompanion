@@ -1551,9 +1551,9 @@ function init() {
 
 			var name_list = document.getElementsByClassName('card-container');
 
+			//for (a = 2; a < name_list.length; a++) {
 			for (a = 2; a < name_list.length; a++) {
-
-
+			console.log(a);
 				card_init = name_list[a].querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[0];
 
 
