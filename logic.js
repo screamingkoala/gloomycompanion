@@ -1197,11 +1197,9 @@ function ScenarioList(scenarios) {
 	scenariolist.special_rules = {};
 	scenariolist.level_selector = null;
 
-	scenariolist.level_selector = new LevelSelector("Select difficulty level ", true);
+	scenariolist.level_selector = new LevelSelector("Select difficulty level ", false);
 
 	scenariolist.ul.appendChild(scenariolist.level_selector.html);
-	console.log(scenariolist.level_selector.html);
-	console.log(scenariolist.level_selector);
 
 	for (var i = 0; i < scenarios.length; i++) {
 		var scenario = scenarios[i];
@@ -1212,8 +1210,6 @@ function ScenarioList(scenarios) {
 	var listitem = document.createElement("li");
 	listitem.innerText = "Select scenario";
 	scenariolist.ul.appendChild(listitem);
-	console.log(listitem);
-	
 	
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
 	scenario_spinner.input.min = 1;
@@ -1221,10 +1217,7 @@ function ScenarioList(scenarios) {
 	scenariolist.ul.appendChild(scenario_spinner.input);
 	scenariolist.spinner = scenario_spinner.input;
 
-	
-	
-	
-	scenariolist.get_selection = function() {
+		scenariolist.get_selection = function() {
 		// We're using the scenario index that is zero-based, but the scenario list is 1-based
 		var current_value = scenariolist.spinner.value - 1;
 		return Math.min(current_value, scenarios.length + 1);
