@@ -1190,10 +1190,8 @@ function DeckList() {
 
 function ScenarioList(scenarios) {
 	var scenariolist = {};
-	//scenariolist.ul = document.createElement("ul");
-	scenariolist.span = document.createElement("span");
-	//scenariolist.ul.className = "selectionlist";
-	scenariolist.span.className = "selectionlist";
+	scenariolist.ul = document.createElement("ul");
+	scenariolist.ul.className = "selectionlist";
 	scenariolist.spinner = null;
 	scenariolist.decks = {};
 	scenariolist.special_rules = {};
@@ -1201,8 +1199,8 @@ function ScenarioList(scenarios) {
 
 	scenariolist.level_selector = new LevelSelector("Select difficulty level ", true);
 
-	//scenariolist.ul.appendChild(scenariolist.level_selector.html);
-	scenariolist.span.appendChild(scenariolist.level_selector.html);
+	scenariolist.ul.appendChild(scenariolist.level_selector.html);
+	
 
 	for (var i = 0; i < scenarios.length; i++) {
 		var scenario = scenarios[i];
@@ -1213,6 +1211,7 @@ function ScenarioList(scenarios) {
 	var listitem = document.createElement("li");
 	listitem.innerText = "Select scenario";
 	scenariolist.ul.appendChild(listitem);
+	
 	
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
 	scenario_spinner.input.min = 1;
