@@ -1200,7 +1200,8 @@ function ScenarioList(scenarios) {
 	scenariolist.level_selector = new LevelSelector("Select difficulty level ", true);
 
 	scenariolist.ul.appendChild(scenariolist.level_selector.html);
-	
+	console.log(scenariolist.level_selector.html);
+	console.log(scenariolist.level_selector);
 
 	for (var i = 0; i < scenarios.length; i++) {
 		var scenario = scenarios[i];
@@ -1211,6 +1212,7 @@ function ScenarioList(scenarios) {
 	var listitem = document.createElement("li");
 	listitem.innerText = "Select scenario";
 	scenariolist.ul.appendChild(listitem);
+	console.log(listitem);
 	
 	
 	var scenario_spinner = create_input("number", "scenario_number", "1", "");
