@@ -1197,7 +1197,7 @@ function ScenarioList(scenarios) {
 	scenariolist.special_rules = {};
 	scenariolist.level_selector = null;
 
-	scenariolist.level_selector = new LevelSelector("Select difficulty level ", false);
+	scenariolist.level_selector = new LevelSelector("Select difficulty level ", true);
 
 	scenariolist.ul.appendChild(scenariolist.level_selector.html);
 
@@ -1426,7 +1426,7 @@ function init() {
 	
 		//set the level to the calculated level or 7, whichever is lower 
 		if (active_characters != 0){
-		//	document.querySelector("#scenariospage > ul > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
+			document.querySelector("#scenariospage > ul > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
 			document.querySelector("#deckspage > ul > li:nth-child(1) > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
 			document.querySelectorAll("#deckspage > ul > li:nth-child(1) > label > input[type=button]")[0].click();
 		}
