@@ -1545,7 +1545,7 @@ function init() {
 			//New Round! Update the button!
 
 			document.getElementById("new_round").value = 'New Round';
-			document.getElementById("round_count").value = round;
+			document.getElementById("round_count").innerHTML = round;
 			
 
 			//First, flip all the unskulled cards
