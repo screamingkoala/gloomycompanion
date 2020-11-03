@@ -1522,9 +1522,9 @@ function init() {
 	new_roundbtn.onclick = function() {
 
 		//Get the round number from the button text. If the substring returns 'Game' it's the first round, so set round to 0
-		round = document.getElementById("new_round").value;
-		round = round.substring(6, 10);
-		if (round == 'Game') {
+		round = document.getElementById("round_count").innerHTML;
+		
+		if (round == '-') {
 			round = 0
 		};
 		round = parseInt(round, 10) + 1;
