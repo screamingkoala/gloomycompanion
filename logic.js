@@ -1349,8 +1349,8 @@ function init() {
 		document.querySelector("#scenariro_Level").innerHTML = "Scenario Level: " + base_level;
 		document.querySelector("#gold_conversion").innerHTML = "Gold Conversion: " + gold;
 		document.querySelector("#trap_damage").innerHTML = "Trap Damage: " + trap_damage;
-		document.querySelector("#hazardous_terrain").innerHTML = " | Hazardous Terrain Damage: " + hazardous_terrain;
-		document.querySelector("#bonus_xp").innerHTML = " | Bonus XP: " + bonus_xp;
+		document.querySelector("#hazardous_terrain").innerHTML = "Hazardous Terrain Damage: " + hazardous_terrain;
+		document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
 
 		
 		
