@@ -1545,8 +1545,8 @@ function init() {
 			//New Round! Update the button!
 
 			document.getElementById("new_round").value = 'New Round';
-			document.getElementById("new_round").value = round_count;
-			round_count
+			document.getElementById("round_count").value = round;
+			
 
 			//First, flip all the unskulled cards
 
@@ -1819,6 +1819,7 @@ function init() {
 	show_game_elements= function(){
 		document.getElementById("elements").style.display=  "block";
 		document.getElementById("new_round").style.display= "block";
+		document.getElementById("round_count").style.display= "block";
 		
 	}
 	
