@@ -167,45 +167,47 @@
             
       
      <div>
-         <table id="element_table" width="100%">
+         <table border="1" id="element_table" width="100%">
                
-            <TR>
-                           <TD>
-               <input alt="Configure" id="settingsbtn" type="image" src="images/settings.svg" />
-               </TD>
-               <TD style=""><input id="new_round" type="button" value="Start Game" style="display:none; width: 100px; height: 50px;padding: 15px;"><BR>ROUND</TD>
-               <TD id= "scenariro_Level" style="text-align:center;padding: 15px;"></TD>
-               <TD rowspan="2" > 
-                  <div id="elements" style="display:none" >
-                     <a class="element" style="text-align: center;" title="" ><img src="images/air_number.svg" height="100" width="100" id="element_air" style="border:20px solid white"></a>
-                     <a class="element" style="text-align: center;" title="" ><img src="images/earth_number.svg" height="100" width="100" id="element_earth" style="border:20px solid white"></a>
-                     <a class="element" style="text-align: center;" title="" ><img src="images/fire_number.svg" height="100" width="100" id="element_fire" style="border:20px solid white"></a>
-                     <a class="element" style="text-align: center;" title="" ><img src="images/ice_number.svg" height="100" width="100" id="element_ice" style="border:20px solid white"></a>
-                     <a class="element" style="text-align: center;" title="" ><img src="images/light_number.svg" height="100" id="element_light" width="100" style="border:20px solid white"></a>
-                     <a class="element" style="text-align: center;" title="" ><img src="images/dark_number.svg" height="100" id="element_dark" width="100" style="border:20px solid white"></a>
+            <tbody><tr>
+                           <td>
+               <input alt="Configure" id="settingsbtn" type="image" src="images/settings.svg">
+               </td>
+               <td style="  display: flex;
+  justify-content: center;
+  align-items: center;"><input id="new_round" type="button" value="Start Game" style="display: block; width: 100px; height: 50px; text-align:center"><br></td>
+               <td id="scenariro_Level" style="text-align:center;padding: 15px;">1</td>
+               <td rowspan="2"> 
+                  <div id="elements" style="display: block;">
+                     <a class="element" style="text-align: center;" title=""><img src="images/air_number.svg" height="100" width="100" id="element_air" style="border:20px solid white"></a>
+                     <a class="element" style="text-align: center;" title=""><img src="images/earth_number.svg" height="100" width="100" id="element_earth" style="border:20px solid white"></a>
+                     <a class="element" style="text-align: center;" title=""><img src="images/fire_number.svg" height="100" width="100" id="element_fire" style="border:20px solid white"></a>
+                     <a class="element" style="text-align: center;" title=""><img src="images/ice_number.svg" height="100" width="100" id="element_ice" style="border:20px solid white"></a>
+                     <a class="element" style="text-align: center;" title=""><img src="images/light_number.svg" height="100" id="element_light" width="100" style="border:20px solid white"></a>
+                     <a class="element" style="text-align: center;" title=""><img src="images/dark_number.svg" height="100" id="element_dark" width="100" style="border:20px solid white"></a>
                   </div>
-               </TD>            
-            </TR>
-            <TR>
-               <TD></TD>
-               <TD><DIV id="round_count" style="font-size: 73px;text-align:center;display:none">-</DIV></TD>
-               <TD style="padding: 15px;" >
-                  <TABLE>
-                     <TR>
-                        <TD>Trap Damage:</TD><TD id= "trap_damage"></TD>
-                     </TR>
-                     <TR>
-                  <TD>Hazardous Terrain:</TD><TD id ="hazardous_terrain"></TD>
-                  </TR>
-                  <TR>
-                  <TD>Gold Conversion:</TD><TD id= "gold_conversion"></TD>
-                     </TR>
-                     <TR>
-                  <TD>Bonus XP:</TD><TD id ="bonus_xp"></TD>               
-                  </TR></TABLE>
-               </TD>
-            </TR>
-         <table>
+               </td>            
+            </tr>
+            <tr>
+               <td></td>
+               <td style="text-align:center">Round<div id="round_count" style="font-size: 73px; text-align: center; display: block;">10</div></td>
+               <td>
+                  <table border="1" width="100%">
+                     <tbody><tr>
+                        <td>Trap Damage:</td><td id="trap_damage">3</td>
+                     </tr>
+                     <tr>
+                  <td>Hazardous Terrain:</td><td id="hazardous_terrain">1</td>
+                  </tr>
+                  <tr>
+                  <td>Gold Conversion:</td><td id="gold_conversion">2</td>
+                     </tr>
+                     <tr>
+                  <td>Bonus XP:</td><td id="bonus_xp">6</td>               
+                  </tr></tbody></table>
+               </td>
+            </tr>
+         </tbody></table>
             
          
       </div>
