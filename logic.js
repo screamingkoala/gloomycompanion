@@ -1474,11 +1474,11 @@ function init() {
 
 		bonus_xp = 4 + (base_level * 2);
 
-		document.querySelector("#scenariro_Level").innerHTML = "Scenario Level: " + base_level;
-		document.querySelector("#gold_conversion").innerHTML = "Gold Conversion: " + gold;
-		document.querySelector("#trap_damage").innerHTML = "Trap Damage: " + trap_damage;
-		document.querySelector("#hazardous_terrain").innerHTML = "Hazardous Terrain Damage: " + hazardous_terrain;
-		document.querySelector("#bonus_xp").innerHTML = "Bonus XP: " + bonus_xp;
+		document.querySelector("#scenariro_Level").innerHTML =  base_level;
+		document.querySelector("#gold_conversion").innerHTML =  gold;
+		document.querySelector("#trap_damage").innerHTML =  trap_damage;
+		document.querySelector("#hazardous_terrain").innerHTML =  hazardous_terrain;
+		document.querySelector("#bonus_xp").innerHTML =  bonus_xp;
 
 		var selected_deck_names = scenariolist.get_scenario_decks();
 
