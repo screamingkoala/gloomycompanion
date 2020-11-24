@@ -1832,7 +1832,6 @@ function init() {
 		console.log(scenario_info);
 	
 		for(var i = 0; i < scenario_info.length; i++) {
-			console.log[i];
     			for(var j = 0; j < scenario_info[i].length; j++) {
         			console.log(scenario_info[i][j]);
     			}
