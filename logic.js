@@ -1828,7 +1828,7 @@ function init() {
 
 	show_available_scenarios = function()
 	{
-		scenario_info = storage.getItem(gloomhavenScenarioTree);
+		scenario_info = JSON.parse(get_from_storage(gloomhavenScenarioTree));			
 		console.log(scenario_info);
 
 	}
