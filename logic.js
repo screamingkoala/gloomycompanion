@@ -1830,7 +1830,8 @@ function init() {
 	{
 		scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
 		console.log(scenario_info);
-
+		scenario_info = localStorage.getItem("gloomhavenScenarioTree");		
+		console.log(scenario_info);
 	}
 
 }
