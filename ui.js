@@ -44,6 +44,7 @@ function init_ui()
     {
 	save_party();
 	change_suggested_level();
+	show_available_scenarios();
         activate_tab(tabs, pages, "scenarios");
 
     }
