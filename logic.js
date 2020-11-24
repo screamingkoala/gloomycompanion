@@ -1832,6 +1832,12 @@ function init() {
 		console.log(scenario_info);
 		scenario_info = localStorage.getItem("gloomhavenScenarioTree");		
 		console.log(scenario_info);
+		for(var i = 0; i < scenario_info.length; i++) {
+    			for(var j = 0; j < scenario_info[i].length; j++) {
+        			console.log(scenario_info[i][j]);
+    			}
+		}
+		
 	}
 
 }
