@@ -1828,16 +1828,15 @@ function init() {
 
 	show_available_scenarios = function()
 	{
-		scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
-		console.log(scenario_info);
+	
 		scenario_info = localStorage.getItem("gloomhavenScenarioTree");			
 		console.log(scenario_info);
-	
-		for(var i = 0; i < scenario_info.length; i++) {
-    			for(var j = 0; j < scenario_info[i].length; j++) {
-        			console.log(scenario_info[i][j]);
-    			}
-		}
+		console.log(JSON.parse(scenario_info));
+		x=JSON.parse(scenario_info);
+		console.log(x);
+		console.log(x[0]);
+		console.log(x[0][0]);
+		
 		
 	}
 
