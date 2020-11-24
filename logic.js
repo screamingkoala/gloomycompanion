@@ -1826,7 +1826,7 @@ function init() {
 	
 	window.onresize = refresh_ui.bind(null, visible_ability_decks);
 
-	show_available_scenarios = function();
+	show_available_scenarios = function()
 	{
 		scenario_info = storage.getItem(gloomhavenScenarioTree);
 		console.log(scenario_info);
