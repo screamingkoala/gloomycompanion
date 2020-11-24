@@ -1826,6 +1826,11 @@ function init() {
 	
 	window.onresize = refresh_ui.bind(null, visible_ability_decks);
 
+	show_available_scenarios = function();
+	{
+		scenariono_info = storage.getItem(gloomhavenScenarioTree);
+		console.log(storage_info);
 
+	}
 
 }
