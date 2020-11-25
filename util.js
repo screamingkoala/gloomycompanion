@@ -109,3 +109,10 @@ function find_in_discard(discard, id) {
 function update_difficulty(){
     document.getElementById("adjusted_level").innerHTML = parseInt(document.getElementById("difficulty").innerHTML) + parseInt(document.querySelector("#scenario_picker").value);
 }
+
+function update_scenario_list(){
+    var x = document.getElementById("scenario_picker");
+    var option = document.createElement("option");
+    option.text = "Kiwi";
+    x.add(option);
+}
