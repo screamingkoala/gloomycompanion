@@ -1832,12 +1832,18 @@ function init() {
 	
 	show_available_scenarios =function(){
 		available_scenarios=list_available_scenarios();
-		  var x = document.getElementById("mySelect");
-  		var option = document.createElement("option");
-  		option.text = "Kiwi";
-  		x.add(option, x[0]);
+		x = document.getElementById("scenario_picker");
+		for (i = 0; i < available_scenarios.length; i++) {
+			option = document.createElement("option");
+  			option.text = available_scenarios[i];
+  			x.add(option, x[i]);	
+		}
+		
+		
+		
 		
 	}
+	
 	
 	
 	list_available_scenarios = function(){
