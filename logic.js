@@ -1832,7 +1832,11 @@ function init() {
 	
 	show_available_scenarios =function(){
 		available_scenarios=list_available_scenarios();
-		console.log(available_scenarios);
+		  var x = document.getElementById("mySelect");
+  		var option = document.createElement("option");
+  		option.text = "Kiwi";
+  		x.add(option, x[0]);
+		
 	}
 	
 	
@@ -1846,6 +1850,9 @@ function init() {
 					available_scenarios.push(scenario_info.nodes[i].id);
 				}
 			}
+		}
+		else{
+			available_scenarios =[1];
 		}
 		return available_scenarios;	
 	}
