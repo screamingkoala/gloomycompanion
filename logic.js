@@ -1836,13 +1836,14 @@ function init() {
 	list_available_scenarios = function(){
 		available_scenarios=[];
 		
-		if (localStorage.hasOwnProperty('gloomhavenScenarioTree') == true)
+		if (localStorage.hasOwnProperty('gloomhavenScenarioTree') == true){
 			scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
 			for (i = 0; i < scenario_info.nodes.length; i++) {
 				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
 					available_scenarios.push(scenario_info.nodes[i].id);
 				}
 			}
+		}
 		return available_scenarios;	
 	}
 
