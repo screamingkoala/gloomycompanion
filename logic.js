@@ -1429,6 +1429,7 @@ function init() {
 			document.querySelector("#scenariospage > ul > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
 			document.querySelector("#deckspage > ul > li:nth-child(1) > span > input[type=number]").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
 			document.querySelectorAll("#deckspage > ul > li:nth-child(1) > label > input[type=button]")[0].click();
+			document.querySelector("#difficulty").value = Math.min(7, Math.ceil((total_levels / active_characters)/2));
 		}
 	}
 	load_party = function() {
