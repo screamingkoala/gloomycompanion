@@ -157,19 +157,21 @@
                <input id="applyscenario" type="button" value="Load Scenario" />
             <HR>
                Anything  below  is still in testing<BR>
-            Suggest Difficulty:4<BR>
-            <select  id="scenario_picker">
+            <div>Suggested Difficulty:<span id="difficulty"></span></div>
+            <div><select  id="scenario_picker">
                   <option value="1">-1</option>
-                  <option value="2">0</option>
+                  <option value="2" selected>0</option>
                   <option value="2">+1</option>
-            </select>
-            <BR>
-            Adjusted level: ?   
-            <BR>
+            </select></div>
+            <div>
+            Adjusted level:<span id="adjusted_level"></span>   
+            </div>
+            <div>
             <select  id="scenario_picker">
-                  <option value="1">Black Barrow</option>
-                  <option value="2">Barrow Lair</option>
+                  <option value="1">1: Black Barrow</option>
+                  <option value="2">2: Barrow Lair</option>
             </select>
+             </div>
                </div>
             <div id="helppage" class="tabbody">
           
