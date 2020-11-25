@@ -1826,16 +1826,22 @@ function init() {
 	
 	window.onresize = refresh_ui.bind(null, visible_ability_decks);
 
-	show_available_scenarios = function()
-	{
 	
-		scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
-		for (i = 0; i < scenario_info.nodes.length; i++) {
-  			console.log(scenario_info.nodes[i].id); 
-			console.log(scenario_info.nodes[i].status); 
-		}
-
-		
+	show_available_scenarios =function(){
+		available_scenarios=list_available_scenarios();
+		console.log(available_scenarios);
+	}
+	
+	
+	list_available_scenarios = function(){
+		if (localStorage.getItem("gloomhavenScenarioTree") != null)
+			scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
+			for (i = 0; i < scenario_info.nodes.length; i++) {
+				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
+					available_scenarios.push(scenario_info.nodes[i].id);
+				}
+			}
+		return available_scenarios;	
 	}
 
 }
