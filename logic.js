@@ -1831,6 +1831,9 @@ function init() {
 
 	
 	show_available_scenarios =function(){
+		document.getElementById("scenario_picker").innerHTML = "";
+
+		
 		available_scenarios=list_available_scenarios();
 		x = document.getElementById("scenario_picker");
 		for (i = 0; i < available_scenarios.length; i++) {
