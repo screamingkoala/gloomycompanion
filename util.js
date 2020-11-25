@@ -105,3 +105,7 @@ function find_in_discard(discard, id) {
     }
     return null;
 }
+
+function update_difficulty(){
+    document.getElementById("adjusted_level").innerHTML = parseInt(document.getElementById("adjusted_level").innerHTML) + parseInt(document.querySelector("#scenario_picker").value)
+    
