@@ -1842,6 +1842,7 @@ function init() {
 		available_scenarios=list_available_scenarios();
 		x = document.getElementById("scenario_picker");
 		for (i = 0; i < available_scenarios.length; i++) {
+			console.log(my_JSON_object.nodes[i+1].data.name);
 			option = document.createElement("option");
   			option.text = available_scenarios[i];
   			x.add(option, x[i]);	
