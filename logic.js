@@ -1832,7 +1832,12 @@ function init() {
 	
 	show_available_scenarios =function(){
 		document.getElementById("scenario_picker").innerHTML = "";
-
+		
+		var request = new XMLHttpRequest();
+   		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
+   		request.send(null)
+   		var my_JSON_object = JSON.parse(request.responseText);
+   		console.log(my_JSON_object);
 		
 		available_scenarios=list_available_scenarios();
 		x = document.getElementById("scenario_picker");
@@ -1841,7 +1846,7 @@ function init() {
   			option.text = available_scenarios[i];
   			x.add(option, x[i]);	
 		}
-		
+	
 		
 		
 		
