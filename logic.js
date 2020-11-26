@@ -1838,6 +1838,7 @@ function init() {
    		request.send(null)
    		var my_JSON_object = JSON.parse(request.responseText);
    		console.log(my_JSON_object);
+		console.log(Object.keys(my_JSON_object.nodes[0].data.treasure))
 		
 		available_scenarios=list_available_scenarios();
 		x = document.getElementById("scenario_picker");
