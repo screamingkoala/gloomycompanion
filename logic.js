@@ -515,7 +515,7 @@ function send_to_discard(card, pull_animation) {
 
 function draw_ability_card(deck) {
 	
-	console.log(deck);
+	
 	document.getElementById(deck.name.replace(/\s/g, '')).style.background = "";
 	document.getElementById(deck.name.replace(/\s/g, '')).style.backgroundRepeat = "";
 
@@ -1361,9 +1361,9 @@ function init() {
 		
 		class_array = document.getElementsByName("class_name");
 		for (i = 0; i < class_array.length; i++) {
-			console.log(i);
+			
 			if (document.getElementsByName("class_name")[i].style.visibility == "visible") {
-				console.log(i);
+				
 				class_name = document.getElementsByName("class_name")[i].id;
 				class_level = document.querySelector("#" + class_name + "_level").value;
 				//replace the _ with a space 
@@ -1564,7 +1564,7 @@ function init() {
 
 			//for (a = 2; a < name_list.length; a++) {
 			for (a = 0; a < name_list.length; a++) {
-			console.log(a);
+			
 				card_init = name_list[a].querySelectorAll("div.card.ability.front.pull.up.discard span.initiative")[0];
 
 
@@ -1877,10 +1877,6 @@ function init() {
 	
 		
 		for (i = 0; i < available_scenarios.length; i++) {
-			console.log(available_scenarios[i]);
-			console.log(scenario_data_JSON.nodes[available_scenarios[i-1]].data.name);
-			console.log(scenario_data_JSON.nodes[available_scenarios[i-1]].data.id);
-			console.log(scenario_data_JSON.nodes[available_scenarios[i-1]]);
 			option = document.createElement("option");
   			option.text = scenario_data_JSON.nodes[available_scenarios[i-1]].data.name;
 			option.value = scenario_data_JSON.nodes[available_scenarios[i-1]].data.id;
@@ -1902,9 +1898,7 @@ function init() {
 			scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
 			for (i = 0; i < scenario_info.nodes.length; i++) {
 				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
-					console.log(i);
-					console.log(scenario_info.nodes[i].id)
-					console.log(scenario_info.nodes[i])
+					
 					
 					available_scenarios.push(scenario_info.nodes[i].id);
 				}
@@ -1914,6 +1908,7 @@ function init() {
 			available_scenarios =[1];
 		}
 		console.log(available_scenarios);
+		console.log("available_scenarios");
 		return available_scenarios;	
 	}
 
