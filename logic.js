@@ -1836,14 +1836,13 @@ function init() {
    		request.send(null)
    		scenario_data_JSON = JSON.parse(request.responseText);
 		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
-		treasure = scenario_data_JSON.nodes[scenario].data.treasure;
+		treasure = scenario_data_JSON.nodes[scenario].data.treasure;		
+				
+		document.querySelector("#treasure > span:nth-child(1)").style.visibility="hidden";
+		document.querySelector("#treasure > span:nth-child(2)").style.visibility="hidden";
+		document.querySelector("#treasure > span:nth-child(3)").style.visibility="hidden";
 		
 		treasure_number=Object.keys(treasure);
-		
-		document.querySelector("#treasure > span:nth-child(0)").style.visibility="hidden"
-		document.querySelector("#treasure > span:nth-child(1)").style.visibility="hidden"
-		document.querySelector("#treasure > span:nth-child(2)").style.visibility="hidden"
-		
 		treasure_description=[];		
 		for (var i = 0; i < Object.keys(treasure).length; i++){
 			treasure_description[i] = treasure[treasure_number[i]].description;
