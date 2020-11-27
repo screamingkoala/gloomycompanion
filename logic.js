@@ -1831,6 +1831,24 @@ function init() {
 		document.getElementById("new_round").style.display= "block";
 		document.getElementById("round_count").style.display= "block";
 		
+		var request = new XMLHttpRequest();
+   		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
+   		request.send(null)
+   		scenario_data_JSON = JSON.parse(request.responseText);
+		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
+		treasure = scenario_data_JSON.nodes[scenario].data.treasure;
+		
+		treasure_number=Object.keys(treasure);
+		
+		treasure_description=[];		
+		for (var i = 0; i < Object.keys(treasure).length; i++){
+			treasure_description[i] = treasure[treasure_number[i]].description;
+			
+			console.log(treasure_number[i]);
+			console.log(treasure_description[i]);
+		}
+			
+		
 	}
 	
 	
@@ -1848,6 +1866,9 @@ function init() {
 		
 		available_scenarios=list_available_scenarios();
 		x = document.getElementById("scenario_picker");
+		
+	
+		
 		for (i = 0; i < available_scenarios.length; i++) {
 			console.log();
 			option = document.createElement("option");
