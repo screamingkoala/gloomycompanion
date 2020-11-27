@@ -1867,19 +1867,19 @@ function init() {
 
 		
 		available_scenarios=list_available_scenarios();
-		console.log(available_scenarios);
+		
 		x = document.getElementById("scenario_picker");
 		
 	
 		
 		for (i = 0; i < available_scenarios.length; i++) {
 			console.log(available_scenarios[i]);
-			console.log(scenario_data_JSON.nodes[i+1].data.name);
-			console.log(scenario_data_JSON.nodes[i+1].data.id);
-			console.log(scenario_data_JSON.nodes[i+1]);
+			console.log(scenario_data_JSON.nodes[available_scenarios[i+1]].data.name);
+			console.log(scenario_data_JSON.nodes[available_scenarios[i+1]].data.id);
+			console.log(scenario_data_JSON.nodes[available_scenarios[i+1]]);
 			option = document.createElement("option");
-  			option.text = scenario_data_JSON.nodes[i+1].data.name;
-			option.value = scenario_data_JSON.nodes[i+1].data.id;
+  			option.text = scenario_data_JSON.nodes[available_scenarios[i+1]].data.name;
+			option.value = scenario_data_JSON.nodes[available_scenarios[i+1]].data.id;
   			
 			x.add(option, x[i]);	
 		}
