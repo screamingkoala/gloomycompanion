@@ -850,7 +850,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 	document.getElementById("currentdeckslist").innerHTML = "";
 	var decks_to_remove = visible_ability_decks.filter(function(visible_deck) {
 		return !preserve_existing_deck_state || (decks.filter(function(deck) {
-			return ((deck.name == visible_deck.name) && (deck.level == visible_deck.level))
+			return ((deck.name == visible_deck.name) && (deck.level == visible_deck.level)) 
 		}).length == 0);
 	});
 
@@ -1840,9 +1840,9 @@ function init() {
 		
 		treasure_number=Object.keys(treasure);
 		
-		document.querySelector("#treasure > span:nth-child(1)").visibility = "invisble"
-		document.querySelector("#treasure > span:nth-child(2)").visibility = "invisble"
-		document.querySelector("#treasure > span:nth-child(3)").visibility = "invisble"
+		document.querySelector("#treasure > span:nth-child(0)").style.visibility="hidden"
+		document.querySelector("#treasure > span:nth-child(1)").style.visibility="hidden"
+		document.querySelector("#treasure > span:nth-child(2)").style.visibility="hidden"
 		
 		treasure_description=[];		
 		for (var i = 0; i < Object.keys(treasure).length; i++){
