@@ -1867,12 +1867,13 @@ function init() {
 
 		
 		available_scenarios=list_available_scenarios();
+		console.log(available_scenarios);
 		x = document.getElementById("scenario_picker");
 		
 	
 		
 		for (i = 0; i < available_scenarios.length; i++) {
-			console.log(i);
+			console.log(available_scenarios[i]);
 			console.log(scenario_data_JSON.nodes[i+1].data.name);
 			console.log(scenario_data_JSON.nodes[i+1].data.id);
 			console.log(scenario_data_JSON.nodes[i+1]);
@@ -1906,6 +1907,7 @@ function init() {
 		else{
 			available_scenarios =[1];
 		}
+		
 		return available_scenarios;	
 	}
 
