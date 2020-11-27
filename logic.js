@@ -1878,8 +1878,8 @@ function init() {
 		
 		for (i = 0; i < available_scenarios.length; i++) {
 			option = document.createElement("option");
-  			option.text = scenario_data_JSON.nodes[available_scenarios[i-1]].data.name;
-			option.value = scenario_data_JSON.nodes[available_scenarios[i-1]].data.id;
+  			option.text = scenario_data_JSON.nodes[i].data.name;
+			option.value = scenario_data_JSON.nodes[i].data.id;
   			
 			x.add(option, x[i]);	
 		}
