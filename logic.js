@@ -1845,8 +1845,8 @@ function init() {
 			treasure_description[i] = treasure[treasure_number[i]].description;
 			document.getElementById('treasure').children.item(i).style.visibility ="visible";
 			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
-			document.getElementById('treasure').children.item(i).dataset.data-treasure = "Treasure " + treasure_number[i] + " : " + treasure_description[i]
-			document.getElementById('treasure').children.item(i).addEventListener("click", function() {alert(data-treasure);});
+			//document.getElementById('treasure').children.item(i).dataset.data-treasure = "Treasure " + treasure_number[i] + " : " + treasure_description[i]
+			//document.getElementById('treasure').children.item(i).addEventListener("click", function() {alert(data-treasure);});
 		}
 			
 		
