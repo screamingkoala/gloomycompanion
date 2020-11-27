@@ -514,7 +514,10 @@ function send_to_discard(card, pull_animation) {
 }
 
 function draw_ability_card(deck) {
-	if (real_name.substring(0,2) != "PC"){
+	console.log(deck);
+	console.log(deck.real_name);
+	console.log(deck.real_name.substring(0,2));
+	if (deck.real_name.substring(0,2) != "PC"){
 	console.log(deck);
 	document.getElementById(deck.name.replace(/\s/g, '')).style.background = "";
 	document.getElementById(deck.name.replace(/\s/g, '')).style.backgroundRepeat = "";
