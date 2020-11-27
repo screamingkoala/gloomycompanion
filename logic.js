@@ -515,7 +515,7 @@ function send_to_discard(card, pull_animation) {
 
 function draw_ability_card(deck) {
 
-
+	console.log(deck);
 	document.getElementById(deck.name.replace(/\s/g, '')).style.background = "";
 	document.getElementById(deck.name.replace(/\s/g, '')).style.backgroundRepeat = "";
 
