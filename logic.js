@@ -1897,9 +1897,8 @@ function init() {
 			scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
 			for (i = 0; i < scenario_info.nodes.length; i++) {
 				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
-					
-					
-					available_scenarios.push(scenario_info.nodes[i].id);
+					//available_scenarios.push(scenario_info.nodes[i].id);
+					available_scenarios.push(i);
 				}
 			}
 		}
