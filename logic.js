@@ -1465,7 +1465,7 @@ function init() {
 	//Take the values from my form and put them in the old form
 		document.querySelector("#scenariospage > ul > span > input[type=number]").value = parseInt(document.querySelector("#adjusted_level").innerHTML);
 		document.querySelector("#scenariospage > ul > input[type=number]").value = document.querySelector("#scenario_picker").value;	
-		
+	}
 	show_game_elements();
 		
 		base_level = parseInt(document.getElementById("adjusted_level").innerHTML);
