@@ -1846,12 +1846,14 @@ function init() {
 			document.getElementById('treasure').children.item(i).style.visibility ="visible";
 			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
 			document.getElementById('treasure').children.item(i).data = "Treasure " + treasure_number[i] + " : " + treasure_description[i]
-			document.getElementById('treasure').children.item(i).addEventListener("click", function() {alert();});
+			document.getElementById('treasure').children.item(i).addEventListener("click", function() {alert(data);});
 		}
 			
 		
 	}
 	
+
+
 	
 	window.onresize = refresh_ui.bind(null, visible_ability_decks);
 
