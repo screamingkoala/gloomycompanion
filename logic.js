@@ -1825,33 +1825,9 @@ function init() {
 
 
 	}
+
+		
 	
-	show_game_elements= function(){
-		document.getElementById("elements").style.display=  "block";
-		document.getElementById("new_round").style.display= "block";
-		document.getElementById("round_count").style.display= "block";
-		
-		var request = new XMLHttpRequest();
-   		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
-   		request.send(null)
-   		scenario_data_JSON = JSON.parse(request.responseText);
-		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
-		treasure = scenario_data_JSON.nodes[scenario].data.treasure;
-		
-		treasure_number=Object.keys(treasure);
-		
-		treasure_description=[];		
-		for (var i = 0; i < Object.keys(treasure).length; i++){
-			treasure_description[i] = treasure[treasure_number[i]].description;
-			document.getElementById('treasure').children.item(i).style.visibility ="visible";
-			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
-			treasure_message= "Treasure " + treasure_number[i] + " : " + treasure_description[i];
-			document.getElementById('treasure').children.item(i).title=treasure_message;
-			});
-		}
-			
-		
-	}
 	
 
 
