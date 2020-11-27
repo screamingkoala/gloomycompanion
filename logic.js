@@ -1097,9 +1097,9 @@ function LevelSelector(text, inline) {
 		//return (this.spinner.value > max_level) ? max_level : this.spinner.value;
 	}
 
-	level.set_value = function(value) {
-		this.spinner.value = (value > max_level) ? max_level : value;
-	}
+	//level.set_value = function(value) {
+	//	this.spinner.value = (value > max_level) ? max_level : value;
+	//}
 
 	return level;
 }
