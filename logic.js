@@ -902,7 +902,7 @@ function apply_deck_selection(decks, preserve_existing_deck_state) {
 			sort_cards();
 		}, false)
 		deck_space.className = "card-container";
-		deck_space.title = "Click to draw enemy ability";
+		deck_space.title = "Click to draw card, right click to remove deck ";
 		container.appendChild(deck_space);
 		place_deck(deck, deck_space);
 		reshuffle(deck, !preserve_existing_deck_state);
