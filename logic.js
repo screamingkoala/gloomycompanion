@@ -1872,11 +1872,15 @@ function init() {
 	
 		
 		for (i = 0; i < available_scenarios.length; i++) {
-			console.log();
+			console.log(i);
+			console.log(scenario_data_JSON.nodes[i+1].data.name);
+			console.log(scenario_data_JSON.nodes[i+1].data.id);
+			console.log(scenario_data_JSON.nodes[i+1]);
 			option = document.createElement("option");
   			option.text = scenario_data_JSON.nodes[i+1].data.name;
 			option.value = scenario_data_JSON.nodes[i+1].data.id;
-  			x.add(option, x[i]);	
+  			
+			x.add(option, x[i]);	
 		}
 	
 		
@@ -1893,6 +1897,8 @@ function init() {
 			scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
 			for (i = 0; i < scenario_info.nodes.length; i++) {
 				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
+					console.log(i)
+					
 					available_scenarios.push(scenario_info.nodes[i].id);
 				}
 			}
