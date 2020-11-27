@@ -1093,13 +1093,12 @@ function LevelSelector(text, inline) {
 	level.spinner = level_spinner.input;
 
 	level.get_selection = function() {
-		return parseInt(document.querySelector("#adjusted_level").innerHTML);
-		//return (this.spinner.value > max_level) ? max_level : this.spinner.value;
+		
+		return (this.spinner.value > max_level) ? max_level : this.spinner.value;
 	}
 
-	level.set_value = function(value) {
-		return parseInt(document.querySelector("#adjusted_level").innerHTML);
-		//this.spinner.value = (value > max_level) ? max_level : value;
+	level.set_value = function(value) {		
+		this.spinner.value = (value > max_level) ? max_level : value;
 	}
 
 	return level;
