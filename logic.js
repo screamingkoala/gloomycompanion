@@ -1465,7 +1465,7 @@ function init() {
 	//Take the values from my form and put them in the old form
 		document.querySelector("#scenariospage > ul > span > input[type=number]").value = parseInt(document.querySelector("#adjusted_level").innerHTML);
 		document.querySelector("#scenariospage > ul > input[type=number]").value = document.querySelector("#scenario_picker").value;	
-	}
+		
 	show_game_elements();
 		
 		base_level = parseInt(document.getElementById("adjusted_level").innerHTML);
@@ -1825,9 +1825,32 @@ function init() {
 
 
 	}
-
-		
 	
+	show_game_elements= function(){
+		document.getElementById("elements").style.display=  "block";
+		document.getElementById("new_round").style.display= "block";
+		document.getElementById("round_count").style.display= "block";
+		
+		var request = new XMLHttpRequest();
+   		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
+   		request.send(null)
+   		scenario_data_JSON = JSON.parse(request.responseText);
+		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
+		treasure = scenario_data_JSON.nodes[scenario].data.treasure;
+		
+		treasure_number=Object.keys(treasure);
+		
+		treasure_description=[];		
+		for (var i = 0; i < Object.keys(treasure).length; i++){
+			treasure_description[i] = treasure[treasure_number[i]].description;
+			document.getElementById('treasure').children.item(i).style.visibility ="visible";
+			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
+			document.getElementById('treasure').children.item(i).dataset.data-treasure = "Treasure " + treasure_number[i] + " : " + treasure_description[i]
+			document.getElementById('treasure').children.item(i).addEventListener("click", function() {alert(data-treasure);});
+		}
+			
+		
+	}
 	
 
 
