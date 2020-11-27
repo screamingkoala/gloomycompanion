@@ -1843,7 +1843,7 @@ function init() {
 		treasure_description=[];		
 		for (var i = 0; i < Object.keys(treasure).length; i++){
 			treasure_description[i] = treasure[treasure_number[i]].description;
-			document.getElementById('treasure').children.item(i).stle.visibility ="visible";
+			document.getElementById('treasure').children.item(i).style.visibility ="visible";
 			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
 			console.log(treasure_number[i]);
 			console.log(treasure_description[i]);
