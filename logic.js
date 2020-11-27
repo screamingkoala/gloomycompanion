@@ -1878,12 +1878,12 @@ function init() {
 		
 		for (i = 0; i < available_scenarios.length; i++) {
 			console.log(available_scenarios[i]);
-			console.log(scenario_data_JSON.nodes[available_scenarios[i]].data.name);
-			console.log(scenario_data_JSON.nodes[available_scenarios[i]].data.id);
-			console.log(scenario_data_JSON.nodes[available_scenarios[i]]);
+			console.log(scenario_data_JSON.nodes[available_scenarios[i-1]].data.name);
+			console.log(scenario_data_JSON.nodes[available_scenarios[i-1]].data.id);
+			console.log(scenario_data_JSON.nodes[available_scenarios[i-1]]);
 			option = document.createElement("option");
-  			option.text = scenario_data_JSON.nodes[available_scenarios[i]].data.name;
-			option.value = scenario_data_JSON.nodes[available_scenarios[i]].data.id;
+  			option.text = scenario_data_JSON.nodes[available_scenarios[i-1]].data.name;
+			option.value = scenario_data_JSON.nodes[available_scenarios[i-1]].data.id;
   			
 			x.add(option, x[i]);	
 		}
@@ -1902,7 +1902,9 @@ function init() {
 			scenario_info = JSON.parse(localStorage.getItem("gloomhavenScenarioTree"));			
 			for (i = 0; i < scenario_info.nodes.length; i++) {
 				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
-					
+					console.log(i);
+					console.log(scenario_info.nodes[i].id)
+					console.log(scenario_info.nodes[i])
 					
 					available_scenarios.push(scenario_info.nodes[i].id);
 				}
@@ -1911,7 +1913,7 @@ function init() {
 		else{
 			available_scenarios =[1];
 		}
-		
+		console.log(available_scenarios);
 		return available_scenarios;	
 	}
 
