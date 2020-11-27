@@ -1836,16 +1836,16 @@ function init() {
 		var request = new XMLHttpRequest();
    		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
    		request.send(null)
-   		var my_JSON_object = JSON.parse(request.responseText);
-   		console.log(my_JSON_object);
-		console.log(Object.keys(my_JSON_object.nodes[0].data.treasure))
+   		var scenario_data_JSON = JSON.parse(request.responseText);
+
 		
 		available_scenarios=list_available_scenarios();
 		x = document.getElementById("scenario_picker");
 		for (i = 0; i < available_scenarios.length; i++) {
 			console.log();
 			option = document.createElement("option");
-  			option.text = my_JSON_object.nodes[i+1].data.name
+  			option.text = scenario_data_JSON.nodes[i+1].data.name;
+			option.value = scenario_data_JSON.nodes[i+1].data.id;
   			x.add(option, x[i]);	
 		}
 	
