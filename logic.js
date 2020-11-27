@@ -1462,6 +1462,10 @@ function init() {
 
 	applyscenariobtn.onclick = function() {
 	
+	//Take the values from my form and put them in the old form
+		document.querySelector("#scenariospage > ul > span > input[type=number]").value = parseInt(document.querySelector("#adjusted_level").innerHTML);
+		document.querySelector("#scenariospage > ul > input[type=number]").value = document.querySelector("#scenario_picker").value;	
+		
 	show_game_elements();
 		
 		base_level = parseInt(document.getElementById("adjusted_level").innerHTML);
@@ -1483,7 +1487,9 @@ function init() {
 		document.querySelector("#trap_damage").innerHTML =  trap_damage;
 		document.querySelector("#hazardous_terrain").innerHTML =  hazardous_terrain;
 		document.querySelector("#bonus_xp").innerHTML =  bonus_xp;
-
+		
+		
+		
 		var selected_deck_names = scenariolist.get_scenario_decks();
 
 		class_array = document.getElementsByName("class_name");
