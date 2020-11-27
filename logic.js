@@ -1463,7 +1463,7 @@ function init() {
 	
 	show_game_elements();
 		
-		base_level = scenariolist.level_selector.get_selection();
+		base_level = parseInt(document.getElementById("adjusted_level").innerHTML);
 		
 		if (base_level == 7) {
 			gold = 6;
