@@ -1840,6 +1840,10 @@ function init() {
 		
 		treasure_number=Object.keys(treasure);
 		
+		document.querySelector("#treasure > span:nth-child(1)").visibility = "invisble"
+		document.querySelector("#treasure > span:nth-child(2)").visibility = "invisble"
+		document.querySelector("#treasure > span:nth-child(3)").visibility = "invisble"
+		
 		treasure_description=[];		
 		for (var i = 0; i < Object.keys(treasure).length; i++){
 			treasure_description[i] = treasure[treasure_number[i]].description;
