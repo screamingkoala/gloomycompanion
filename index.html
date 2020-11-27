@@ -154,20 +154,22 @@
             </div>
             <div id="scenariospage" class="tabbody">
                        <button onclick=" window.open('https://screamingkoala.github.io/scenariostracker/docs/index.html', '_blank'); return false;">Open Scenario Tracker </button><HR>
-               <input id="applyscenario" type="button" value="Load Scenario" />
+               
             <HR>
                Anything  below  is still in testing<BR>
             <div>Suggested Difficulty:<span id="difficulty"></span></div>
             <div>Difficulty adjustment:
             <select  id="difficulty_picker" onchange="update_difficulty()">
                   <option value="-1">-1 (Easy)</option>
-                  <option value="0 Normal " selected>0</option>
+                  <option value="0" selected>0 (Normal)</option>
                   <option value="1">+1 (Hard)</option>
-                  <option value="2">+2 (Really Hard)</option>
+                  <option value="2">+2 (Very Hard)</option>
             </select></div>
             <div>
             Adjusted level:<span id="adjusted_level"></span>   
+               
             </div>
+               <div><input id="applyscenario" type="button" value="Load Scenario" /></div>
             <div>
             Scenario: <select id="scenario_picker">
                   
