@@ -1899,7 +1899,7 @@ function init() {
 				if (scenario_info.nodes[i].status == "attempted" || scenario_info.nodes[i].status =="incomplete"){
 					console.log(i)
 					
-					available_scenarios.push(scenario_info.nodes[i].id);
+					available_scenarios.push(i);
 				}
 			}
 		}
