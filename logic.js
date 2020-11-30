@@ -1871,20 +1871,20 @@ function init() {
 		
 		available_scenarios=list_available_scenarios();
 		
-		x = document.getElementById("scenario_picker");
+		scenario_picker_element = document.getElementById("scenario_picker");
 		
 		scenario_numbers=[]
-		
-		
+				
 		for (i = 0; i < scenario_data_JSON.nodes.length; i++) {
-			
 			scenario_numbers[i] =scenario_data_JSON.nodes[i].data.id
+		}
 			
-		//	option = document.createElement("option");
-  		//	option.text = scenario_data_JSON.nodes[i].data.name;
-		//	option.value = scenario_data_JSON.nodes[i].data.id;
-  			
-		//	x.add(option, x[i]);	
+		for (i = 0; i < scenario_data_JSON.nodes.length; i++) {
+			option = document.createElement("option");
+  			option.text = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.name;
+			option.value = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.name;			
+			scenario_picker_element.add(option);	
+			console.log(scenario_data_JSON.nodes[scenario_numbers[i]].data.name);
 		}
 	
 		
