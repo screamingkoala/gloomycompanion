@@ -1846,7 +1846,7 @@ function init() {
 			scenario_numbers[i]=scenario_data_JSON.nodes[i].data.id;
 		}
 				
-		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
+		scenario=parseInt(document.querySelector("#scenario_picker").value);
 		
 		scenario=scenario_numbers.indexOf(scenario.toString());
 				
