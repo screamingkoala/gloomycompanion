@@ -1333,6 +1333,7 @@ function init() {
 	applydeckbtn.onclick = function() {
 		show_game_elements();
 		
+		
 		base_level = scenariolist.level_selector.get_selection();
 		
 		if (base_level == 7) {
@@ -1882,7 +1883,7 @@ function init() {
 		for (i = 0; i < scenario_data_JSON.nodes.length; i++) {
 			option = document.createElement("option");
   			option.text = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.name;
-			option.value = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.name;			
+			option.value = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.id;			
 			scenario_picker_element.add(option);	
 			
 		}
