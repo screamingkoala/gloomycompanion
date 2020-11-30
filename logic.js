@@ -1832,20 +1832,29 @@ function init() {
 		document.getElementById("new_round").style.display= "block";
 		document.getElementById("round_count").style.display= "block";
 		
-		var request = new XMLHttpRequest();
-   		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
-   		request.send(null)
-   		scenario_data_JSON = JSON.parse(request.responseText);
-		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
-		treasure = scenario_data_JSON.nodes[scenario].data.treasure;		
-				
 		document.querySelector("#treasure > span:nth-child(1)").style.visibility="hidden";
 		document.querySelector("#treasure > span:nth-child(2)").style.visibility="hidden";
 		document.querySelector("#treasure > span:nth-child(3)").style.visibility="hidden";
 		
+		var request = new XMLHttpRequest();
+   		request.open("GET", "scenariostracker/src/assets/scenarios.json", false);
+   		request.send(null)
+   		scenario_data_JSON = JSON.parse(request.responseText);
+		
+		scenario_numbers=[]				
+		for (i = 0; i < scenario_data_JSON.nodes.length; i++) {
+			scenario_numbers[i]=scenario_data_JSON.nodes[i].data.id;
+		}
+				
+		scenario=parseInt(document.querySelector("#scenario_picker").value)-1;
+		
+		scenario=scenario_numbers.indexOf(scenario.toString());
+				
+		
+		treasure = scenario_data_JSON.nodes[scenario].data.treasure;		
 		treasure_number=Object.keys(treasure);
 		treasure_description=[];		
-		for (var i = 0; i < Object.keys(treasure).length; i++){
+		for (var i = 0; i < Object.keys(treasure).length; i++){			
 			treasure_description[i] = treasure[treasure_number[i]].description;
 			document.getElementById('treasure').children.item(i).style.visibility ="visible";
 			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
