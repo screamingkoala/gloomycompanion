@@ -1873,14 +1873,18 @@ function init() {
 		
 		x = document.getElementById("scenario_picker");
 		
-	
+		scenario_numbers=[]
+		
 		
 		for (i = 0; i < scenario_data_JSON.nodes.length; i++) {
-			option = document.createElement("option");
-  			option.text = scenario_data_JSON.nodes[i].data.name;
-			option.value = scenario_data_JSON.nodes[i].data.id;
+			
+			scenario_numbers[i] =scenario_data_JSON.nodes[i].data.id
+			
+		//	option = document.createElement("option");
+  		//	option.text = scenario_data_JSON.nodes[i].data.name;
+		//	option.value = scenario_data_JSON.nodes[i].data.id;
   			
-			x.add(option, x[i]);	
+		//	x.add(option, x[i]);	
 		}
 	
 		
