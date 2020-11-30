@@ -1875,7 +1875,7 @@ function init() {
 		
 	
 		
-		for (i = 0; i < available_scenarios.length; i++) {
+		for (i = 0; i < scenario_data_JSON.nodes.length; i++) {
 			option = document.createElement("option");
   			option.text = scenario_data_JSON.nodes[i].data.name;
 			option.value = scenario_data_JSON.nodes[i].data.id;
