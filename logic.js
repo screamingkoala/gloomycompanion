@@ -1884,7 +1884,7 @@ function init() {
   			option.text = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.name;
 			option.value = scenario_data_JSON.nodes[scenario_numbers[i]-1].data.name;			
 			scenario_picker_element.add(option);	
-			console.log(scenario_data_JSON.nodes[scenario_numbers[i]].data.name);
+			
 		}
 	
 		
