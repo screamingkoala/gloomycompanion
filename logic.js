@@ -1359,7 +1359,7 @@ function init() {
 		
 		var selected_deck_names = decklist.get_selected_decks();
 		
-		if (document.querySelector("#round_count").innerText != ""){			
+		
 			class_array = document.getElementsByName("class_name");
 			for (i = 0; i < class_array.length; i++) {			
 				if (document.getElementsByName("class_name")[i].style.visibility == "visible") {				
@@ -1377,11 +1377,11 @@ function init() {
 					selected_deck_names[selected_deck_names.length] = json_string;
 				}
 			}
-		}
+		
 		var selected_decks = selected_deck_names.map(function(deck_names) {
 			return load_ability_deck(deck_names.class, deck_names.name, deck_names.level);
 		});
-		apply_deck_selection(selected_decks, false);
+		apply_deck_selection(selected_decks, true);
 		
 		
 	};
