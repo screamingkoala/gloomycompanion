@@ -1359,26 +1359,23 @@ function init() {
 		
 		var selected_deck_names = decklist.get_selected_decks();
 		
-		
-		class_array = document.getElementsByName("class_name");
-		for (i = 0; i < class_array.length; i++) {
-			
-			if (document.getElementsByName("class_name")[i].style.visibility == "visible") {
+		if (document.querySelector("#round_count").innerText != "")			
+			class_array = document.getElementsByName("class_name");
+			for (i = 0; i < class_array.length; i++) {			
+				if (document.getElementsByName("class_name")[i].style.visibility == "visible") {				
+					class_name = document.getElementsByName("class_name")[i].id;
+					class_level = document.querySelector("#" + class_name + "_level").value;
+					//replace the _ with a space 
+					class_name  = class_name.replace(/_/g, " ");			
 				
-				class_name = document.getElementsByName("class_name")[i].id;
-				class_level = document.querySelector("#" + class_name + "_level").value;
-				//replace the _ with a space 
-				class_name  = class_name.replace(/_/g, " ");
-										
+					class_name = class_name.charAt(0).toUpperCase() + class_name.slice(1);
 				
+					class_string = '{"name": "PC ' + class_name + '", "class": "' + class_name + '", "level": "' + class_level + '"}';
 				
-				class_name = class_name.charAt(0).toUpperCase() + class_name.slice(1);
+					json_string = JSON.parse(class_string);
 				
-				class_string = '{"name": "PC ' + class_name + '", "class": "' + class_name + '", "level": "' + class_level + '"}';
-				
-				json_string = JSON.parse(class_string);
-				
-				selected_deck_names[selected_deck_names.length] = json_string;
+					selected_deck_names[selected_deck_names.length] = json_string;
+				}
 			}
 		}
 		var selected_decks = selected_deck_names.map(function(deck_names) {
