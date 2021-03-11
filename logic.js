@@ -1359,7 +1359,7 @@ function init() {
 		
 		var selected_deck_names = decklist.get_selected_decks();
 		
-		if (document.querySelector("#round_count").innerText != "")			
+		if (document.querySelector("#round_count").innerText != ""){			
 			class_array = document.getElementsByName("class_name");
 			for (i = 0; i < class_array.length; i++) {			
 				if (document.getElementsByName("class_name")[i].style.visibility == "visible") {				
