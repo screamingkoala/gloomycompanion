@@ -399,7 +399,7 @@ function load_ability_deck(deck_class, deck_name, level) {
 		}
 	}
 
-	write_to_storage(deck.name, JSON.stringify(deck));
+	//write_to_storage(deck.name, JSON.stringify(deck));
 
 	return deck;
 
@@ -546,7 +546,7 @@ function draw_ability_card(deck) {
 	
 
 
-	write_to_storage(deck.name, JSON.stringify(deck));
+	//write_to_storage(deck.name, JSON.stringify(deck));
 	
 }
 
