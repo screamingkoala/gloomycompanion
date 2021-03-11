@@ -1847,17 +1847,17 @@ function init() {
 		
 		scenario=scenario_numbers.indexOf(scenario.toString());
 				
-		
-		treasure = scenario_data_JSON.nodes[scenario].data.treasure;		
-		treasure_number=Object.keys(treasure);
-		treasure_description=[];		
-		for (var i = 0; i < Object.keys(treasure).length; i++){			
-			treasure_description[i] = treasure[treasure_number[i]].description;
-			document.getElementById('treasure').children.item(i).style.visibility ="visible";
-			document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
-			document.getElementById('treasure').children.item(i).title = "Treasure " + treasure_number[i] + " : " + treasure_description[i]			
+		if (scenario > 0){
+			treasure = scenario_data_JSON.nodes[scenario].data.treasure;		
+			treasure_number=Object.keys(treasure);
+			treasure_description=[];		
+			for (var i = 0; i < Object.keys(treasure).length; i++){			
+				treasure_description[i] = treasure[treasure_number[i]].description;
+				document.getElementById('treasure').children.item(i).style.visibility ="visible";
+				document.getElementById('treasure').children.item(i).innerHTML = treasure_number[i];
+				document.getElementById('treasure').children.item(i).title = "Treasure " + treasure_number[i] + " : " + treasure_description[i]			
+			}	
 		}
-			
 		
 	}
 	
